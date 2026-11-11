@@ -2,12 +2,13 @@
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { assetPath } from "../utils/basePath";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const TOTAL_HERO_FRAMES = 134;
 const PAD = (n: number) => String(n).padStart(3, "0");
-const FRAME_URL = (i: number) => `/hero-frames/frame-${PAD(i + 1)}.jpg`;
+const FRAME_URL = (i: number) => assetPath(`/hero-frames/frame-${PAD(i + 1)}.jpg`);
 
 const CAPTIONS = [
   { at: 0.05, text: "The Multiverse is dying.", sub: "Incursions are colliding every timeline. None can escape." },
@@ -142,7 +143,7 @@ export default function FrameHero() {
         {/* Immediate Background Poster (Prevents ANY black screen while JS/frames initialize) */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/hero-frames/frame-001.jpg"
+          src={assetPath("/hero-frames/frame-001.jpg")}
           alt=""
           aria-hidden
           className="absolute inset-0 w-full h-full object-cover transition-opacity duration-700"

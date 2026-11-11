@@ -1,13 +1,14 @@
 "use client";
 import { useRef, useState, useEffect } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
+import { assetPath } from "../utils/basePath";
 
 const IMAGES = [
-  { src: "/gallery/incursion-collision.jpg",   alt: "The Great Incursion: Collision of Realities", span: "hero" },
-  { src: "/gallery/latveria-citadel.jpg",      alt: "Castle Doom: The Latverian Citadel",         span: "tall" },
-  { src: "/gallery/battleworld-wasteland.jpg", alt: "Battleworld: The Fractured Earths",          span: "small" },
-  { src: "/gallery/god-emperor-ascendant.jpg", alt: "The Ascendance of God Emperor Doom",         span: "small" },
-  { src: "/gallery/multiversal-war.jpg",       alt: "The Multiverse War: Twilight of Existence",  span: "small" },
+  { src: assetPath("/gallery/incursion-collision.jpg"),   alt: "The Great Incursion: Collision of Realities", span: "hero" },
+  { src: assetPath("/gallery/latveria-citadel.jpg"),      alt: "Castle Doom: The Latverian Citadel",         span: "tall" },
+  { src: assetPath("/gallery/battleworld-wasteland.jpg"), alt: "Battleworld: The Fractured Earths",          span: "small" },
+  { src: assetPath("/gallery/god-emperor-ascendant.jpg"), alt: "The Ascendance of God Emperor Doom",         span: "small" },
+  { src: assetPath("/gallery/multiversal-war.jpg"),       alt: "The Multiverse War: Twilight of Existence",  span: "small" },
 ];
 
 export default function GallerySection() {

@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { showToast } from "./Toast";
+import { assetPath } from "../utils/basePath";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -61,7 +62,7 @@ export default function Navbar() {
             <div className="absolute inset-0 rounded-full bg-emerald-500/20 blur-md" />
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/logos/doom-mask-emblem.png"
+              src={assetPath("/logos/doom-mask-emblem.png")}
               alt="Doctor Doom Mask"
               style={{ width: 38, height: 38, objectFit: "contain", filter: "drop-shadow(0 0 10px rgba(16, 185, 129, 0.85))" }}
             />

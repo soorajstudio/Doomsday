@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { assetPath } from "../utils/basePath";
 
 export type ToastMsg = { id: number; text: string; sub?: string };
 
@@ -45,7 +46,7 @@ export default function Toast() {
             }}>
             <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/logos/doom-mask-emblem.png" alt="" style={{ width: 22, height: 22, objectFit: "contain", filter: "drop-shadow(0 0 6px rgba(16,185,129,0.9))", flexShrink: 0 }} />
+              <img src={assetPath("/logos/doom-mask-emblem.png")} alt="" style={{ width: 22, height: 22, objectFit: "contain", filter: "drop-shadow(0 0 6px rgba(16,185,129,0.9))", flexShrink: 0 }} />
               <div>
                 <p style={{ fontSize: 13, fontWeight: 800, color: "#fff", fontFamily: "sans-serif", letterSpacing: "0.01em" }}>{t.text}</p>
                 {t.sub && <p style={{ fontSize: 11, color: "rgba(241,245,249,0.6)", fontFamily: "sans-serif", marginTop: 2, letterSpacing: "0.02em" }}>{t.sub}</p>}

@@ -3,12 +3,13 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { showToast } from "./Toast";
+import { assetPath } from "../utils/basePath";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const TOTAL_FOOTER_FRAMES = 277;
 const PAD = (n: number) => String(n).padStart(3, "0");
-const FRAME_URL = (i: number) => `/footer-frames/frame-${PAD(i + 1)}.jpg`;
+const FRAME_URL = (i: number) => assetPath(`/footer-frames/frame-${PAD(i + 1)}.jpg`);
 
 export default function Footer() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -123,7 +124,7 @@ export default function Footer() {
             <div className="flex items-center justify-between flex-wrap gap-4">
               <div className="flex items-center gap-3">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/logos/doom-mask-emblem.png" alt="Doctor Doom"
+                <img src={assetPath("/logos/doom-mask-emblem.png")} alt="Doctor Doom"
                   style={{ width: 28, height: 28, objectFit: "contain", filter: "drop-shadow(0 0 8px rgba(16,185,129,0.8))" }} />
                 <span className="text-[10px] tracking-[0.4em] uppercase font-bold text-emerald-400" style={{ fontFamily: "sans-serif" }}>
                   AVENGERS: DOOMSDAY

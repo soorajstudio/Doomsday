@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect, useCallback, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { assetPath } from "../utils/basePath";
 
 const CHARACTERS = [
   {
@@ -230,7 +231,7 @@ export default function CharactersSection() {
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src={char.img}
+            src={assetPath(char.img)}
             alt={char.realName}
             onLoad={() => setImgReady(true)}
             style={{

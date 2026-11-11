@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { assetPath } from "../utils/basePath";
 
 export default function Loader() {
   const [phase, setPhase] = useState<"hold" | "split" | "done">("hold");
@@ -35,7 +36,7 @@ export default function Loader() {
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <motion.img
-            src="/logos/doom-loader-left.png"
+            src={assetPath("/logos/doom-loader-left.png")}
             alt="Doom Mask Left"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -66,7 +67,7 @@ export default function Loader() {
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <motion.img
-            src="/logos/doom-loader-right.png"
+            src={assetPath("/logos/doom-loader-right.png")}
             alt="Doom Mask Right"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}

@@ -4,12 +4,13 @@ import { motion, useInView } from "framer-motion";
 import { showToast } from "./Toast";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { assetPath } from "../utils/basePath";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const TOTAL_FOOTER_FRAMES = 277;
 const PAD = (n: number) => String(n).padStart(3, "0");
-const FRAME_URL = (i: number) => `/footer-frames/frame-${PAD(i + 1)}.jpg`;
+const FRAME_URL = (i: number) => assetPath(`/footer-frames/frame-${PAD(i + 1)}.jpg`);
 
 export default function CTASection() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -92,7 +93,7 @@ export default function CTASection() {
         {/* Immediate Background Poster */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/footer-frames/frame-001.jpg"
+          src={assetPath("/footer-frames/frame-001.jpg")}
           alt=""
           aria-hidden
           className="absolute inset-0 w-full h-full object-cover transition-opacity duration-700"
@@ -225,7 +226,7 @@ export default function CTASection() {
           <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 12 }}>
             <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/logos/doom-mask-emblem.png" alt="Doctor Doom"
+              <img src={assetPath("/logos/doom-mask-emblem.png")} alt="Doctor Doom"
                 style={{ width: 24, height: 24, objectFit: "contain", filter: "drop-shadow(0 0 8px rgba(16,185,129,0.8))" }} />
               <span style={{ fontSize: 10, letterSpacing: "0.35em", textTransform: "uppercase", color: "var(--emerald-bright)", fontFamily: "sans-serif", fontWeight: 700 }}>
                 AVENGERS: DOOMSDAY
