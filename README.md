@@ -1,14 +1,32 @@
 # Marvel Studios: Avengers Doomsday
 
-A cinematic streaming & ticketing experience for **Marvel Studios' Avengers: Doomsday** (2026), starring Robert Downey Jr. as Victor von Doom / Doctor Doom.
+A modern **React + TypeScript + Vite** cinematic experience for **Marvel Studios' Avengers: Doomsday** (May 2026), starring Robert Downey Jr. as Victor von Doom / God Emperor Doom.
+
+## Tech Stack
+- **Framework**: React 18 + TypeScript + Vite
+- **Styling**: Modern CSS3 custom properties (Emerald & Obsidian theme, glassmorphism, responsive carousels)
+- **Icons**: Lucide React
+- **Deployment**: Automated GitHub Pages CI/CD via GitHub Actions
 
 ## Features
-- **Hero Billboard**: Cinematic Doctor Doom concept art wallpaper with custom Marvel Studios & Avengers: Doomsday title typography.
-- **Multiverse Saga Acts**: Story acts exploring the incursion events, the Fantastic Four's arrival, and the path to Battleworld.
-- **Official Trailers & Featurettes**: 10 stylized previews, behind-the-scenes featurettes, and San Diego Comic-Con Hall H footage.
-- **Full Cast & Production Details**: Complete talent credits including the Russo Brothers and MCU cast.
-- **Theatrical & Streaming Plans**: IMAX 3D Laser ticketing and Disney+ streaming packages.
+- **Hero Showcase**: High-resolution God Emperor Doom wallpaper, title typography, cinematic metadata pills, and official cast billing.
+- **Conquered Realities & Battleworld Domains**: Interactive smooth-scrolling carousel with danger badges and modal dossier inspection.
+- **Threats to the Throne**: Interactive smooth-scrolling carousel showcasing vanquished cosmic adversaries (Beyonders, Galactus, Thanos, Kang, etc.).
+- **Interactive Dossier Modals**: Click any domain or threat card to open high-res artwork, ruler credentials, and imperial lore.
+- **100% Offline Asset Delivery**: All assets, logos, and fonts are bundled locally with zero external network or CDN dependencies.
 
-## Structure
-- `index.html`: Main landing page
-- `assets/`: Optimized images, wallpapers, logos, and stylesheets
+## Development
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build locally
+npm run preview
+```
