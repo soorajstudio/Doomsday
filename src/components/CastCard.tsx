@@ -9,33 +9,33 @@ interface CastCardProps {
 export const CastCard: React.FC<CastCardProps> = ({ cast, onClick }) => {
   return (
     <div
-      className="carousel-card cast-card-item"
+      className="lateral-cast-card"
       onClick={() => onClick(cast)}
       tabIndex={0}
       role="button"
       aria-label={`${cast.name} as ${cast.character}`}
     >
-      <div className="card-image-wrap">
+      <div className="lateral-cast-image-wrap">
         <img
           src={cast.image}
           alt={cast.name}
           loading="lazy"
-          className="card-image cast-image"
+          className="lateral-cast-img"
         />
-        <div className="card-gradient"></div>
-        <div className="card-badge-top">
-          <span className="badge-pill badge-cast">
-            {cast.role}
+        <div className="lateral-cast-gradient"></div>
+        
+        {/* Top-left status badge */}
+        <div className="lateral-cast-badge-wrap">
+          <span className="lateral-cast-badge">
+            {cast.statusBadge || 'CONFIRMED'}
           </span>
         </div>
-        <div className="card-info-bottom">
-          <h3 className="card-title cast-character-title">{cast.character}</h3>
-          <p className="card-subtitle cast-actor-subtitle">{cast.name}</p>
+
+        {/* Bottom character & actor labels */}
+        <div className="lateral-cast-info">
+          <h3 className="lateral-cast-char-name">{cast.character}</h3>
+          <p className="lateral-cast-actor-name">{cast.name}</p>
         </div>
-      </div>
-      <div className="card-hover-reveal">
-        <span className="reveal-ruler">Dossier Intel</span>
-        <span className="reveal-cta">Character Bio &rarr;</span>
       </div>
     </div>
   );

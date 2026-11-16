@@ -5,10 +5,21 @@ import { ChevronLeft, ChevronRight, Users } from 'lucide-react';
 
 interface CastCarouselProps {
   onSelectCast: (cast: CastMember) => void;
+  searchQuery?: string;
 }
 
-export const CastCarousel: React.FC<CastCarouselProps> = ({ onSelectCast }) => {
+export const CastCarousel: React.FC<CastCarouselProps> = ({ onSelectCast, searchQuery = '' }) => {
   const scrollRef = useRef<HTMLDivElement>(null);
+
+  const filteredCast = DOOMSDAY_CAST.filter((cast) => {
+    if (!searchQuery.trim()) return true;
+    const q = searchQuery.toLowerCase();
+    return (
+      cast.name.toLowerCase().includes(q) ||
+      cast.character.toLowerCase().includes(q) ||
+      cast.role.toLowerCase().includes(q)
+    );
+  });
 
   const scroll = (direction: 'left' | 'right') => {
     if (scrollRef.current) {
@@ -22,31 +33,47 @@ export const CastCarousel: React.FC<CastCarouselProps> = ({ onSelectCast }) => {
   };
 
   return (
-    <section id="cast-section" className="section-block">
-      <div className="section-header">
-        <div className="section-title-wrap">
-          <Users className="section-icon emerald-text" size={24} />
+    <section id="cast-section" className="lateral-section">
+      <div className="lateral-section-header">
+        <div className="lateral-title-group">
+          <div className="lateral-icon-container">
+            <Users size={22} className="lateral-icon-teal" />
+          </div>
           <div>
-            <h2 className="section-title">Cast &amp; Characters: Avengers Doomsday</h2>
-            <p className="section-desc">The supreme sovereign, cosmic heralds, and multiverse survivors assembled for the ultimate incursion.</p>
+            <h2 className="lateral-section-title">Cast &amp; Characters: Avengers Doomsday</h2>
+            <p className="lateral-section-subtitle">
+              The legendary Avengers, brought together once again for the ultimate showdown.
+            </p>
           </div>
         </div>
 
-        <div className="carousel-nav-arrows">
-          <button className="nav-arrow-btn" onClick={() => scroll('left')} aria-label="Previous Cast">
-            <ChevronLeft size={20} />
+        <div className="lateral-arrow-group">
+          <button
+            className="lateral-arrow-btn"
+            onClick={() => scroll('left')}
+            aria-label="Previous Cast Members"
+          >
+            <ChevronLeft size={18} />
           </button>
-          <button className="nav-arrow-btn" onClick={() => scroll('right')} aria-label="Next Cast">
-            <ChevronRight size={20} />
+          <button
+            className="lateral-arrow-btn"
+            onClick={() => scroll('right')}
+            aria-label="Next Cast Members"
+          >
+            <ChevronRight size={18} />
           </button>
         </div>
       </div>
 
-      <div className="carousel-track-container" ref={scrollRef}>
-        <div className="carousel-track">
-          {DOOMSDAY_CAST.map((cast) => (
-            <CastCard key={cast.id} cast={cast} onClick={onSelectCast} />
-          ))}
+      <div className="lateral-carousel-container" ref={scrollRef}>
+        <div className="lateral-carousel-track lateral-cast-track">
+          {filteredCast.length > 0 ? (
+            filteredCast.map((cast) => (
+              <CastCard key={cast.id} cast={cast} onClick={onSelectCast} />
+            ))
+          ) : (
+            <div className="lateral-empty-results">No cast members match "{searchQuery}"</div>
+          )}
         </div>
       </div>
     </section>

@@ -1386,3 +1386,579 @@ body {
   .netflix-curved-screen-frame { min-height: 360px; }
   .modal-title { font-size: 1.15rem; }
 }
+
+
+/* ============================================================
+   LATERAL CINEMA UI THEME (Pixel-matched to user reference)
+   ============================================================ */
+
+/* Lateral Header */
+.lateral-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 0.85rem 2rem;
+  background: rgba(6, 11, 10, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s ease;
+}
+
+.lateral-header-scrolled {
+  background: rgba(4, 8, 7, 0.98);
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.85);
+  border-bottom: 1px solid rgba(0, 223, 162, 0.2);
+  padding: 0.65rem 2rem;
+}
+
+.lateral-header-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.lateral-nav-left {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.lateral-menu-icon-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.lateral-menu-icon-btn:hover {
+  background: rgba(0, 223, 162, 0.15);
+  border-color: #00dfa2;
+  color: #00dfa2;
+}
+
+.lateral-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: pointer;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.lateral-brand-logo {
+  filter: drop-shadow(0 0 8px rgba(0, 223, 162, 0.6));
+}
+
+.lateral-brand-text {
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+}
+
+.lateral-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.lateral-nav-link {
+  background: none;
+  border: 1px solid transparent;
+  color: #a1a1aa;
+  font-size: 0.84rem;
+  font-weight: 600;
+  padding: 0.42rem 0.95rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.lateral-nav-link:hover {
+  color: #ffffff;
+}
+
+.lateral-nav-link.active {
+  color: #00dfa2;
+  background: rgba(0, 223, 162, 0.12);
+  border-color: rgba(0, 223, 162, 0.35);
+  box-shadow: 0 0 12px rgba(0, 223, 162, 0.15);
+}
+
+.lateral-nav-right {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  flex-shrink: 0;
+}
+
+.lateral-search-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 9999px;
+  padding: 0.42rem 1.1rem;
+  width: 240px;
+  transition: all 0.2s ease;
+}
+
+.lateral-search-pill:focus-within {
+  border-color: #00dfa2;
+  background: rgba(0, 223, 162, 0.06);
+  box-shadow: 0 0 15px rgba(0, 223, 162, 0.2);
+}
+
+.lateral-search-icon {
+  color: #71717a;
+  flex-shrink: 0;
+}
+
+.lateral-search-input {
+  background: none;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  font-size: 0.82rem;
+  width: 100%;
+}
+
+.lateral-search-input::placeholder {
+  color: #71717a;
+}
+
+.lateral-explore-btn {
+  background: #00dfa2;
+  color: #040807;
+  font-weight: 800;
+  font-size: 0.75rem;
+  letter-spacing: 0.6px;
+  border-radius: 9999px;
+  padding: 0.55rem 1.25rem;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 0 15px rgba(0, 223, 162, 0.4);
+  white-space: nowrap;
+}
+
+.lateral-explore-btn:hover {
+  background: #22fbc0;
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: 0 0 25px rgba(0, 223, 162, 0.6);
+}
+
+.lateral-avatar-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.lateral-avatar-btn:hover {
+  border-color: #00dfa2;
+  color: #00dfa2;
+}
+
+/* Lateral Carousels Container */
+.lateral-carousels-container {
+  max-width: 1480px;
+  margin: 0 auto;
+  padding: 2.5rem 2.5rem 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  position: relative;
+  z-index: 10;
+}
+
+/* Lateral Section */
+.lateral-section {
+  position: relative;
+}
+
+.lateral-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 1.15rem;
+}
+
+.lateral-title-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.lateral-icon-container {
+  margin-top: 0.15rem;
+  flex-shrink: 0;
+}
+
+.lateral-icon-teal {
+  color: #00dfa2;
+}
+
+.lateral-section-title {
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.2px;
+  line-height: 1.25;
+}
+
+.lateral-section-subtitle {
+  font-size: 0.82rem;
+  color: #94a3b8;
+  margin-top: 0.2rem;
+}
+
+.lateral-arrow-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.lateral-arrow-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.lateral-arrow-btn:hover {
+  background: #00dfa2;
+  border-color: #00dfa2;
+  color: #040807;
+  transform: scale(1.08);
+  box-shadow: 0 0 15px rgba(0, 223, 162, 0.4);
+}
+
+.lateral-carousel-container {
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 0.5rem 0.25rem 1rem;
+  margin: -0.5rem -0.25rem -1rem;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+}
+
+.lateral-carousel-container::-webkit-scrollbar {
+  display: none;
+}
+
+.lateral-carousel-track {
+  display: flex;
+  gap: 1.1rem;
+}
+
+.lateral-empty-results {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  padding: 2rem 1rem;
+}
+
+/* ============================================================
+   Cast Card: Wide Landscape Format
+   ============================================================ */
+.lateral-cast-card {
+  flex: 0 0 220px;
+  height: 145px;
+  border-radius: 14px;
+  position: relative;
+  overflow: hidden;
+  background: #0a1311;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  cursor: pointer;
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  scroll-snap-align: start;
+}
+
+.lateral-cast-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 223, 162, 0.6);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7), 0 0 20px rgba(0, 223, 162, 0.2);
+}
+
+.lateral-cast-image-wrap {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.lateral-cast-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.4s ease;
+}
+
+.lateral-cast-card:hover .lateral-cast-img {
+  transform: scale(1.05);
+}
+
+.lateral-cast-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.15) 0%,
+    transparent 35%,
+    rgba(6, 12, 11, 0.7) 65%,
+    rgba(6, 12, 11, 0.96) 100%
+  );
+  pointer-events: none;
+}
+
+.lateral-cast-badge-wrap {
+  position: absolute;
+  top: 0.65rem;
+  left: 0.65rem;
+  z-index: 5;
+}
+
+.lateral-cast-badge {
+  background: rgba(0, 223, 162, 0.18);
+  border: 1px solid rgba(0, 223, 162, 0.5);
+  color: #00dfa2;
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  display: inline-block;
+  backdrop-filter: blur(4px);
+}
+
+.lateral-cast-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.75rem 0.85rem;
+  z-index: 5;
+}
+
+.lateral-cast-char-name {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.25;
+  margin-bottom: 2px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.lateral-cast-actor-name {
+  font-size: 11px;
+  font-weight: 600;
+  color: #00dfa2;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ============================================================
+   Movie & Series Poster Card: Vertical Poster Format
+   ============================================================ */
+.lateral-poster-card {
+  flex: 0 0 176px;
+  aspect-ratio: 2 / 3;
+  border-radius: 14px;
+  position: relative;
+  overflow: hidden;
+  background: #0a1311;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  cursor: pointer;
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  scroll-snap-align: start;
+}
+
+.lateral-poster-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(0, 223, 162, 0.7);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.85), 0 0 22px rgba(0, 223, 162, 0.25);
+}
+
+.lateral-poster-wrap {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.lateral-poster-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.lateral-poster-card:hover .lateral-poster-img {
+  transform: scale(1.05);
+}
+
+.lateral-poster-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.25) 0%,
+    transparent 35%,
+    rgba(4, 8, 7, 0.65) 60%,
+    rgba(4, 8, 7, 0.98) 100%
+  );
+  pointer-events: none;
+}
+
+/* Top-Right Rating Badge */
+.lateral-rating-badge {
+  position: absolute;
+  top: 0.65rem;
+  right: 0.65rem;
+  z-index: 5;
+  background: rgba(0, 0, 0, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(4px);
+  border-radius: 6px;
+  padding: 2px 7px;
+  display: flex;
+  align-items: center;
+  gap: 3.5px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.lateral-rating-badge .star-icon {
+  flex-shrink: 0;
+}
+
+/* Center Circular Play Button */
+.lateral-center-play {
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  pointer-events: none;
+}
+
+.lateral-play-circle {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.65);
+  border: 1.5px solid rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+}
+
+.lateral-poster-card:hover .lateral-play-circle {
+  border-color: #00dfa2;
+  background: rgba(0, 223, 162, 0.25);
+  transform: scale(1.15);
+  box-shadow: 0 0 16px rgba(0, 223, 162, 0.45);
+}
+
+/* Bottom Poster Info */
+.lateral-poster-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.75rem 0.85rem;
+  z-index: 5;
+}
+
+.lateral-poster-title {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.25;
+  margin-bottom: 2px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.lateral-poster-sub {
+  font-size: 10.5px;
+  color: #94a3b8;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ============================================================
+   Lateral Cinema Responsive Mobile Adjustments
+   ============================================================ */
+@media (max-width: 900px) {
+  .lateral-nav-links { display: none; }
+  .lateral-search-pill { width: 170px; }
+  .lateral-explore-btn span { display: none; }
+  .lateral-explore-btn { padding: 0.5rem 0.75rem; }
+}
+
+@media (max-width: 640px) {
+  .lateral-header { padding: 0.65rem 1rem; }
+  .lateral-carousels-container { padding: 1.5rem 1rem 4rem; gap: 2.25rem; }
+  .lateral-section-title { font-size: 1.05rem; }
+  .lateral-section-subtitle { font-size: 0.76rem; }
+  .lateral-arrow-group { display: none; }
+  
+  .lateral-cast-card { flex: 0 0 180px; height: 125px; }
+  .lateral-cast-char-name { font-size: 11.5px; }
+  .lateral-cast-actor-name { font-size: 10px; }
+  
+  .lateral-poster-card { flex: 0 0 145px; }
+  .lateral-poster-title { font-size: 11.5px; }
+  .lateral-poster-sub { font-size: 9.5px; }
+  
+  .lateral-search-pill { display: none; }
+}

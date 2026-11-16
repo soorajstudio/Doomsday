@@ -12,6 +12,7 @@ import './App.css';
 export const App: React.FC = () => {
   const [activeItem, setActiveItem] = useState<MovieRecommendation | SeriesRecommendation | CastMember | null>(null);
   const [activeType, setActiveType] = useState<'movie' | 'series' | 'cast' | null>(null);
+  const [searchQuery, setSearchQuery] = useState('');
 
   const handleSelectCast = (cast: CastMember) => {
     setActiveItem(cast);
@@ -35,13 +36,13 @@ export const App: React.FC = () => {
 
   return (
     <div className="doomsday-app">
-      <Header />
+      <Header searchQuery={searchQuery} onSearchChange={setSearchQuery} />
       <main className="main-content">
         <HeroScrollCanvas />
-        <div className="carousels-container">
-          <CastCarousel onSelectCast={handleSelectCast} />
-          <MovieCarousel onSelectMovie={handleSelectMovie} />
-          <SeriesCarousel onSelectSeries={handleSelectSeries} />
+        <div className="lateral-carousels-container">
+          <CastCarousel onSelectCast={handleSelectCast} searchQuery={searchQuery} />
+          <MovieCarousel onSelectMovie={handleSelectMovie} searchQuery={searchQuery} />
+          <SeriesCarousel onSelectSeries={handleSelectSeries} searchQuery={searchQuery} />
         </div>
       </main>
       <Footer />
