@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Header } from './components/Header';
-import { Hero } from './components/Hero';
+import { HeroScrollCanvas } from './components/HeroScrollCanvas';
 import { DomainCarousel } from './components/DomainCarousel';
 import { ThreatCarousel } from './components/ThreatCarousel';
 import { Footer } from './components/Footer';
@@ -31,7 +31,7 @@ export const App: React.FC = () => {
     <div className="doomsday-app">
       <Header />
       <main className="main-content">
-        <Hero />
+        <HeroScrollCanvas />
         <div className="carousels-container">
           <DomainCarousel onSelectDomain={handleSelectDomain} />
           <ThreatCarousel onSelectThreat={handleSelectThreat} />
