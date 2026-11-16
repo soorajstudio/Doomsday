@@ -1,186 +1,271 @@
-export interface DomainItem {
+export interface MovieRecommendation {
   id: string;
   title: string;
-  subtitle: string;
+  year: string;
+  runtime: string;
+  phase: string;
+  significance: string;
   description: string;
   image: string;
-  ruler: string;
-  dangerLevel: 'Safe' | 'Guarded' | 'Extreme' | 'Forbidden';
+  characters: string[];
+  connection: string;
 }
 
-export interface ThreatItem {
+export interface SeriesRecommendation {
   id: string;
-  name: string;
-  alias: string;
-  fate: string;
+  title: string;
+  year: string;
+  seasons: string;
+  episodes: string;
+  phase: string;
+  significance: string;
+  description: string;
   image: string;
-  status: 'Extinguished' | 'Subdued' | 'Exiled' | 'Contained';
+  characters: string[];
+  connection: string;
 }
 
-export const DOMAINS: DomainItem[] = [
+export const RECOMMENDED_MOVIES: MovieRecommendation[] = [
   {
-    id: 'domain-01',
-    title: 'New Latveria',
-    subtitle: 'The Imperial Throne',
-    description: 'The capital of Battleworld and seat of God Emperor Doom. Crowned by Castle Doom and the World Tree.',
-    image: './assets/domain-01-new-latveria.webp',
-    ruler: 'Victor von Doom',
-    dangerLevel: 'Safe'
+    id: 'movie-01',
+    title: 'The Fantastic Four: First Steps',
+    year: '2025',
+    runtime: '2h 10m',
+    phase: 'Phase 6',
+    significance: 'Origin & Galactus Crisis',
+    description: "Introduces Marvel's First Family in a retro-futuristic alternate 1960s universe, fighting to survive against the world-devourer Galactus before reality fractures.",
+    image: './assets/movie-01-fantastic-four.webp',
+    characters: ['Reed Richards', 'Sue Storm', 'Johnny Storm', 'Ben Grimm', 'Galactus', 'Silver Surfer'],
+    connection: 'Doctor Doom’s arch-rivals. Reed Richards and the Fantastic Four directly cross into Earth-616 and Castle Doom.'
   },
   {
-    id: 'domain-02',
-    title: 'Barony of Agamotto',
-    subtitle: 'Arcane Sanctum',
-    description: 'The mystical domain overseen by the Sheriff of Agamotto, guarding the occult balance of creation.',
-    image: './assets/domain-02-barony-of-agamotto.webp',
-    ruler: 'Stephen Strange',
-    dangerLevel: 'Guarded'
+    id: 'movie-02',
+    title: 'Avengers: Endgame',
+    year: '2019',
+    runtime: '3h 01m',
+    phase: 'Phase 3',
+    significance: 'Multiverse Fracturing',
+    description: "The climactic chapter of the Infinity Saga where the Avengers bend quantum mechanics to defeat Thanos, fracturing the timeline continuum and opening the gateway to multiversal chaos.",
+    image: './assets/movie-02-avengers-endgame.webp',
+    characters: ['Tony Stark / Iron Man', 'Steve Rogers', 'Thor', 'Bruce Banner', 'Thanos'],
+    connection: 'Tony Stark’s sacrifice created the void in Earth’s cosmic defense that Victor von Doom now rises to claim.'
   },
   {
-    id: 'domain-03',
-    title: 'The Deadlands',
-    subtitle: 'Zombie & Ultron Perimeter',
-    description: 'A nightmare wasteland beyond The Shield teeming with zombie hordes and rogue Ultron legions.',
-    image: './assets/domain-03-deadlands.webp',
-    ruler: 'None (Quarantine Zone)',
-    dangerLevel: 'Forbidden'
+    id: 'movie-03',
+    title: 'Doctor Strange in the Multiverse of Madness',
+    year: '2022',
+    runtime: '2h 06m',
+    phase: 'Phase 4',
+    significance: 'Incursion Cataclysm',
+    description: "Doctor Strange travels through alternate dimensions, encounters the Illuminati of Earth-838, and witnesses firsthand the catastrophic destruction of multiversal incursions.",
+    image: './assets/movie-03-multiverse-of-madness.webp',
+    characters: ['Doctor Strange', 'Wanda Maximoff / Scarlet Witch', 'America Chavez', 'Clea', 'Illuminati'],
+    connection: 'Explicitly introduces Incursions—the exact phenomenon that destroys universes and compels Doom to forge Battleworld.'
   },
   {
-    id: 'domain-04',
-    title: 'The Shield',
-    subtitle: 'Colossal Defense Barrier',
-    description: 'A 16,000-mile impenetrable wall separating civilized baronies from the horrors of the Deadlands.',
-    image: './assets/domain-04-the-shield.webp',
-    ruler: 'Commander of the Wall',
-    dangerLevel: 'Guarded'
+    id: 'movie-04',
+    title: 'Deadpool & Wolverine',
+    year: '2024',
+    runtime: '2h 08m',
+    phase: 'Phase 5',
+    significance: 'The Void & Anchor Beings',
+    description: "Wade Wilson teams up with a broken Wolverine to save his timeline from a rogue TVA agent using the Time Ripper, traversing the multiversal junkyard of The Void.",
+    image: './assets/movie-04-deadpool-wolverine.webp',
+    characters: ['Deadpool', 'Wolverine', 'Cassandra Nova', 'Paradox', 'Blade', 'Gambit'],
+    connection: 'Introduces Anchor Beings and the concept that dying realities dump into The Void—a precursor domain of Battleworld.'
   },
   {
-    id: 'domain-05',
-    title: 'Manhattan 616',
-    subtitle: 'Temporal Quarantine Zone',
-    description: 'A preserved shard of Earth-616 frozen moments before the final multiversal incursion collapse.',
-    image: './assets/domain-05-manhattan-616.webp',
-    ruler: 'Remnant Illuminati',
-    dangerLevel: 'Guarded'
+    id: 'movie-05',
+    title: 'Spider-Man: No Way Home',
+    year: '2021',
+    runtime: '2h 28m',
+    phase: 'Phase 4',
+    significance: 'Dimensional Breach',
+    description: "A catastrophic memory spell breaches the dimensional veil, pulling alternate Spider-Men and legacy villains into Earth-616 before Strange barely seals the fractures.",
+    image: './assets/movie-05-spiderman-no-way-home.webp',
+    characters: ['Peter Parker', 'Doctor Strange', 'Green Goblin', 'Doc Ock', 'Electro'],
+    connection: 'The first time multiversal variants directly infiltrated Earth-616, proving the fragility of reality.'
   },
   {
-    id: 'domain-06',
-    title: 'The Warzone',
-    subtitle: 'Eternal Conflict Sector',
-    description: 'A perpetual combat sector where ideological factions wage unending tactical warfare under Doom.',
-    image: './assets/domain-06-the-warzone.webp',
-    ruler: 'General of the Front',
-    dangerLevel: 'Extreme'
+    id: 'movie-06',
+    title: 'Captain America: Brave New World',
+    year: '2025',
+    runtime: '2h 05m',
+    phase: 'Phase 5',
+    significance: 'Global Superpower Conflict',
+    description: "Sam Wilson faces off against international power struggles over the Celestial Tiamut’s Adamantium deposits, culminating in a clash with President Thaddeus Ross as Red Hulk.",
+    image: './assets/movie-06-brave-new-world.webp',
+    characters: ['Sam Wilson / Captain America', 'President Ross / Red Hulk', 'The Leader', 'Joaquin Torres'],
+    connection: 'Establishes Sam Wilson’s leadership of the grounded Avengers before multiversal war renders national borders obsolete.'
   },
   {
-    id: 'domain-07',
-    title: 'Barony of Sinister',
-    subtitle: 'Mutant Gene Spires',
-    description: 'A genetic citadel where Mister Sinister conducts cloning trials under strict imperial decree.',
-    image: './assets/domain-07-barony-of-sinister.webp',
-    ruler: 'Nathaniel Essex',
-    dangerLevel: 'Extreme'
+    id: 'movie-07',
+    title: 'Thunderbolts*',
+    year: '2025',
+    runtime: '2h 12m',
+    phase: 'Phase 5',
+    significance: 'The Sentry & Anti-Hero Unity',
+    description: "Contessa Valentina Allegra de Fontaine’s black-ops team of anti-heroes and reformed assassins are forced to survive against the god-like entity Bob / Sentry.",
+    image: './assets/movie-07-thunderbolts.webp',
+    characters: ['Yelena Belova', 'Bucky Barnes', 'Red Guardian', 'U.S. Agent', 'Ghost', 'Bob / Sentry'],
+    connection: 'Introduces the Sentry (one of the few powerhouses capable of standing in Doom’s presence) and unites the anti-hero vanguard.'
   },
   {
-    id: 'domain-08',
-    title: "K'un-Lun",
-    subtitle: 'Domain of the Iron Fist',
-    description: 'The mystical realm of martial mastery and dragon flame, pledged in tribute to Castle Doom.',
-    image: './assets/domain-08-kun-lun.webp',
-    ruler: 'Grandmaster of K\'un-Lun',
-    dangerLevel: 'Guarded'
+    id: 'movie-08',
+    title: 'Avengers: Infinity War',
+    year: '2018',
+    runtime: '2h 29m',
+    phase: 'Phase 3',
+    significance: 'Cosmic Scale Devastation',
+    description: "The Avengers and Guardians of the Galaxy battle across Titan and Wakanda to stop Thanos from assembling the six Infinity Stones to erase half of all life.",
+    image: './assets/movie-08-infinity-war.webp',
+    characters: ['Iron Man', 'Thor', 'Captain America', 'Doctor Strange', 'Thanos', 'Black Order'],
+    connection: 'Demonstrates what happens when a singular unstoppable will bends cosmic reality—a feat Doom will execute on a multiversal level.'
   },
   {
-    id: 'domain-09',
-    title: 'Hala City',
-    subtitle: 'Cosmic Kree Ruins',
-    description: 'The fallen ruins of the Supreme Intelligence empire, rebuilt into an imperial shipyard.',
-    image: './assets/domain-09-hala-city.webp',
-    ruler: 'Imperial Legate',
-    dangerLevel: 'Guarded'
+    id: 'movie-09',
+    title: 'Iron Man',
+    year: '2008',
+    runtime: '2h 06m',
+    phase: 'Phase 1',
+    significance: 'The Legacy of Robert Downey Jr.',
+    description: "Billionaire genius Tony Stark builds an armored suit to escape captivity and vows to protect the world, launching the entire Marvel Cinematic Universe.",
+    image: './assets/movie-09-iron-man.webp',
+    characters: ['Tony Stark / Iron Man', 'Pepper Potts', 'James Rhodes', 'Obadiah Stane'],
+    connection: 'The definitive foundation for Robert Downey Jr.’s return as Victor von Doom—the ultimate dark inversion of the hero who started it all.'
   }
 ];
 
-export const THREATS: ThreatItem[] = [
+export const RECOMMENDED_SERIES: SeriesRecommendation[] = [
   {
-    id: 'threat-01',
-    name: 'The Beyonders',
-    alias: 'Architects of the Incursions',
-    fate: 'Stripped of omnipotence by Doom and Molecule Man; energy absorbed into Battleworld foundation.',
-    image: './assets/threat-01-beyonders.webp',
-    status: 'Extinguished'
+    id: 'series-01',
+    title: 'Loki',
+    year: '2021 - 2023',
+    seasons: '2 Seasons',
+    episodes: '12 Episodes',
+    phase: 'Phase 4 - 5',
+    significance: 'God of Stories & The Multiverse Tree',
+    description: "Loki navigates the Time Variance Authority, meets He Who Remains, and ultimately sacrifices his freedom to replace the Temporal Loom, physically holding the multiverse together as the God of Stories.",
+    image: './assets/series-01-loki.webp',
+    characters: ['Loki', 'Mobius', 'Sylvie', 'He Who Remains', 'O.B.'],
+    connection: 'CRITICAL: Loki is currently the sole anchor of the multiverse branches. Doom’s rise threatens to usurp the throne at the end of time.'
   },
   {
-    id: 'threat-02',
-    name: 'Galactus the World-Eater',
-    alias: 'Cosmic Devourer',
-    fate: 'Reprogrammed into the silent gargoyle sentinel perched above Castle Doom gates.',
-    image: './assets/threat-02-galactus.webp',
-    status: 'Subdued'
+    id: 'series-02',
+    title: 'WandaVision',
+    year: '2021',
+    seasons: '1 Season',
+    episodes: '9 Episodes',
+    phase: 'Phase 4',
+    significance: 'Scarlet Witch & The Darkhold',
+    description: "Grief-stricken Wanda Maximoff warps reality around Westview into classic sitcoms, awakening her ancient prophecy as the Scarlet Witch and unleashing Chaos Magic upon the cosmos.",
+    image: './assets/series-02-wandavision.webp',
+    characters: ['Wanda Maximoff / Scarlet Witch', 'Vision', 'Agatha Harkness', 'Monica Rambeau'],
+    connection: 'Unlocks the nexus of Chaos Magic and reality manipulation that Doom weaponizes to reconstruct reality.'
   },
   {
-    id: 'threat-03',
-    name: 'Kang the Conqueror',
-    alias: 'Council of Kangs',
-    fate: 'Every alternate variant hunted through timeline branches and expunged from the chronal lattice.',
-    image: './assets/threat-03-kang.webp',
-    status: 'Extinguished'
+    id: 'series-03',
+    title: 'What If...?',
+    year: '2021 - 2024',
+    seasons: '3 Seasons',
+    episodes: '27 Episodes',
+    phase: 'Phase 4 - 5',
+    significance: 'Infinite Realities & Strange Supreme',
+    description: "The Watcher guides viewers through infinite parallel timelines where major MCU moments went differently, showcasing cosmic-level threats like Infinity Ultron and reality-devouring sorcerers.",
+    image: './assets/series-03-what-if.webp',
+    characters: ['The Watcher', 'Doctor Strange Supreme', 'Captain Carter', 'Infinity Ultron'],
+    connection: 'Visualizes the sheer scope of alternate Marvel universes that will be collaged together to form Battleworld.'
   },
   {
-    id: 'threat-04',
-    name: 'Ultron Prime Legion',
-    alias: 'Singularity Consciousness',
-    fate: 'Cast beyond The Shield into the Deadlands to endlessly war against the infected.',
-    image: './assets/threat-04-ultron-prime.webp',
-    status: 'Exiled'
+    id: 'series-04',
+    title: "X-Men '97",
+    year: '2024',
+    seasons: 'Season 1',
+    episodes: '10 Episodes',
+    phase: 'Marvel Animation',
+    significance: 'Mutant Extinction & Cosmic Judgment',
+    description: "The X-Men face a dangerous world after the loss of Professor X, battling the Sentinel genocide on Genosha and Bastion's cybernetic evolution, concluding with timeline dispersal across ancient Egypt and the far future.",
+    image: './assets/series-04-xmen-97.webp',
+    characters: ['Cyclops', 'Magneto', 'Storm', 'Jean Grey', 'Wolverine', 'Bastion'],
+    connection: 'Re-establishes the core X-Men dynamics and temporal displacement leading into the mutant integration during Doomsday.'
   },
   {
-    id: 'threat-05',
-    name: 'Maestro of Dystopia',
-    alias: 'Corrupted Gamma Tyrant',
-    fate: 'Broken in single combat by God Emperor Doom; banished to the northern perimeter.',
-    image: './assets/threat-05-maestro.webp',
-    status: 'Exiled'
+    id: 'series-05',
+    title: 'Moon Knight',
+    year: '2022',
+    seasons: '1 Season',
+    episodes: '6 Episodes',
+    phase: 'Phase 4',
+    significance: 'Ancient Gods & Supernatural Avatars',
+    description: "Marc Spector and Steven Grant share a body while serving as the avatar of Khonshu, Egyptian god of the moon, navigating mythical underworlds and divine judgment.",
+    image: './assets/series-05-moon-knight.webp',
+    characters: ['Marc Spector / Moon Knight', 'Khonshu', 'Arthur Harrow', 'Layla El-Faouly'],
+    connection: 'Introduces ancient Egyptian sorcery and godly pantheons that Victor von Doom harnesses in his arcane repertoire.'
   },
   {
-    id: 'threat-06',
-    name: 'The Void & Sentry',
-    alias: 'Entity of Absolute Dark',
-    fate: 'Bound in quantum containment crypts deep beneath the Latverian bedrock.',
-    image: './assets/threat-06-the-void.webp',
-    status: 'Contained'
+    id: 'series-06',
+    title: 'Agatha All Along',
+    year: '2024',
+    seasons: '1 Season',
+    episodes: '9 Episodes',
+    phase: 'Phase 5',
+    significance: 'Witches’ Road & Billy Maximoff',
+    description: "Agatha Harkness escapes Wanda’s spell and gathers a coven to walk the perilous Witches’ Road, uncovering the rebirth of Billy Maximoff (Wiccan) and the true nature of mystical creation.",
+    image: './assets/series-06-agatha-all-along.webp',
+    characters: ['Agatha Harkness', 'Billy Maximoff / Wiccan', 'Rio Vidal / Death', 'Jennifer Kale'],
+    connection: 'Brings Wiccan (reincarnated son of Scarlet Witch) back into the MCU fold and establishes fundamental dark occult laws.'
   },
   {
-    id: 'threat-07',
-    name: 'Thanos of Titan',
-    alias: 'The Mad Titan',
-    fate: 'His spine ripped out with bare hands upon daring to refuse God Emperor Doom homage.',
-    image: './assets/threat-07-thanos.webp',
-    status: 'Extinguished'
+    id: 'series-07',
+    title: 'Ms. Marvel',
+    year: '2022',
+    seasons: '1 Season',
+    episodes: '6 Episodes',
+    phase: 'Phase 4',
+    significance: 'Mutant DNA & Interdimensional Bangles',
+    description: "Kamala Khan unlocks hard-light cosmic powers through her family’s ancient quantum bangles, uncovering interdimensional portals to the Noor Realm and her own mutant genetic signature.",
+    image: './assets/series-07-ms-marvel.webp',
+    characters: ['Kamala Khan / Ms. Marvel', 'Bruno Carrelli', 'Kamran', 'Najma'],
+    connection: 'Reveals the first MCU mutant genetic mutation and quantum bangles capable of tearing open spatial wormholes.'
   },
   {
-    id: 'threat-08',
-    name: 'The Black Order',
-    alias: 'Children of Thanos',
-    fate: 'Obliterated in seconds by a synchronized volley from the Thor Corps.',
-    image: './assets/threat-08-black-order.webp',
-    status: 'Extinguished'
+    id: 'series-08',
+    title: 'Secret Invasion',
+    year: '2023',
+    seasons: '1 Season',
+    episodes: '6 Episodes',
+    phase: 'Phase 5',
+    significance: 'The Harvest & Super-Skrull DNA',
+    description: "Nick Fury uncovers a clandestine invasion of shape-shifting Skrulls infiltrating Earth’s highest governments, leading to the creation of the Harvest containing DNA of all Avengers.",
+    image: './assets/series-08-secret-invasion.webp',
+    characters: ['Nick Fury', 'Gravik', 'G’iah', 'Talos', 'Sonya Falsworth'],
+    connection: 'Leaves Earth in extreme political paranoia and introduces the Harvest DNA reservoir—a prime target for Doctor Doom’s scientific synthesis.'
   },
   {
-    id: 'threat-09',
-    name: 'The Celestials',
-    alias: 'Space Gods',
-    fate: 'Bowed their cosmic crowns in recognition of Victor von Doom as the True Creator.',
-    image: './assets/threat-09-celestials.webp',
-    status: 'Subdued'
+    id: 'series-09',
+    title: 'Daredevil: Born Again',
+    year: '2025',
+    seasons: 'Season 1',
+    episodes: '9 Episodes',
+    phase: 'Phase 5',
+    significance: 'Street-Level Resistance & NYC Under Siege',
+    description: "Matt Murdock and Mayor Wilson Fisk engage in a deadly ideological and physical war for the soul of New York City, testing the limits of street-level vigilante justice.",
+    image: './assets/series-09-daredevil-born-again.webp',
+    characters: ['Matt Murdock / Daredevil', 'Wilson Fisk / Kingpin', 'Punisher', 'Bullseye'],
+    connection: 'Anchors the gritty human reality of New York City before the entire island is quarantined as a sector of Battleworld.'
   },
   {
-    id: 'threat-10',
-    name: 'Scarlet Witch',
-    alias: 'Chaos Magic Nexus',
-    fate: 'Power stabilized and redirected to anchor the multiversal boundary wards.',
-    image: './assets/threat-10-scarlet-witch.webp',
-    status: 'Subdued'
+    id: 'series-10',
+    title: 'The Falcon and the Winter Soldier',
+    year: '2021',
+    seasons: '1 Season',
+    episodes: '6 Episodes',
+    phase: 'Phase 4',
+    significance: 'The New Captain America & Super Soldiers',
+    description: "Sam Wilson wrestles with the legacy of Steve Rogers’ shield while teaming with Bucky Barnes to stop the Flag Smashers, culminating in Sam officially becoming Captain America.",
+    image: './assets/series-10-falcon-winter-soldier.webp',
+    characters: ['Sam Wilson', 'Bucky Barnes', 'John Walker / U.S. Agent', 'Baron Zemo', 'Sharon Carter'],
+    connection: 'Sets up Sam Wilson as the moral core of Earth’s remaining defenders against the tyrannical order of Doctor Doom.'
   }
 ];
 

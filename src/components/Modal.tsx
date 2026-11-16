@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
-import { DomainItem, ThreatItem } from '../data/doomsdayData';
+import { MovieRecommendation, SeriesRecommendation } from '../data/doomsdayData';
 
 interface ModalProps {
-  item: DomainItem | ThreatItem | null;
-  type: 'domain' | 'threat' | null;
+  item: MovieRecommendation | SeriesRecommendation | null;
+  type: 'movie' | 'series' | null;
   onClose: () => void;
 }
 
@@ -24,9 +24,9 @@ export const Modal: React.FC<ModalProps> = ({ item, type, onClose }) => {
 
   if (!item) return null;
 
-  const isDomain = type === 'domain';
-  const domain = isDomain ? (item as DomainItem) : null;
-  const threat = !isDomain ? (item as ThreatItem) : null;
+  const isMovie = type === 'movie';
+  const movie = isMovie ? (item as MovieRecommendation) : null;
+  const series = !isMovie ? (item as SeriesRecommendation) : null;
 
   return (
     <div className="modal-backdrop" onClick={onClose}>
@@ -37,33 +37,31 @@ export const Modal: React.FC<ModalProps> = ({ item, type, onClose }) => {
 
         <div className="modal-content">
           <div className="modal-poster-wrap">
-            <img src={item.image} alt={isDomain ? domain!.title : threat!.name} className="modal-poster" />
+            <img src={item.image} alt={item.title} className="modal-poster" />
           </div>
 
           <div className="modal-info">
             <div className="modal-header">
-              <span className={`modal-tag ${isDomain ? 'tag-domain' : 'tag-threat'}`}>
-                {isDomain ? `DOMAIN SECTOR &bull; ${domain!.dangerLevel.toUpperCase()}` : `THREAT STATUS &bull; ${threat!.status.toUpperCase()}`}
+              <span className={`modal-tag ${isMovie ? 'tag-domain' : 'tag-threat'}`}>
+                {isMovie ? `MCU FILM &bull; ${movie!.phase.toUpperCase()}` : `MARVEL SERIES &bull; ${series!.phase.toUpperCase()}`}
               </span>
-              <h2 className="modal-title">{isDomain ? domain!.title : threat!.name}</h2>
-              <h4 className="modal-subtitle">{isDomain ? domain!.subtitle : threat!.alias}</h4>
+              <h2 className="modal-title">{item.title}</h2>
+              <h4 className="modal-subtitle">
+                {isMovie ? `${movie!.year} &bull; ${movie!.runtime}` : `${series!.year} &bull; ${series!.seasons} (${series!.episodes})`}
+              </h4>
             </div>
 
-            <p className="modal-body-text">
-              {isDomain ? domain!.description : threat!.fate}
-            </p>
+            <p className="modal-body-text">{item.description}</p>
 
-            {isDomain && (
-              <div className="modal-field">
-                <span className="field-label">Appointed Sovereign:</span>
-                <span className="field-value">{domain!.ruler}</span>
-              </div>
-            )}
+            <div className="modal-field">
+              <span className="field-label">Key Characters:</span>
+              <span className="field-value">{item.characters.join(', ')}</span>
+            </div>
 
             <div className="modal-decree-box">
-              <span className="decree-stamp">IMPERIAL ARCHIVE OF LATVERIA</span>
+              <span className="decree-stamp">ROAD TO AVENGERS: DOOMSDAY INTEL</span>
               <p className="decree-text">
-                "All reality is subject to God Emperor Doom. Those who resist the divine order shall be cast into the Deadlands."
+                "{item.connection}"
               </p>
             </div>
           </div>

@@ -32,7 +32,7 @@ export const Header: React.FC = () => {
           <button
             className="kneel-button"
             onClick={() => {
-              const el = document.getElementById('domains-section');
+              const el = document.getElementById('movies-section');
               el?.scrollIntoView({ behavior: 'smooth' });
             }}
           >
