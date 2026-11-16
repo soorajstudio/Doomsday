@@ -3,6 +3,8 @@ import path from 'path';
 
 const distDir = path.resolve('dist');
 const assetsDir = path.resolve('assets');
+const rootSeqDir = path.resolve('sequence');
+const publicDir = path.resolve('public');
 
 if (!fs.existsSync(distDir)) {
   console.error('dist directory does not exist.');
@@ -33,10 +35,25 @@ if (fs.existsSync(rootIndexHtml)) {
   console.log('✓ Copied index.html -> dist/index.html');
 }
 
-// 3. Ensure dist has public assets and sequence if needed for standalone dist deployment
-const publicDir = path.resolve('public');
+// 3. Ensure sequence is in root and dist
+const publicSeqDir = path.join(publicDir, 'sequence');
+if (fs.existsSync(publicSeqDir)) {
+  if (!fs.existsSync(rootSeqDir)) {
+    fs.mkdirSync(rootSeqDir, { recursive: true });
+  }
+  fs.cpSync(publicSeqDir, rootSeqDir, { recursive: true });
+  console.log('✓ Synced sequence to root sequence/');
+
+  const distSeqDir = path.join(distDir, 'sequence');
+  if (!fs.existsSync(distSeqDir)) {
+    fs.mkdirSync(distSeqDir, { recursive: true });
+  }
+  fs.cpSync(publicSeqDir, distSeqDir, { recursive: true });
+  console.log('✓ Synced sequence to dist/sequence/');
+}
+
+// 4. Ensure dist has all public assets
 if (fs.existsSync(publicDir)) {
-  // Copy public assets into dist
   fs.cpSync(publicDir, distDir, { recursive: true });
   console.log('✓ Synced public assets into dist');
 }

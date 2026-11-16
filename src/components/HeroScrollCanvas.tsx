@@ -29,11 +29,12 @@ export const HeroScrollCanvas: React.FC = () => {
   const imagesRef = useRef<HTMLImageElement[]>([]);
   const animFrameIdRef = useRef<number | null>(null);
   const lastFrameTimeRef = useRef<number>(0);
+  const hasDrawnInitialRef = useRef<boolean>(false);
 
   // Loading & Playback states
   const [loadProgress, setLoadProgress] = useState(0);
   const [isLoaded, setIsLoaded] = useState(false);
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(true); // Autoplay video sequence by default
   const [currentFrame, setCurrentFrame] = useState(0);
   const [isMuted, setIsMuted] = useState(true);
   const [isFullscreen, setIsFullscreen] = useState(false);
@@ -44,10 +45,16 @@ export const HeroScrollCanvas: React.FC = () => {
   const [email, setEmail] = useState('');
   const [emailSubmitted, setEmailSubmitted] = useState(false);
 
-  // Preload all 166 frames
-  const getFrameUrl = (index: number) => {
+  // Candidate paths for sequence frames to guarantee resolution in any environment
+  const getCandidateFrameUrls = (index: number) => {
     const frameNum = String(index).padStart(3, '0');
-    return `./sequence/frame_${frameNum}.jpg`;
+    return [
+      `./sequence/frame_${frameNum}.jpg`,
+      `sequence/frame_${frameNum}.jpg`,
+      `/sequence/frame_${frameNum}.jpg`,
+      `public/sequence/frame_${frameNum}.jpg`,
+      `dist/sequence/frame_${frameNum}.jpg`
+    ];
   };
 
   // Draw frame to canvas with sharp cover fitting
@@ -57,23 +64,44 @@ export const HeroScrollCanvas: React.FC = () => {
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
+    // Ensure canvas dimensions match billboard frame
+    const screenContainer = billboardScreenRef.current;
+    if (screenContainer) {
+      const rect = screenContainer.getBoundingClientRect();
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      if (rect.width > 0 && rect.height > 0) {
+        const targetW = Math.round(rect.width * dpr);
+        const targetH = Math.round(rect.height * dpr);
+        if (canvas.width !== targetW || canvas.height !== targetH) {
+          canvas.width = targetW;
+          canvas.height = targetH;
+        }
+      }
+    }
+
+    if (canvas.width === 0 || canvas.height === 0) {
+      canvas.width = 1280;
+      canvas.height = 720;
+    }
+
     let img = imagesRef.current[frameIndex];
-    if (!img || !img.complete) {
+    if (!img || !img.complete || img.naturalWidth === 0) {
+      // Find nearest loaded frame
       for (let offset = 1; offset < TOTAL_FRAMES; offset++) {
         const prev = imagesRef.current[frameIndex - offset];
-        if (prev && prev.complete) {
+        if (prev && prev.complete && prev.naturalWidth > 0) {
           img = prev;
           break;
         }
         const next = imagesRef.current[frameIndex + offset];
-        if (next && next.complete) {
+        if (next && next.complete && next.naturalWidth > 0) {
           img = next;
           break;
         }
       }
     }
 
-    if (!img || !img.complete) return;
+    if (!img || !img.complete || img.naturalWidth === 0) return;
 
     const width = canvas.width;
     const height = canvas.height;
@@ -96,9 +124,10 @@ export const HeroScrollCanvas: React.FC = () => {
 
     ctx.clearRect(0, 0, width, height);
     ctx.drawImage(img, offsetX, offsetY, drawWidth, drawHeight);
+    hasDrawnInitialRef.current = true;
   }, []);
 
-  // Preload images on mount
+  // Preload images on mount with fallback paths & instant wallpaper painting
   useEffect(() => {
     let loadedCount = 0;
     const images: HTMLImageElement[] = [];
@@ -109,30 +138,66 @@ export const HeroScrollCanvas: React.FC = () => {
       if (!canvas || !screenContainer) return;
       const rect = screenContainer.getBoundingClientRect();
       const dpr = Math.min(window.devicePixelRatio || 1, 2);
-      canvas.width = rect.width * dpr;
-      canvas.height = rect.height * dpr;
-      drawFrame(currentFrame);
+      if (rect.width > 0 && rect.height > 0) {
+        canvas.width = Math.round(rect.width * dpr);
+        canvas.height = Math.round(rect.height * dpr);
+        drawFrame(currentFrame);
+      }
     };
 
     window.addEventListener('resize', handleResize);
+    handleResize();
+
+    // Instant wallpaper fallback while sequence buffers
+    const wallpaper = new Image();
+    wallpaper.src = './assets/hero-wallpaper-desktop.webp';
+    wallpaper.onload = () => {
+      if (!hasDrawnInitialRef.current) {
+        const canvas = canvasRef.current;
+        if (canvas) {
+          const ctx = canvas.getContext('2d');
+          if (ctx && canvas.width > 0 && canvas.height > 0) {
+            ctx.drawImage(wallpaper, 0, 0, canvas.width, canvas.height);
+          }
+        }
+      }
+    };
 
     for (let i = 1; i <= TOTAL_FRAMES; i++) {
       const img = new Image();
-      img.src = getFrameUrl(i);
-      img.onload = () => {
-        loadedCount++;
-        const pct = Math.floor((loadedCount / TOTAL_FRAMES) * 100);
-        setLoadProgress(pct);
+      const candidateUrls = getCandidateFrameUrls(i);
 
-        if (loadedCount === 1) {
-          handleResize();
-          drawFrame(0);
+      const tryLoad = (urlIndex: number) => {
+        if (urlIndex >= candidateUrls.length) {
+          // If all paths failed for this frame, still count it so progress completes
+          loadedCount++;
+          const pct = Math.floor((loadedCount / TOTAL_FRAMES) * 100);
+          setLoadProgress(pct);
+          return;
         }
 
-        if (loadedCount >= Math.floor(TOTAL_FRAMES * 0.4) && !isLoaded) {
-          setIsLoaded(true);
-        }
+        img.src = candidateUrls[urlIndex];
+        img.onload = () => {
+          loadedCount++;
+          const pct = Math.floor((loadedCount / TOTAL_FRAMES) * 100);
+          setLoadProgress(pct);
+
+          if (!hasDrawnInitialRef.current || loadedCount === 1) {
+            handleResize();
+            drawFrame(0);
+          }
+
+          if (loadedCount >= Math.floor(TOTAL_FRAMES * 0.15) && !isLoaded) {
+            setIsLoaded(true);
+          }
+        };
+
+        img.onerror = () => {
+          tryLoad(urlIndex + 1);
+        };
       };
+
+      tryLoad(0);
       images.push(img);
     }
 
@@ -141,14 +206,13 @@ export const HeroScrollCanvas: React.FC = () => {
     return () => {
       window.removeEventListener('resize', handleResize);
     };
-  }, [drawFrame, isLoaded, currentFrame]);
+  }, [drawFrame, currentFrame, isLoaded]);
 
   // Scroll scrubbing listener
   useEffect(() => {
     let ticking = false;
 
     const handleScroll = () => {
-      if (isPlaying) return; // Allow manual autoplay when playing
       if (!ticking) {
         requestAnimationFrame(() => {
           const container = containerRef.current;
@@ -192,7 +256,7 @@ export const HeroScrollCanvas: React.FC = () => {
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [isPlaying, drawFrame]);
+  }, [drawFrame]);
 
   // Video autoplay loop (~28 fps)
   useEffect(() => {
@@ -262,40 +326,35 @@ export const HeroScrollCanvas: React.FC = () => {
     setShowSubtitles((prev) => !prev);
   };
 
-  const scrollTo = (sectionId: string) => {
-    if (sectionId === 'top') {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-      return;
-    }
-    const el = document.getElementById(sectionId);
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   const handleEmailSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (email.trim()) {
       setEmailSubmitted(true);
       setTimeout(() => setEmailSubmitted(false), 4000);
-      scrollTo('cast-section');
+    }
+  };
+
+  const scrollTo = (id: string) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
   return (
-    <section id="billboard-hero" className="netflix-hero-wrapper" ref={containerRef}>
-      {/* SVG Clip Path Definition for Cinema Curved Screen */}
-      <svg width="0" height="0" style={{ position: 'absolute', pointerEvents: 'none' }} aria-hidden="true">
+    <div className="netflix-billboard-wrapper" ref={containerRef}>
+      {/* SVG Clip Path for Cinema Screen Curved Bottom */}
+      <svg width="0" height="0" style={{ position: 'absolute' }}>
         <defs>
           <clipPath id="netflix-curved-screen-clip" clipPathUnits="objectBoundingBox">
-            <path d="M 0.02,0 L 0.98,0 Q 1,0 1,0.035 L 1,0.965 Q 1,0.995 0.98,0.985 Q 0.5,0.92 0.02,0.985 Q 0,0.995 0,0.965 L 0,0.035 Q 0,0 0.02,0 Z" />
+            <path d="M 0 0 L 1 0 L 1 0.94 Q 0.5 1.0 0 0.94 Z" />
           </clipPath>
         </defs>
       </svg>
 
-      <div className="netflix-hero-sticky">
-        {/* Top Floating Pill Navigation */}
-        <div className="netflix-curved-nav-pill" role="tablist" aria-label="Billboard Navigation">
+      <div className="netflix-billboard-center">
+        {/* Floating Top Pill Nav */}
+        <div className="netflix-curved-nav-pill">
           <button
             className={`pill-tab ${activeTab === 'trailers' ? 'active' : ''}`}
             onClick={() => {
@@ -338,7 +397,7 @@ export const HeroScrollCanvas: React.FC = () => {
         <div className="netflix-curved-screen-frame" ref={billboardScreenRef}>
           <div className="netflix-curved-screen-clip-wrap">
             {/* The Scrubbing / Playing Canvas */}
-            <canvas ref={canvasRef} className="netflix-curved-canvas" />
+            <canvas ref={canvasRef} width={1280} height={720} className="netflix-curved-canvas" />
 
             {/* Cinematic Gradient Shadow Overlays for Crisp Text Legibility */}
             <div className="netflix-canvas-gradient-left" />
@@ -369,31 +428,22 @@ export const HeroScrollCanvas: React.FC = () => {
                 />
               </div>
 
-              {/* Email Form & Join Now Button */}
-              <form className="netflix-cta-email-form" onSubmit={handleEmailSubmit}>
-                <div className="netflix-email-input-wrap">
-                  <input
-                    type="email"
-                    placeholder="Email address"
-                    className="netflix-email-input"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                  />
-                </div>
+              <form className="netflix-email-cta-row" onSubmit={handleEmailSubmit}>
+                <input
+                  type="email"
+                  placeholder="Email address"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="netflix-email-input"
+                  required
+                />
                 <button type="submit" className="netflix-join-btn">
-                  Join now
+                  <span>{emailSubmitted ? 'Joined' : 'Join now'}</span>
                 </button>
               </form>
 
-              {emailSubmitted && (
-                <p className="email-submitted-msg">
-                  Allegiance recorded. Welcome to Battleworld.
-                </p>
-              )}
-
               <p className="netflix-pricing-tagline">
-                Endless entertainment starting at ₹149 • Exclusive In Theaters May 2026
+                Endless entertainment starting at &#8377;149 • Exclusive In Theaters May 2026
               </p>
             </div>
 
@@ -402,52 +452,52 @@ export const HeroScrollCanvas: React.FC = () => {
               <button
                 className={`media-icon-btn ${isPlaying ? 'playing' : ''}`}
                 onClick={togglePlay}
-                aria-label={isPlaying ? 'Pause' : 'Play'}
-                title={isPlaying ? 'Pause sequence' : 'Play sequence'}
+                aria-label={isPlaying ? 'Pause Sequence' : 'Play Sequence'}
+                title={isPlaying ? 'Pause Sequence' : 'Play Sequence'}
               >
-                {isPlaying ? <Pause size={20} /> : <Play size={20} fill="currentColor" />}
+                {isPlaying ? <Pause size={17} /> : <Play size={17} fill="currentColor" />}
               </button>
 
               <button
                 className="media-icon-btn"
                 onClick={toggleMute}
-                aria-label={isMuted ? 'Unmute' : 'Mute'}
-                title={isMuted ? 'Unmute' : 'Mute'}
+                aria-label={isMuted ? 'Unmute Audio' : 'Mute Audio'}
+                title={isMuted ? 'Unmute Audio' : 'Mute Audio'}
               >
-                {isMuted ? <VolumeX size={20} /> : <Volume2 size={20} />}
-              </button>
-
-              <button
-                className="media-icon-btn"
-                onClick={toggleFullscreen}
-                aria-label="Fullscreen"
-                title="Toggle Fullscreen"
-              >
-                {isFullscreen ? <Minimize size={20} /> : <Maximize size={20} />}
+                {isMuted ? <VolumeX size={17} /> : <Volume2 size={17} />}
               </button>
 
               <button
                 className={`media-icon-btn ${showSubtitles ? 'active-subtitles' : ''}`}
                 onClick={toggleSubtitles}
-                aria-label="Subtitles"
+                aria-label="Toggle Subtitles"
                 title="Toggle Subtitles"
               >
-                <Subtitles size={20} />
+                <Subtitles size={17} />
+              </button>
+
+              <button
+                className="media-icon-btn"
+                onClick={toggleFullscreen}
+                aria-label="Toggle Fullscreen"
+                title="Toggle Fullscreen"
+              >
+                {isFullscreen ? <Minimize size={17} /> : <Maximize size={17} />}
               </button>
             </div>
 
-            {/* Quick Dossier Button in top right of billboard */}
+            {/* Top-Right Dossier Pill Button */}
             <button
               className="billboard-dossier-pill-btn"
               onClick={() => setShowDossier(true)}
-              title="Open Marvel Studios Dossier"
+              aria-label="Open Imperial Dossier"
             >
-              <Info size={15} />
+              <Info size={14} />
               <span>Dossier &amp; Cast</span>
             </button>
 
             {/* Loading Indicator */}
-            {!isLoaded && (
+            {loadProgress < 100 && (
               <div className="netflix-billboard-loading">
                 <div className="loading-spinner" />
                 <span>LOADING NETFLIX CANVAS... {loadProgress}%</span>
@@ -460,18 +510,19 @@ export const HeroScrollCanvas: React.FC = () => {
         <div
           className="netflix-bottom-scroll-prompt"
           onClick={() => scrollTo('cast-section')}
-          role="button"
-          tabIndex={0}
         >
           <span>Scroll down to explore Cast &amp; Recommendations</span>
           <ChevronDown size={16} />
         </div>
       </div>
 
-      {/* Slide-out / Pop-up Dossier Modal for Full Cast & Synopsis */}
+      {/* Dossier Modal */}
       {showDossier && (
         <div className="modal-backdrop" onClick={() => setShowDossier(false)}>
-          <div className="dossier-modal-container" onClick={(e) => e.stopPropagation()}>
+          <div
+            className="dossier-modal-container"
+            onClick={(e) => e.stopPropagation()}
+          >
             <button
               className="modal-close"
               onClick={() => setShowDossier(false)}
@@ -481,50 +532,52 @@ export const HeroScrollCanvas: React.FC = () => {
             </button>
 
             <div className="dossier-header">
-              <span className="modal-tag tag-domain">CLASSIFIED LATVERIAN DOSSIER</span>
-              <h2 className="dossier-title">Marvel Studios' Avengers: Doomsday</h2>
-              <div className="dossier-meta-pills">
-                <span className="pill pill-year">{MOVIE_METADATA.year}</span>
-                <span className="pill pill-epoch">{MOVIE_METADATA.epoch}</span>
-                <span className="pill pill-runtime">{MOVIE_METADATA.runtime}</span>
-                <span className="pill pill-rating">{MOVIE_METADATA.rating}</span>
-              </div>
+              <span className="dossier-kicker">CLASSIFIED DOCUMENT • BATTLEWORLD PROTOCOL</span>
+              <h2 className="dossier-title">{MOVIE_METADATA.title}</h2>
+              <p className="dossier-tagline">{MOVIE_METADATA.subtitle}</p>
+            </div>
+
+            <div className="dossier-meta-row">
+              <span className="pill pill-year">{MOVIE_METADATA.year}</span>
+              <span className="pill pill-epoch">{MOVIE_METADATA.epoch}</span>
+              <span className="pill pill-runtime">{MOVIE_METADATA.runtime}</span>
+              <span className="pill pill-rating">{MOVIE_METADATA.rating}</span>
+              <span className="pill pill-format">{MOVIE_METADATA.format}</span>
             </div>
 
             <div className="dossier-body">
-              <div className="dossier-section">
-                <h4 className="dossier-section-heading">Executive Synopsis</h4>
+              <div>
+                <h3 className="dossier-section-heading">Imperial Synopsis</h3>
                 <p className="dossier-synopsis-text">{MOVIE_METADATA.synopsis}</p>
               </div>
 
-              <div className="dossier-section">
-                <h4 className="dossier-section-heading">Supreme Sovereign &amp; Subjects (Cast)</h4>
+              <div>
+                <h3 className="dossier-section-heading">Confirmed Main Cast</h3>
                 <div className="cast-grid">
-                  {MOVIE_METADATA.cast.map((c) => (
-                    <div key={c.name} className="cast-card">
-                      <span className="cast-actor-name">{c.name}</span>
-                      <span className="cast-character-role">{c.role}</span>
+                  {MOVIE_METADATA.cast.map((member, index) => (
+                    <div key={index} className="cast-card">
+                      <span className="cast-actor-name">{member.name}</span>
+                      <span className="cast-character-role">{member.role}</span>
                     </div>
                   ))}
                 </div>
               </div>
 
-              <div className="dossier-section">
-                <h4 className="dossier-section-heading">Creative Architects</h4>
+              <div className="dossier-credits">
                 <p className="dossier-credit-text">
-                  <strong>Directors:</strong> {MOVIE_METADATA.directors}
+                  <strong>Directing Duo:</strong> {MOVIE_METADATA.directors}
                 </p>
                 <p className="dossier-credit-text">
                   <strong>Screenplay:</strong> {MOVIE_METADATA.screenplay}
                 </p>
                 <p className="dossier-credit-text">
-                  <strong>Theatrical Release:</strong> Exclusively in Theaters • {MOVIE_METADATA.theaters}
+                  <strong>World Premiere:</strong> {MOVIE_METADATA.theaters}
                 </p>
               </div>
             </div>
           </div>
         </div>
       )}
-    </section>
+    </div>
   );
 };
