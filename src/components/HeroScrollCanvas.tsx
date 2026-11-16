@@ -226,7 +226,7 @@ export const HeroScrollCanvas: React.FC = () => {
             <span className="pill pill-rating">{MOVIE_METADATA.rating}</span>
           </div>
 
-          {/* Clean "Cast & Intel" button to replace clutter */}
+          {/* Clean "Cast & Intel" button and Netflix Catalog Shortcut */}
           <div className="overlay-cta-row">
             <button
               className="dossier-toggle-btn"
@@ -234,11 +234,22 @@ export const HeroScrollCanvas: React.FC = () => {
               aria-label="View movie dossier & cast"
             >
               <Info size={16} />
-              <span>Dossier &amp; Cast</span>
+              <span>Dossier</span>
+            </button>
+
+            <button
+              className="catalog-jump-btn"
+              onClick={() => {
+                const el = document.getElementById('cast-section');
+                el?.scrollIntoView({ behavior: 'smooth' });
+              }}
+              aria-label="Explore Netflix Catalog & Cast"
+            >
+              <span>Explore Netflix Catalog &darr;</span>
             </button>
 
             <div className="scroll-prompt">
-              <span>Scroll to Play Video</span>
+              <span>Scroll to Scrub</span>
               <ChevronDown className="scroll-arrow" size={18} />
             </div>
           </div>

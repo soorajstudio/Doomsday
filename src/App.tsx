@@ -1,16 +1,22 @@
 import React, { useState } from 'react';
 import { Header } from './components/Header';
 import { HeroScrollCanvas } from './components/HeroScrollCanvas';
+import { CastCarousel } from './components/CastCarousel';
 import { MovieCarousel } from './components/MovieCarousel';
 import { SeriesCarousel } from './components/SeriesCarousel';
 import { Footer } from './components/Footer';
 import { Modal } from './components/Modal';
-import { MovieRecommendation, SeriesRecommendation } from './data/doomsdayData';
+import { MovieRecommendation, SeriesRecommendation, CastMember } from './data/doomsdayData';
 import './App.css';
 
 export const App: React.FC = () => {
-  const [activeItem, setActiveItem] = useState<MovieRecommendation | SeriesRecommendation | null>(null);
-  const [activeType, setActiveType] = useState<'movie' | 'series' | null>(null);
+  const [activeItem, setActiveItem] = useState<MovieRecommendation | SeriesRecommendation | CastMember | null>(null);
+  const [activeType, setActiveType] = useState<'movie' | 'series' | 'cast' | null>(null);
+
+  const handleSelectCast = (cast: CastMember) => {
+    setActiveItem(cast);
+    setActiveType('cast');
+  };
 
   const handleSelectMovie = (movie: MovieRecommendation) => {
     setActiveItem(movie);
@@ -33,6 +39,7 @@ export const App: React.FC = () => {
       <main className="main-content">
         <HeroScrollCanvas />
         <div className="carousels-container">
+          <CastCarousel onSelectCast={handleSelectCast} />
           <MovieCarousel onSelectMovie={handleSelectMovie} />
           <SeriesCarousel onSelectSeries={handleSelectSeries} />
         </div>

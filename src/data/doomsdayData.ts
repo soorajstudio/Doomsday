@@ -1,3 +1,12 @@
+export interface CastMember {
+  id: string;
+  name: string;
+  character: string;
+  role: string;
+  bio: string;
+  image: string;
+}
+
 export interface MovieRecommendation {
   id: string;
   title: string;
@@ -24,6 +33,105 @@ export interface SeriesRecommendation {
   characters: string[];
   connection: string;
 }
+
+export const DOOMSDAY_CAST: CastMember[] = [
+  {
+    id: 'cast-01',
+    name: 'Robert Downey Jr.',
+    character: 'Victor von Doom / God Emperor Doom',
+    role: 'Supreme Sovereign of Battleworld',
+    bio: 'Ascended beyond mortal limits after absorbing the Beyonders’ reality-shaping omnipotence to salvage the dying multiverse.',
+    image: './assets/cast-01-robert-downey-jr.webp'
+  },
+  {
+    id: 'cast-02',
+    name: 'Pedro Pascal',
+    character: 'Reed Richards / Mister Fantastic',
+    role: 'Leader of the Fantastic Four',
+    bio: 'The smartest man alive, leading the First Family across the void to confront his ultimate rival.',
+    image: './assets/cast-02-pedro-pascal.webp'
+  },
+  {
+    id: 'cast-03',
+    name: 'Benedict Cumberbatch',
+    character: 'Doctor Stephen Strange',
+    role: 'Sheriff of Agamotto',
+    bio: 'Former Sorcerer Supreme who formed an uneasy cosmic pact with Doom to maintain reality wards.',
+    image: './assets/cast-03-benedict-cumberbatch.webp'
+  },
+  {
+    id: 'cast-04',
+    name: 'Vanessa Kirby',
+    character: 'Sue Storm / Invisible Woman',
+    role: 'The First Family Vanguard',
+    bio: 'Master of psionic forcefields, fighting to protect reality’s remnants and her family.',
+    image: './assets/cast-04-vanessa-kirby.webp'
+  },
+  {
+    id: 'cast-05',
+    name: 'Anthony Mackie',
+    character: 'Sam Wilson / Captain America',
+    role: 'Earth’s Moral Vanguard',
+    bio: 'Leads the remaining grounded Avengers in resistance against total multiversal subjugation.',
+    image: './assets/cast-05-anthony-mackie.webp'
+  },
+  {
+    id: 'cast-06',
+    name: 'Chris Hemsworth',
+    character: 'Thor Odinson',
+    role: 'The God of Thunder',
+    bio: 'Wields Stormbreaker against the cosmic incursions, refusing to kneel before any false god.',
+    image: './assets/cast-06-chris-hemsworth.webp'
+  },
+  {
+    id: 'cast-07',
+    name: 'Tom Holland',
+    character: 'Peter Parker / Spider-Man',
+    role: 'Earth-616 Protector',
+    bio: 'The friendly neighborhood hero thrust into cosmic warfare to save what little remains of home.',
+    image: './assets/cast-07-tom-holland.webp'
+  },
+  {
+    id: 'cast-08',
+    name: 'Florence Pugh',
+    character: 'Yelena Belova',
+    role: 'Thunderbolts Infiltrator',
+    bio: 'Deadly Black Widow operative navigating the murky alliances of the new world order.',
+    image: './assets/cast-08-florence-pugh.webp'
+  },
+  {
+    id: 'cast-09',
+    name: 'Sebastian Stan',
+    character: 'Bucky Barnes / Winter Soldier',
+    role: 'Battle-Hardened Veteran',
+    bio: 'Congressman and covert operative anchoring the Thunderbolts against impending annihilation.',
+    image: './assets/cast-09-sebastian-stan.webp'
+  },
+  {
+    id: 'cast-10',
+    name: 'Joseph Quinn',
+    character: 'Johnny Storm / Human Torch',
+    role: 'Cosmic Flame Vanguard',
+    bio: 'Blazes with supernova heat against the encroaching darkness of incursion collisions.',
+    image: './assets/cast-10-joseph-quinn.webp'
+  },
+  {
+    id: 'cast-11',
+    name: 'Ebon Moss-Bachrach',
+    character: 'Ben Grimm / The Thing',
+    role: 'Unbreakable Rock Titan',
+    bio: 'The emotional rock and physical powerhouse of the Fantastic Four standing resolute.',
+    image: './assets/cast-11-ebon-moss-bachrach.webp'
+  },
+  {
+    id: 'cast-12',
+    name: 'Tom Hiddleston',
+    character: 'Loki / God of Stories',
+    role: 'Anchor of the Multiverse Tree',
+    bio: 'Silently holding together the infinite branches of time from the citadel at the end of reality.',
+    image: './assets/cast-12-tom-hiddleston.webp'
+  }
+];
 
 export const RECOMMENDED_MOVIES: MovieRecommendation[] = [
   {
