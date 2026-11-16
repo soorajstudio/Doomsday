@@ -41,7 +41,7 @@ export const Modal: React.FC<ModalProps> = ({ item, type, onClose }) => {
             <div className="modal-info">
               <div className="modal-header">
                 <span className="modal-tag tag-cast">
-                  AVENGERS: DOOMSDAY &bull; CAST DOSSIER
+                  AVENGERS: DOOMSDAY • CAST DOSSIER
                 </span>
                 <h2 className="modal-title">{cast.character}</h2>
                 <h4 className="modal-subtitle emerald-text">
@@ -87,11 +87,11 @@ export const Modal: React.FC<ModalProps> = ({ item, type, onClose }) => {
           <div className="modal-info">
             <div className="modal-header">
               <span className={`modal-tag ${isMovie ? 'tag-domain' : 'tag-threat'}`}>
-                {isMovie ? `MCU FILM &bull; ${movie!.phase.toUpperCase()}` : `MARVEL SERIES &bull; ${series!.phase.toUpperCase()}`}
+                {isMovie ? `MCU FILM • ${movie!.phase.toUpperCase()}` : `MARVEL SERIES • ${series!.phase.toUpperCase()}`}
               </span>
               <h2 className="modal-title">{mediaItem.title}</h2>
               <h4 className="modal-subtitle">
-                {isMovie ? `${movie!.year} &bull; ${movie!.runtime}` : `${series!.year} &bull; ${series!.seasons} (${series!.episodes})`}
+                {isMovie ? `${movie!.year} • ${movie!.runtime}` : `${series!.year} • ${series!.seasons} (${series!.episodes})`}
               </h4>
             </div>
 

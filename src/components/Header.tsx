@@ -33,7 +33,7 @@ export const Header: React.FC = () => {
               className="header-emblem"
             />
             <div className="header-title-group">
-              <span className="header-badge">NETFLIX &bull; IMPERIAL BROADCAST</span>
+              <span className="header-badge">NETFLIX • IMPERIAL BROADCAST</span>
               <span className="header-title">
                 <span className="emerald-text">LATVERIA</span> CINEMA
               </span>

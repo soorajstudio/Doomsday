@@ -23,7 +23,7 @@ export const MovieCard: React.FC<MovieCardProps> = ({ movie, onClick }) => {
         </div>
       </div>
       <div className="card-hover-reveal">
-        <span className="reveal-ruler">{movie.year} &bull; {movie.runtime}</span>
+        <span className="reveal-ruler">{movie.year} • {movie.runtime}</span>
         <span className="reveal-cta">Why It Matters &rarr;</span>
       </div>
     </div>

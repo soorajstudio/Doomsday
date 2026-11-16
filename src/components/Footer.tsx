@@ -15,7 +15,7 @@ export const Footer: React.FC = () => {
         </div>
 
         <p className="footer-tagline">
-          THE IMPERIAL SOVEREIGN REALM OF BATTLEWORLD &bull; ALL TIMELINES BOW TO DOOM
+          THE IMPERIAL SOVEREIGN REALM OF BATTLEWORLD • ALL TIMELINES BOW TO DOOM
         </p>
 
         <p className="footer-disclaimer">

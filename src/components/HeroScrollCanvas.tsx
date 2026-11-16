@@ -393,7 +393,7 @@ export const HeroScrollCanvas: React.FC = () => {
               )}
 
               <p className="netflix-pricing-tagline">
-                Endless entertainment starting at ₹149 &bull; Exclusive In Theaters May 2026
+                Endless entertainment starting at ₹149 • Exclusive In Theaters May 2026
               </p>
             </div>
 
@@ -518,7 +518,7 @@ export const HeroScrollCanvas: React.FC = () => {
                   <strong>Screenplay:</strong> {MOVIE_METADATA.screenplay}
                 </p>
                 <p className="dossier-credit-text">
-                  <strong>Theatrical Release:</strong> Exclusively in Theaters &bull; {MOVIE_METADATA.theaters}
+                  <strong>Theatrical Release:</strong> Exclusively in Theaters • {MOVIE_METADATA.theaters}
                 </p>
               </div>
             </div>
