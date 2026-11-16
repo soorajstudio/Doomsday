@@ -241,6 +241,114 @@ export const RECOMMENDED_MOVIES: MovieRecommendation[] = [
     image: './assets/movie-09-iron-man.webp',
     characters: ['Tony Stark / Iron Man', 'Pepper Potts', 'James Rhodes', 'Obadiah Stane'],
     connection: 'The definitive foundation for Robert Downey Jr.’s return as Victor von Doom—the ultimate dark inversion of the hero who started it all.'
+  },
+  {
+    id: 'movie-10',
+    title: 'Avengers: Age of Ultron',
+    year: '2015',
+    runtime: '2h 21m',
+    phase: 'Phase 2',
+    significance: 'Sokovia’s Fall & Technocratic Hubris',
+    description: "Tony Stark attempts to jumpstart an artificial intelligence planetary defense initiative, inadvertently creating Ultron and causing the cataclysmic destruction of Sokovia.",
+    image: './assets/movie-10-age-of-ultron.webp',
+    characters: ['Tony Stark / Iron Man', 'Steve Rogers', 'Wanda Maximoff', 'Vision', 'Ultron'],
+    connection: 'Sokovia shares borders with Latveria in Marvel lore. Tony Stark’s flawed vision of "armor around the world" is what Victor von Doom achieves through absolute tyranny.'
+  },
+  {
+    id: 'movie-11',
+    title: 'Captain America: Civil War',
+    year: '2016',
+    runtime: '2h 27m',
+    phase: 'Phase 3',
+    significance: 'The Fracturing of Earth’s Guardians',
+    description: "Political pressure over the Sokovia Accords tears the Avengers into opposing factions led by Steve Rogers and Tony Stark, expertly exploited by Baron Zemo from within.",
+    image: './assets/movie-11-civil-war.webp',
+    characters: ['Captain America', 'Iron Man', 'Bucky Barnes', 'Black Panther', 'Spider-Man', 'Baron Zemo'],
+    connection: 'Proves that mortal human governments and splintered heroes cannot safeguard Earth from catastrophic global destruction, leaving a vacuum for God Emperor Doom.'
+  },
+  {
+    id: 'movie-12',
+    title: 'Ant-Man and the Wasp: Quantumania',
+    year: '2023',
+    runtime: '2h 04m',
+    phase: 'Phase 5',
+    significance: 'The Quantum Realm & The Kang Dynasty',
+    description: "Scott Lang and his family are sucked into the Quantum Realm beneath space-time, battling Kang the Conqueror and discovering the infinite Council of Kangs convening for war.",
+    image: './assets/movie-12-quantumania.webp',
+    characters: ['Scott Lang / Ant-Man', 'Hope van Dyne / Wasp', 'Kang the Conqueror', 'Janet van Dyne', 'Cassie Lang'],
+    connection: 'Reveals the mechanics of the Multiversal War. The threat of infinite colliding timelines is the catalyst for Doom taking supreme omnipotent control.'
+  },
+  {
+    id: 'movie-13',
+    title: 'Black Panther: Wakanda Forever',
+    year: '2022',
+    runtime: '2h 41m',
+    phase: 'Phase 4',
+    significance: 'Vibranium World War & Talokan',
+    description: "Following the death of King T’Challa, Wakanda defends its borders against predatory global powers and faces Namor, the feathered serpent god ruler of underwater Talokan.",
+    image: './assets/movie-13-wakanda-forever.webp',
+    characters: ['Shuri / Black Panther', 'Namor', 'Queen Ramonda', 'Okoye', 'Riri Williams / Ironheart'],
+    connection: 'Adapts elements of Marvel’s historic Doomwar comic event. Doom exploits the geopolitical friction between Wakanda and Talokan to harvest Vibranium for his reality engine.'
+  },
+  {
+    id: 'movie-14',
+    title: 'The Marvels',
+    year: '2023',
+    runtime: '1h 45m',
+    phase: 'Phase 5',
+    significance: 'Spacetime Tear & Fox X-Men Bridge',
+    description: "Carol Danvers, Monica Rambeau, and Kamala Khan become quantum-entangled. When villain Dar-Benn tears open an interdimensional portal, Monica sacrifices herself to seal the tear from the other side.",
+    image: './assets/movie-14-the-marvels.webp',
+    characters: ['Carol Danvers / Captain Marvel', 'Monica Rambeau', 'Kamala Khan / Ms. Marvel', 'Beast (Hank McCoy)', 'Binary'],
+    connection: 'CRITICAL INVASION BRIDGE: Monica crosses into Earth-10005 (the Fox X-Men universe), directly triggering the interdimensional convergence into Battleworld.'
+  },
+  {
+    id: 'movie-15',
+    title: 'Shang-Chi and the Legend of the Ten Rings',
+    year: '2021',
+    runtime: '2h 12m',
+    phase: 'Phase 4',
+    significance: 'Ancient Cosmic Beacon & Mystic Portals',
+    description: "Shang-Chi confronts his past and the immortal warlord Wenwu in the mythical pocket dimension of Ta Lo, unlocking the true cosmic power of the thousand-year-old Ten Rings.",
+    image: './assets/movie-15-shang-chi.webp',
+    characters: ['Shang-Chi', 'Wenwu / The Mandarin', 'Xialing', 'Katy', 'Wong', 'Bruce Banner'],
+    connection: 'The post-credits sequence reveals the Ten Rings are pulsing an ancient homing signal across the multiverse—heralds calling out to primordial cosmic forces.'
+  },
+  {
+    id: 'movie-16',
+    title: 'Doctor Strange',
+    year: '2016',
+    runtime: '1h 55m',
+    phase: 'Phase 3',
+    significance: 'The Origin of Sorcery & Time Manipulation',
+    description: "Arrogant neurosurgeon Stephen Strange journeys to Kamar-Taj to heal his shattered hands, discovering the Mystic Arts, the Mirror Dimension, and the Time Stone.",
+    image: './assets/movie-16-doctor-strange.webp',
+    characters: ['Doctor Strange', 'The Ancient One', 'Karl Mordo', 'Wong', 'Kaecilius', 'Dormammu'],
+    connection: 'Establishes the arcane codex of Kamar-Taj and Agamotto. Doctor Doom combines this exact dark dimensional sorcery with quantum hyper-technology.'
+  },
+  {
+    id: 'movie-17',
+    title: 'Eternals',
+    year: '2021',
+    runtime: '2h 36m',
+    phase: 'Phase 4',
+    significance: 'Celestial Judgment & The Birth of Adamantium',
+    description: "Immortal synthetic beings living secretly on Earth since antiquity emerge to prevent the Emergence of the Celestial Tiamut, leaving his massive petrified marble corpse in the Indian Ocean.",
+    image: './assets/movie-17-eternals.webp',
+    characters: ['Sersi', 'Ikaris', 'Thena', 'Ajak', 'Druig', 'Arishem the Judge'],
+    connection: 'Tiamut’s oceanic corpse is the canon source of Adamantium in Brave New World and reveals the cosmic hierarchy that Doom will ultimately dethrone.'
+  },
+  {
+    id: 'movie-18',
+    title: 'The Avengers',
+    year: '2012',
+    runtime: '2h 23m',
+    phase: 'Phase 1',
+    significance: 'Earth’s First Assembly',
+    description: "Nick Fury assembles Earth’s Mightiest Heroes to stop Loki and an invading Chitauri army from subjugating humanity with the Tesseract in the historic Battle of New York.",
+    image: './assets/movie-18-the-avengers.webp',
+    characters: ['Iron Man', 'Captain America', 'Thor', 'Bruce Banner / Hulk', 'Black Widow', 'Hawkeye', 'Loki'],
+    connection: 'The origin of Earth’s cosmic defense doctrine. Sets the standard of heroism that Doom claims failed humanity when multiversal extinction arrived.'
   }
 ];
 
@@ -374,6 +482,71 @@ export const RECOMMENDED_SERIES: SeriesRecommendation[] = [
     image: './assets/series-10-falcon-winter-soldier.webp',
     characters: ['Sam Wilson', 'Bucky Barnes', 'John Walker / U.S. Agent', 'Baron Zemo', 'Sharon Carter'],
     connection: 'Sets up Sam Wilson as the moral core of Earth’s remaining defenders against the tyrannical order of Doctor Doom.'
+  },
+  {
+    id: 'series-11',
+    title: 'Hawkeye',
+    year: '2021',
+    seasons: '1 Season',
+    episodes: '6 Episodes',
+    phase: 'Phase 4',
+    significance: 'Street-Level Underground & Young Avengers Passing',
+    description: "Clint Barton confronts his violent Ronin past during a holiday trip to New York, teaming up with prodigy archer Kate Bishop and uncovering Wilson Fisk’s shadow operations.",
+    image: './assets/series-11-hawkeye.webp',
+    characters: ['Clint Barton / Hawkeye', 'Kate Bishop', 'Yelena Belova', 'Maya Lopez / Echo', 'Wilson Fisk / Kingpin'],
+    connection: 'Bridges Yelena Belova and Kate Bishop into the next generation of heroes and establishes the modern NYC street crime hierarchy.'
+  },
+  {
+    id: 'series-12',
+    title: 'She-Hulk: Attorney at Law',
+    year: '2022',
+    seasons: '1 Season',
+    episodes: '9 Episodes',
+    phase: 'Phase 4',
+    significance: 'Superhuman Law, Daredevil & Meta Realities',
+    description: "Jennifer Walters balances her career as a superhuman attorney with her gamma-powered transformation, encountering Abomination, Wong, Daredevil, and rewriting reality’s story structure.",
+    image: './assets/series-12-she-hulk.webp',
+    characters: ['Jennifer Walters / She-Hulk', 'Bruce Banner / Smart Hulk', 'Matt Murdock / Daredevil', 'Emil Blonsky / Abomination', 'Skaar'],
+    connection: 'Introduces Hulk’s son Skaar, reunites Matt Murdock with the wider MCU, and explores how meta-reality manipulation alters narrative physics.'
+  },
+  {
+    id: 'series-13',
+    title: 'Werewolf by Night',
+    year: '2022',
+    seasons: 'Special Presentation',
+    episodes: '1 Episode',
+    phase: 'Phase 4',
+    significance: 'Bloodstone Sorcery & Monster Underworld',
+    description: "A secret cabal of monster hunters gather at Bloodstone Manor following their leader’s death, thrust into a deadly competition for an ancient relic that controls supernatural entities.",
+    image: './assets/series-13-werewolf-by-night.webp',
+    characters: ['Jack Russell / Werewolf by Night', 'Elsa Bloodstone', 'Man-Thing (Ted)', 'Verussa Bloodstone'],
+    connection: 'Reveals the existence of ancient relics like the Bloodstone and subterranean monster domains that Doom isolates within The Deadlands on Battleworld.'
+  },
+  {
+    id: 'series-14',
+    title: 'Echo',
+    year: '2024',
+    seasons: '1 Season',
+    episodes: '5 Episodes',
+    phase: 'Phase 5',
+    significance: 'Ancestral Lineage & Kingpin’s NYC Mayoral Bid',
+    description: "Maya Lopez returns to her Oklahoma hometown pursued by Wilson Fisk’s criminal syndicate, discovering her Choctaw ancestral spiritual power and defeating Fisk’s hold on her.",
+    image: './assets/series-14-echo.webp',
+    characters: ['Maya Lopez / Echo', 'Wilson Fisk / Kingpin', 'Matt Murdock / Daredevil', 'Henry Black Crow Lopez'],
+    connection: 'Concludes with Kingpin realizing he needs raw political dominance, launching his campaign for Mayor of New York before the incursion crisis.'
+  },
+  {
+    id: 'series-15',
+    title: 'Ironheart',
+    year: '2025',
+    seasons: 'Season 1',
+    episodes: '6 Episodes',
+    phase: 'Phase 5',
+    significance: 'Stark Technology vs. Dark Magic',
+    description: "MIT prodigy Riri Williams returns home to Chicago to develop next-generation cybernetic armor suits, clashing with Parker Robbins (The Hood) who wields dark demonic sorcery.",
+    image: './assets/series-15-ironheart.webp',
+    characters: ['Riri Williams / Ironheart', 'Parker Robbins / The Hood', 'Zelma Stanton', 'Natalie Washington'],
+    connection: 'The core ideological and operational thesis of Doctor Doom: the fusion and war between bleeding-edge high technology and ancient dark magic.'
   }
 ];
 
@@ -400,7 +573,8 @@ export const MOVIE_METADATA = {
     { name: "Sebastian Stan", role: "Bucky Barnes" },
     { name: "Tom Holland", role: "Peter Parker / Spider-Man" },
     { name: "Joseph Quinn", role: "Johnny Storm / Human Torch" },
-    { name: "Ebon Moss-Bachrach", role: "Ben Grimm / The Thing" }
+    { name: "Ebon Moss-Bachrach", role: "Ben Grimm / The Thing" },
+    { name: "Tom Hiddleston", role: "Loki / God of Stories" }
   ],
   directors: "Anthony & Joe Russo (The Russo Brothers)",
   screenplay: "Stephen McFeely",
