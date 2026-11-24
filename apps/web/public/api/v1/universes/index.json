@@ -1,0 +1,59 @@
+[
+  {
+    "id": "columbia-pictures",
+    "name": "Columbia Pictures",
+    "short_name": "Columbia",
+    "order": 6,
+    "color": "#10b981"
+  },
+  {
+    "id": "fox-marvel-cinematic-universe",
+    "name": "Fox Marvel Cinematic Universe",
+    "short_name": "Fox MCU",
+    "order": 4,
+    "color": "#E3D51B"
+  },
+  {
+    "id": "marvel-television",
+    "name": "Marvel Television",
+    "short_name": "Marvel TV",
+    "order": 2,
+    "color": "#a855f7"
+  },
+  {
+    "id": "mcu",
+    "name": "Marvel Cinematic Universe",
+    "short_name": "MCU",
+    "order": 1,
+    "color": "#ef4444",
+    "phases": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ]
+  },
+  {
+    "id": "netflix",
+    "name": "Netflix",
+    "short_name": "Netflix",
+    "order": 2,
+    "color": "#e50914"
+  },
+  {
+    "id": "new-line-cinema",
+    "name": "New Line Cinema",
+    "short_name": "New Line",
+    "order": 7,
+    "color": "#9c9c9c"
+  },
+  {
+    "id": "sonys-spider-man-universe",
+    "name": "Sony's Spider-Man Universe",
+    "short_name": "SSU",
+    "order": 5,
+    "color": "#03a1fc"
+  }
+]

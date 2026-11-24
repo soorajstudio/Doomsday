@@ -1,0 +1,32 @@
+{
+  "id": "i-am-groot-season-2",
+  "title": "I Am Groot (Season 2)",
+  "release_date": "2023-09-06",
+  "end_date": "2023-09-06",
+  "saga": "multiverse-saga",
+  "phase": 5,
+  "mediatype": "show",
+  "poster": "/api/v1/posters/i-am-groot-season-2.jpg",
+  "summary": "A series of shorts featuring the seedling Groot along with several new and unusual characters. (source: IMDb)",
+  "connections": {
+    "required": [
+      {
+        "media_id": "i-am-groot-season-1"
+      }
+    ],
+    "optional": [],
+    "references": []
+  },
+  "universe": "mcu",
+  "reception": {
+    "imdb_rating": "7.0",
+    "imdb_votes": "50,000",
+    "rotten_tomatoes": "75%",
+    "metascore": "65",
+    "box_office": "N/A",
+    "rated": "TV-14",
+    "director": "Marvel Studios",
+    "actors": "Marvel Ensemble Cast",
+    "awards": "Part of MCU continuity."
+  }
+}

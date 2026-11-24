@@ -1,0 +1,30 @@
+{
+  "id": "deadpool-2",
+  "title": "Deadpool 2",
+  "release_date": "2018-05-18",
+  "saga": "deadpool-saga",
+  "mediatype": "movie",
+  "poster": "/api/v1/posters/deadpool-2.jpg",
+  "summary": "Foul-mouthed mutant mercenary Wade Wilson (a.k.a. Deadpool) assembles a team of fellow mutant rogues to protect a young boy with abilities from the brutal, time-traveling cyborg Cable. (source: IMDb)",
+  "connections": {
+    "required": [
+      {
+        "media_id": "deadpool"
+      }
+    ],
+    "optional": [],
+    "references": []
+  },
+  "universe": "fox-marvel-cinematic-universe",
+  "reception": {
+    "imdb_rating": "7.7",
+    "imdb_votes": "650,000",
+    "rotten_tomatoes": "84%",
+    "metascore": "66",
+    "box_office": "$785,896,609",
+    "rated": "R",
+    "director": "David Leitch",
+    "actors": "Ryan Reynolds, Josh Brolin, Morena Baccarin, Julian Dennison, Zazie Beetz",
+    "awards": "6 wins & 53 nominations total."
+  }
+}

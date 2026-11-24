@@ -1,0 +1,30 @@
+{
+  "id": "x-men-apocalypse",
+  "title": "X-Men: Apocalypse",
+  "release_date": "2016-05-27",
+  "saga": "x-men-prequel",
+  "mediatype": "movie",
+  "poster": "/api/v1/posters/x-men-apocalypse.jpg",
+  "summary": "In the 1980s, the X-Men must defeat an ancient all-powerful mutant, En Sabah Nur, who intends to thrive by bringing destruction to the world. (source: IMDb)",
+  "connections": {
+    "required": [
+      {
+        "media_id": "x-men-days-of-future-past"
+      }
+    ],
+    "optional": [],
+    "references": []
+  },
+  "universe": "fox-marvel-cinematic-universe",
+  "reception": {
+    "imdb_rating": "6.8",
+    "imdb_votes": "460,000",
+    "rotten_tomatoes": "47%",
+    "metascore": "52",
+    "box_office": "$543,934,787",
+    "rated": "PG-13",
+    "director": "Bryan Singer",
+    "actors": "James McAvoy, Michael Fassbender, Jennifer Lawrence, Nicholas Hoult, Oscar Isaac",
+    "awards": "1 win & 22 nominations total."
+  }
+}

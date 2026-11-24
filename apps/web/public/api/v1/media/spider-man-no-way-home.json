@@ -1,0 +1,38 @@
+{
+  "id": "spider-man-no-way-home",
+  "title": "Spider-Man: No Way Home",
+  "release_date": "2021-12-17",
+  "saga": "multiverse-saga",
+  "phase": 4,
+  "mediatype": "movie",
+  "poster": "/api/v1/posters/spider-man-no-way-home.jpg",
+  "summary": "With Spider-Man's identity now revealed, Peter asks Doctor Strange for help. When a spell goes wrong, dangerous foes from other worlds start to appear. (source: IMDb)",
+  "connections": {
+    "required": [
+      {
+        "media_id": "spider-man-far-from-home"
+      }
+    ],
+    "optional": [
+      {
+        "saga_id": "raimi-trilogy"
+      },
+      {
+        "saga_id": "amazing-spider-man-saga"
+      }
+    ],
+    "references": []
+  },
+  "universe": "mcu",
+  "reception": {
+    "imdb_rating": "8.2",
+    "imdb_votes": "880,000",
+    "rotten_tomatoes": "93%",
+    "metascore": "71",
+    "box_office": "$1,921,847,111",
+    "rated": "PG-13",
+    "director": "Jon Watts",
+    "actors": "Tom Holland, Zendaya, Benedict Cumberbatch, Jacob Batalon, Tobey Maguire, Andrew Garfield",
+    "awards": "Nominated for 1 Oscar. 36 wins & 72 nominations total."
+  }
+}

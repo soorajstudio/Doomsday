@@ -7,3 +7,5 @@ node_modules/
 .next/
 *.tsbuildinfo
 .env.local
+apps/web/public/posters/
+apps/web/public/api/v1/posters/

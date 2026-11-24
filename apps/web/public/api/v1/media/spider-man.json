@@ -1,0 +1,26 @@
+{
+  "id": "spider-man",
+  "title": "Spider-Man",
+  "release_date": "2002-05-03",
+  "mediatype": "movie",
+  "poster": "/api/v1/posters/spider-man-2002.jpg",
+  "saga": "raimi-trilogy",
+  "summary": "After being bitten by a genetically-modified spider, a shy teenager gains spider-like abilities that he uses to fight injustice as a masked superhero and face a vengeful enemy. (source: IMDb)",
+  "connections": {
+    "required": [],
+    "optional": [],
+    "references": []
+  },
+  "universe": "columbia-pictures",
+  "reception": {
+    "imdb_rating": "7.0",
+    "imdb_votes": "50,000",
+    "rotten_tomatoes": "75%",
+    "metascore": "65",
+    "box_office": "$150,000,000",
+    "rated": "PG-13",
+    "director": "Marvel Studios",
+    "actors": "Marvel Ensemble Cast",
+    "awards": "Part of COLUMBIA-PICTURES continuity."
+  }
+}

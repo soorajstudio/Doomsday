@@ -1,0 +1,32 @@
+{
+  "id": "wandavision",
+  "title": "WandaVision",
+  "release_date": "2021-01-15",
+  "end_date": "2021-01-15",
+  "saga": "multiverse-saga",
+  "phase": 4,
+  "mediatype": "show",
+  "poster": "/api/v1/posters/wandavision.jpg",
+  "summary": "Blends the style of classic sitcoms with the MCU, in which Wanda Maximoff and Vision - two super-powered beings living their ideal suburban lives - begin to suspect that everything is not as it seems. (source: IMDB)",
+  "connections": {
+    "required": [
+      {
+        "media_id": "avengers-endgame"
+      }
+    ],
+    "optional": [],
+    "references": []
+  },
+  "universe": "mcu",
+  "reception": {
+    "imdb_rating": "7.9",
+    "imdb_votes": "360,000",
+    "rotten_tomatoes": "91%",
+    "metascore": "77",
+    "box_office": "N/A",
+    "rated": "TV-PG",
+    "director": "Matt Shakman",
+    "actors": "Elizabeth Olsen, Paul Bettany, Kathryn Hahn, Teyonah Parris",
+    "awards": "Won 3 Primetime Emmys. 25 wins & 92 nominations total."
+  }
+}

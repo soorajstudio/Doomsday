@@ -1,0 +1,32 @@
+{
+  "id": "ironheart",
+  "title": "Ironheart",
+  "release_date": "2025-06-24",
+  "end_date": "2025-06-24",
+  "saga": "multiverse-saga",
+  "phase": 5,
+  "mediatype": "show",
+  "poster": "/api/v1/posters/ironheart.jpg",
+  "summary": "Genius teenage inventor Riri Williams creates the most advanced suit of armor since Iron Man. (source: IMDb)",
+  "connections": {
+    "required": [
+      {
+        "media_id": "black-panther-wakanda-forever"
+      }
+    ],
+    "optional": [],
+    "references": []
+  },
+  "universe": "mcu",
+  "reception": {
+    "imdb_rating": "N/A",
+    "imdb_votes": "Upcoming",
+    "rotten_tomatoes": "Expected 2025",
+    "metascore": "TBD",
+    "box_office": "In Post-Production",
+    "rated": "TV-14",
+    "director": "Sam Bailey, Angela Barnes",
+    "actors": "Dominique Thorne, Anthony Ramos, Alden Ehrenreich, Lyric Ross",
+    "awards": "Upcoming Phase 5 Disney+ series."
+  }
+}

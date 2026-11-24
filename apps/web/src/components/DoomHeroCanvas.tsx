@@ -77,7 +77,9 @@ export function DoomHeroCanvas() {
 
   const getCandidateFrameUrls = (index: number) => {
     const frameNum = String(index).padStart(3, "0");
+    const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
     return [
+      `${basePath}/sequence/frame_${frameNum}.jpg`,
       `/sequence/frame_${frameNum}.jpg`,
       `./sequence/frame_${frameNum}.jpg`,
       `sequence/frame_${frameNum}.jpg`,
@@ -172,8 +174,9 @@ export function DoomHeroCanvas() {
     window.addEventListener("resize", handleResize);
     handleResize();
 
+    const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
     const wallpaper = new Image();
-    wallpaper.src = "/assets/hero-wallpaper-desktop.webp";
+    wallpaper.src = `${basePath}/assets/hero-wallpaper-desktop.webp`;
     wallpaper.onload = () => {
       if (!hasDrawnInitialRef.current) {
         const canvas = canvasRef.current;

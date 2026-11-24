@@ -1,0 +1,32 @@
+{
+  "id": "what-if-season-1",
+  "title": "What If...? (Season 1)",
+  "release_date": "2021-08-11",
+  "end_date": "2021-08-11",
+  "saga": "multiverse-saga",
+  "phase": 4,
+  "mediatype": "show",
+  "poster": "/api/v1/posters/what-if-season-1.jpg",
+  "summary": "Exploring pivotal moments from the Marvel Cinematic Universe and turning them on their head, leading the audience into uncharted territory. (source: IMDb)",
+  "connections": {
+    "required": [
+      {
+        "media_id": "avengers-endgame"
+      }
+    ],
+    "optional": [],
+    "references": []
+  },
+  "universe": "mcu",
+  "reception": {
+    "imdb_rating": "7.4",
+    "imdb_votes": "145,000",
+    "rotten_tomatoes": "94%",
+    "metascore": "69",
+    "box_office": "N/A",
+    "rated": "TV-14",
+    "director": "Bryan Andrews",
+    "actors": "Jeffrey Wright, Chadwick Boseman, Hayley Atwell, Benedict Cumberbatch",
+    "awards": "Won 3 Primetime Emmys. 3 wins & 13 nominations total."
+  }
+}

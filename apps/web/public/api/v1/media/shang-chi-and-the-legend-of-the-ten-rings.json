@@ -1,0 +1,31 @@
+{
+  "id": "shang-chi-and-the-legend-of-the-ten-rings",
+  "title": "Shang-Chi and the Legend of the Ten Rings",
+  "release_date": "2021-09-03",
+  "saga": "multiverse-saga",
+  "phase": 4,
+  "mediatype": "movie",
+  "poster": "/api/v1/posters/shang-chi-and-the-legend-of-the-ten-rings.jpg",
+  "summary": "Shang-Chi, the master of weaponry-based Kung Fu, is forced to confront his past after being drawn into the Ten Rings organization. (source: IMDb)",
+  "connections": {
+    "required": [],
+    "optional": [],
+    "references": [
+      {
+        "media_id": "avengers-endgame"
+      }
+    ]
+  },
+  "universe": "mcu",
+  "reception": {
+    "imdb_rating": "7.4",
+    "imdb_votes": "440,000",
+    "rotten_tomatoes": "92%",
+    "metascore": "71",
+    "box_office": "$432,243,292",
+    "rated": "PG-13",
+    "director": "Destin Daniel Cretton",
+    "actors": "Simu Liu, Awkwafina, Meng'er Zhang, Fala Chen, Tony Leung Chiu-wai",
+    "awards": "Nominated for 1 Oscar. 19 wins & 64 nominations total."
+  }
+}

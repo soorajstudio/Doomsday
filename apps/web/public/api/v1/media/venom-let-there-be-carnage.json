@@ -1,0 +1,30 @@
+{
+  "id": "venom-let-there-be-carnage",
+  "title": "Venom: Let There Be Carnage",
+  "release_date": "2021-10-01",
+  "saga": "sonys-spider-man-universe",
+  "mediatype": "movie",
+  "poster": "/api/v1/posters/venom-let-there-be-carnage.jpg",
+  "summary": "Eddie Brock attempts to reignite his career by interviewing serial killer Cletus Kasady, who becomes the host of the symbiote Carnage and escapes prison after a failed execution. (source: IMDb)",
+  "connections": {
+    "required": [
+      {
+        "media_id": "venom"
+      }
+    ],
+    "optional": [],
+    "references": []
+  },
+  "universe": "sonys-spider-man-universe",
+  "reception": {
+    "imdb_rating": "5.9",
+    "imdb_votes": "270,000",
+    "rotten_tomatoes": "57%",
+    "metascore": "49",
+    "box_office": "$506,863,592",
+    "rated": "PG-13",
+    "director": "Andy Serkis",
+    "actors": "Tom Hardy, Woody Harrelson, Michelle Williams, Naomie Harris",
+    "awards": "1 win & 7 nominations total."
+  }
+}

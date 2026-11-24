@@ -1,0 +1,31 @@
+{
+  "id": "iron-man-2",
+  "title": "Iron Man 2",
+  "release_date": "2010-05-07",
+  "saga": "infinite-saga",
+  "phase": 1,
+  "mediatype": "movie",
+  "poster": "/api/v1/posters/iron-man-2.jpg",
+  "summary": "With the world now aware of his identity as Iron Man, Tony Stark must contend with both his declining health and a vengeful mad man with ties to his father's legacy. (source: IMDb)",
+  "connections": {
+    "required": [
+      {
+        "media_id": "iron-man"
+      }
+    ],
+    "optional": [],
+    "references": []
+  },
+  "universe": "mcu",
+  "reception": {
+    "imdb_rating": "6.9",
+    "imdb_votes": "860,000",
+    "rotten_tomatoes": "72%",
+    "metascore": "57",
+    "box_office": "$623,933,331",
+    "rated": "PG-13",
+    "director": "Jon Favreau",
+    "actors": "Robert Downey Jr., Mickey Rourke, Gwyneth Paltrow, Don Cheadle, Scarlett Johansson",
+    "awards": "Nominated for 1 Oscar. 7 wins & 45 nominations total."
+  }
+}

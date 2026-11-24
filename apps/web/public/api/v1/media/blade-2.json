@@ -1,0 +1,30 @@
+{
+  "id": "blade-2",
+  "title": "Blade II",
+  "release_date": "2002-03-22",
+  "saga": "blade-saga",
+  "mediatype": "movie",
+  "poster": "/api/v1/posters/blade-2.jpg",
+  "summary": "Blade forms an uneasy alliance with the vampire council in order to combat the Reapers, who are feeding on vampires. (source: IMDb)",
+  "connections": {
+    "required": [
+      {
+        "media_id": "blade"
+      }
+    ],
+    "optional": [],
+    "references": []
+  },
+  "universe": "new-line-cinema",
+  "reception": {
+    "imdb_rating": "6.7",
+    "imdb_votes": "230,000",
+    "rotten_tomatoes": "57%",
+    "metascore": "52",
+    "box_office": "$155,010,032",
+    "rated": "R",
+    "director": "Guillermo del Toro",
+    "actors": "Wesley Snipes, Kris Kristofferson, Ron Perlman, Leonor Varela",
+    "awards": "3 wins & 12 nominations total."
+  }
+}

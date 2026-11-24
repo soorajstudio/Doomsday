@@ -1,0 +1,26 @@
+{
+  "id": "daredevil",
+  "title": "Daredevil",
+  "release_date": "2003-02-14",
+  "saga": "fox-daredevil",
+  "mediatype": "movie",
+  "poster": "/api/v1/posters/daredevil.jpg",
+  "summary": "A man blinded by toxic waste which also enhanced his remaining senses fights crime as an acrobatic martial arts superhero. (source: IMDb)",
+  "connections": {
+    "required": [],
+    "optional": [],
+    "references": []
+  },
+  "universe": "fox-marvel-cinematic-universe",
+  "reception": {
+    "imdb_rating": "7.0",
+    "imdb_votes": "50,000",
+    "rotten_tomatoes": "75%",
+    "metascore": "65",
+    "box_office": "$150,000,000",
+    "rated": "PG-13",
+    "director": "Marvel Studios",
+    "actors": "Marvel Ensemble Cast",
+    "awards": "Part of FOX-MARVEL-CINEMATIC-UNIVERSE continuity."
+  }
+}

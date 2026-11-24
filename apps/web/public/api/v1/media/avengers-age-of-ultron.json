@@ -1,0 +1,37 @@
+{
+  "id": "avengers-age-of-ultron",
+  "title": "Avengers: Age of Ultron",
+  "release_date": "2015-05-01",
+  "saga": "infinite-saga",
+  "phase": 2,
+  "mediatype": "movie",
+  "poster": "/api/v1/posters/avengers-age-of-ultron.jpg",
+  "summary": "When Tony Stark and Bruce Banner try to jump-start a dormant peacekeeping program called Ultron, things go horribly wrong and it's up to Earth's mightiest heroes to stop the villainous Ultron from enacting his terrible plan. (source: IMDb)",
+  "connections": {
+    "required": [
+      {
+        "media_id": "iron-man-3"
+      },
+      {
+        "media_id": "thor-the-dark-world"
+      },
+      {
+        "media_id": "captain-america-the-winter-soldier"
+      }
+    ],
+    "optional": [],
+    "references": []
+  },
+  "universe": "mcu",
+  "reception": {
+    "imdb_rating": "7.3",
+    "imdb_votes": "930,000",
+    "rotten_tomatoes": "76%",
+    "metascore": "66",
+    "box_office": "$1,405,018,048",
+    "rated": "PG-13",
+    "director": "Joss Whedon",
+    "actors": "Robert Downey Jr., Chris Evans, Mark Ruffalo, Chris Hemsworth, Scarlett Johansson",
+    "awards": "8 wins & 52 nominations total."
+  }
+}

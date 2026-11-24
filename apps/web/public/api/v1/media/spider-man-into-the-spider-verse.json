@@ -1,0 +1,30 @@
+{
+  "id": "spider-man-into-the-spider-verse",
+  "title": "Spider-Man: Into the Spider-Verse",
+  "release_date": "2018-12-14",
+  "saga": "animated-spider-verse",
+  "mediatype": "movie",
+  "poster": "/api/v1/posters/spider-man-into-the-spider-verse.jpg",
+  "summary": "Teen Miles Morales becomes the Spider-Man of his universe and must join with five spider-powered individuals from other dimensions to stop a threat for all realities. (source: IMDb)",
+  "connections": {
+    "required": [],
+    "optional": [],
+    "references": [
+      {
+        "media_id": "venom"
+      }
+    ]
+  },
+  "universe": "sonys-spider-man-universe",
+  "reception": {
+    "imdb_rating": "8.4",
+    "imdb_votes": "680,000",
+    "rotten_tomatoes": "97%",
+    "metascore": "87",
+    "box_office": "$384,256,930",
+    "rated": "PG",
+    "director": "Bob Persichetti, Peter Ramsey, Rodney Rothman",
+    "actors": "Shameik Moore, Jake Johnson, Hailee Steinfeld, Mahershala Ali, Brian Tyree Henry",
+    "awards": "Won 1 Oscar. 85 wins & 60 nominations total."
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "id": "echo",
+  "title": "Echo",
+  "release_date": "2024-01-09",
+  "end_date": "2024-01-09",
+  "saga": "multiverse-saga",
+  "phase": 5,
+  "mediatype": "show",
+  "poster": "/api/v1/posters/echo.jpg",
+  "summary": "Maya Lopez must face her past, reconnect with her Native American roots, and embrace the meaning of family and community if she ever hopes to move forward. (source: IMDb)",
+  "connections": {
+    "required": [
+      {
+        "media_id": "hawkeye"
+      }
+    ],
+    "optional": [],
+    "references": []
+  },
+  "universe": "mcu",
+  "reception": {
+    "imdb_rating": "6.0",
+    "imdb_votes": "42,000",
+    "rotten_tomatoes": "70%",
+    "metascore": "62",
+    "box_office": "N/A",
+    "rated": "TV-MA",
+    "director": "Sydney Freeland, Catriona McKenzie",
+    "actors": "Alaqua Cox, Chaske Spencer, Tantoo Cardinal, Devery Jacobs, Vincent D'Onofrio",
+    "awards": "Nominated for 1 Primetime Emmy. 2 wins & 4 nominations total."
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "id": "avengers-endgame",
+  "title": "Avengers: Endgame",
+  "release_date": "2019-04-26",
+  "saga": "infinite-saga",
+  "phase": 3,
+  "mediatype": "movie",
+  "poster": "/api/v1/posters/avengers-endgame.jpg",
+  "summary": "After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe. (source: IMDb)",
+  "connections": {
+    "required": [
+      {
+        "media_id": "avengers-infinity-war"
+      },
+      {
+        "media_id": "ant-man-and-the-wasp"
+      },
+      {
+        "media_id": "captain-marvel"
+      }
+    ],
+    "optional": [],
+    "references": []
+  },
+  "universe": "mcu",
+  "reception": {
+    "imdb_rating": "8.4",
+    "imdb_votes": "1,300,000",
+    "rotten_tomatoes": "94%",
+    "metascore": "78",
+    "box_office": "$2,799,439,100",
+    "rated": "PG-13",
+    "director": "Anthony Russo, Joe Russo",
+    "actors": "Robert Downey Jr., Chris Evans, Mark Ruffalo, Chris Hemsworth, Scarlett Johansson",
+    "awards": "Nominated for 1 Oscar. 72 wins & 134 nominations total."
+  }
+}

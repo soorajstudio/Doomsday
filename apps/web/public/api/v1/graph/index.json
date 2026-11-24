@@ -1,0 +1,1934 @@
+{
+  "nodes": [
+    {
+      "id": "blade",
+      "title": "Blade",
+      "release_date": "1998-08-21",
+      "saga": "blade-saga",
+      "universe": "new-line-cinema",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/blade.jpg"
+    },
+    {
+      "id": "x-men",
+      "title": "X-Men",
+      "release_date": "2000-07-14",
+      "saga": "x-men-original-trilogy",
+      "universe": "fox-marvel-cinematic-universe",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/x-men.jpg"
+    },
+    {
+      "id": "blade-2",
+      "title": "Blade II",
+      "release_date": "2002-03-22",
+      "saga": "blade-saga",
+      "universe": "new-line-cinema",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/blade-2.jpg"
+    },
+    {
+      "id": "spider-man",
+      "title": "Spider-Man",
+      "release_date": "2002-05-03",
+      "saga": "raimi-trilogy",
+      "universe": "columbia-pictures",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/spider-man-2002.jpg"
+    },
+    {
+      "id": "daredevil",
+      "title": "Daredevil",
+      "release_date": "2003-02-14",
+      "saga": "fox-daredevil",
+      "universe": "fox-marvel-cinematic-universe",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/daredevil.jpg"
+    },
+    {
+      "id": "x2",
+      "title": "X2",
+      "release_date": "2003-05-02",
+      "saga": "x-men-original-trilogy",
+      "universe": "fox-marvel-cinematic-universe",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/x2.jpg"
+    },
+    {
+      "id": "spider-man-2",
+      "title": "Spider-Man 2",
+      "release_date": "2004-06-30",
+      "saga": "raimi-trilogy",
+      "universe": "columbia-pictures",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/spider-man-2-2004.jpg"
+    },
+    {
+      "id": "blade-trinity",
+      "title": "Blade: Trinity",
+      "release_date": "2004-12-10",
+      "saga": "blade-saga",
+      "universe": "new-line-cinema",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/blade-trinity.jpg"
+    },
+    {
+      "id": "elektra",
+      "title": "Elektra",
+      "release_date": "2005-01-14",
+      "saga": "fox-daredevil",
+      "universe": "fox-marvel-cinematic-universe",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/elektra.jpg"
+    },
+    {
+      "id": "fantastic-four-2005",
+      "title": "Fantastic Four",
+      "release_date": "2005-07-08",
+      "saga": "fantastic-four-saga",
+      "universe": "fox-marvel-cinematic-universe",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/fantastic-four-2005.jpg"
+    },
+    {
+      "id": "x-men-the-last-stand",
+      "title": "X-Men: The Last Stand",
+      "release_date": "2006-05-26",
+      "saga": "x-men-original-trilogy",
+      "universe": "fox-marvel-cinematic-universe",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/x-men-the-last-stand.jpg"
+    },
+    {
+      "id": "blade-series",
+      "title": "Blade: The Series",
+      "release_date": "2006-06-28",
+      "saga": "blade-saga",
+      "universe": "new-line-cinema",
+      "mediatype": "show",
+      "poster": "/api/v1/posters/blade-series.jpg"
+    },
+    {
+      "id": "spider-man-3",
+      "title": "Spider-Man 3",
+      "release_date": "2007-05-04",
+      "saga": "raimi-trilogy",
+      "universe": "columbia-pictures",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/spider-man-3-2007.jpg"
+    },
+    {
+      "id": "fantastic-four-rise-of-the-silver-surfer",
+      "title": "Fantastic Four: Rise of the Silver Surfer",
+      "release_date": "2007-06-15",
+      "saga": "fantastic-four-saga",
+      "universe": "fox-marvel-cinematic-universe",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/fantastic-four-rise-of-the-silver-surfer.jpg"
+    },
+    {
+      "id": "iron-man",
+      "title": "Iron Man",
+      "release_date": "2008-05-02",
+      "saga": "infinite-saga",
+      "universe": "mcu",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/iron-man.jpg"
+    },
+    {
+      "id": "incredible-hulk",
+      "title": "The Incredible Hulk",
+      "release_date": "2008-06-13",
+      "saga": "infinite-saga",
+      "universe": "mcu",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/incredible-hulk.jpg"
+    },
+    {
+      "id": "x-men-origins-wolverine",
+      "title": "X-Men Origins: Wolverine",
+      "release_date": "2009-05-01",
+      "saga": "wolverine-trilogy",
+      "universe": "fox-marvel-cinematic-universe",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/x-men-origins-wolverine.jpg"
+    },
+    {
+      "id": "iron-man-2",
+      "title": "Iron Man 2",
+      "release_date": "2010-05-07",
+      "saga": "infinite-saga",
+      "universe": "mcu",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/iron-man-2.jpg"
+    },
+    {
+      "id": "thor",
+      "title": "Thor",
+      "release_date": "2011-05-06",
+      "saga": "infinite-saga",
+      "universe": "mcu",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/thor.jpg"
+    },
+    {
+      "id": "x-men-first-class",
+      "title": "X-Men: First Class",
+      "release_date": "2011-06-03",
+      "saga": "x-men-prequel",
+      "universe": "fox-marvel-cinematic-universe",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/x-men-first-class.jpg"
+    },
+    {
+      "id": "captain-america-the-first-avenger",
+      "title": "Captain America: The First Avenger",
+      "release_date": "2011-07-22",
+      "saga": "infinite-saga",
+      "universe": "mcu",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/captain-america-the-first-avenger.jpg"
+    },
+    {
+      "id": "avengers",
+      "title": "The Avengers",
+      "release_date": "2012-05-04",
+      "saga": "infinite-saga",
+      "universe": "mcu",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/avengers.jpg"
+    },
+    {
+      "id": "the-amazing-spider-man",
+      "title": "The Amazing Spider-Man",
+      "release_date": "2012-07-03",
+      "saga": "amazing-spider-man-saga",
+      "universe": "columbia-pictures",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/the-amazing-spider-man-2012.jpg"
+    },
+    {
+      "id": "iron-man-3",
+      "title": "Iron Man 3",
+      "release_date": "2013-05-03",
+      "saga": "infinite-saga",
+      "universe": "mcu",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/iron-man-3.jpg"
+    },
+    {
+      "id": "the-wolverine",
+      "title": "The Wolverine",
+      "release_date": "2013-07-26",
+      "saga": "wolverine-trilogy",
+      "universe": "fox-marvel-cinematic-universe",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/the-wolverine.jpg"
+    },
+    {
+      "id": "agents-of-shield",
+      "title": "Agents of S.H.I.E.L.D.",
+      "release_date": "2013-09-24",
+      "saga": "infinite-saga",
+      "universe": "marvel-television",
+      "mediatype": "show",
+      "poster": "/api/v1/posters/agents-of-shield.jpg"
+    },
+    {
+      "id": "thor-the-dark-world",
+      "title": "Thor: The Dark World",
+      "release_date": "2013-11-08",
+      "saga": "infinite-saga",
+      "universe": "mcu",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/thor-the-dark-world.jpg"
+    },
+    {
+      "id": "captain-america-the-winter-soldier",
+      "title": "Captain America: The Winter Soldier",
+      "release_date": "2014-04-04",
+      "saga": "infinite-saga",
+      "universe": "mcu",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/captain-america-the-winter-soldier.jpg"
+    },
+    {
+      "id": "the-amazing-spider-man-2",
+      "title": "The Amazing Spider-Man 2",
+      "release_date": "2014-05-02",
+      "saga": "amazing-spider-man-saga",
+      "universe": "columbia-pictures",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/the-amazing-spider-man-2-2014.jpg"
+    },
+    {
+      "id": "x-men-days-of-future-past",
+      "title": "X-Men: Days of Future Past",
+      "release_date": "2014-05-23",
+      "saga": "x-men-prequel",
+      "universe": "fox-marvel-cinematic-universe",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/x-men-days-of-future-past.jpg"
+    },
+    {
+      "id": "guardians-of-the-galaxy",
+      "title": "Guardians of the Galaxy",
+      "release_date": "2014-08-01",
+      "saga": "infinite-saga",
+      "universe": "mcu",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/guardians-of-the-galaxy.jpg"
+    },
+    {
+      "id": "agent-carter",
+      "title": "Agent Carter",
+      "release_date": "2015-01-06",
+      "saga": "infinite-saga",
+      "universe": "marvel-television",
+      "mediatype": "show",
+      "poster": "/api/v1/posters/agent-carter.jpg"
+    },
+    {
+      "id": "daredevil-season-1",
+      "title": "Daredevil Season 1",
+      "release_date": "2015-04-10",
+      "saga": "defenders-saga",
+      "universe": "netflix",
+      "mediatype": "show",
+      "poster": "/api/v1/posters/daredevil-season-1.jpg"
+    },
+    {
+      "id": "avengers-age-of-ultron",
+      "title": "Avengers: Age of Ultron",
+      "release_date": "2015-05-01",
+      "saga": "infinite-saga",
+      "universe": "mcu",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/avengers-age-of-ultron.jpg"
+    },
+    {
+      "id": "ant-man",
+      "title": "Ant-Man",
+      "release_date": "2015-07-17",
+      "saga": "infinite-saga",
+      "universe": "mcu",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/ant-man.jpg"
+    },
+    {
+      "id": "fantastic-four-2015",
+      "title": "Fantastic Four",
+      "release_date": "2015-08-07",
+      "saga": null,
+      "universe": "fox-marvel-cinematic-universe",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/fantastic-four-2015.jpg"
+    },
+    {
+      "id": "jessica-jones-season-1",
+      "title": "Jessica Jones Season 1",
+      "release_date": "2015-11-20",
+      "saga": "defenders-saga",
+      "universe": "netflix",
+      "mediatype": "show",
+      "poster": "/api/v1/posters/jessica-jones-season-1.jpg"
+    },
+    {
+      "id": "deadpool",
+      "title": "Deadpool",
+      "release_date": "2016-02-12",
+      "saga": "deadpool-saga",
+      "universe": "fox-marvel-cinematic-universe",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/deadpool.jpg"
+    },
+    {
+      "id": "daredevil-season-2",
+      "title": "Daredevil Season 2",
+      "release_date": "2016-03-18",
+      "saga": "defenders-saga",
+      "universe": "netflix",
+      "mediatype": "show",
+      "poster": "/api/v1/posters/daredevil-season-2.jpg"
+    },
+    {
+      "id": "captain-america-civil-war",
+      "title": "Captain America: Civil War",
+      "release_date": "2016-05-06",
+      "saga": "infinite-saga",
+      "universe": "mcu",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/captain-america-civil-war.jpg"
+    },
+    {
+      "id": "x-men-apocalypse",
+      "title": "X-Men: Apocalypse",
+      "release_date": "2016-05-27",
+      "saga": "x-men-prequel",
+      "universe": "fox-marvel-cinematic-universe",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/x-men-apocalypse.jpg"
+    },
+    {
+      "id": "luke-cage-season-1",
+      "title": "Luke Cage Season 1",
+      "release_date": "2016-09-30",
+      "saga": "defenders-saga",
+      "universe": "netflix",
+      "mediatype": "show",
+      "poster": "/api/v1/posters/luke-cage-season-1.jpg"
+    },
+    {
+      "id": "doctor-strange",
+      "title": "Doctor Strange",
+      "release_date": "2016-11-04",
+      "saga": "infinite-saga",
+      "universe": "mcu",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/doctor-strange.jpg"
+    },
+    {
+      "id": "slingshot",
+      "title": "Agents of S.H.I.E.L.D.: Slingshot",
+      "release_date": "2016-12-13",
+      "saga": null,
+      "universe": "marvel-television",
+      "mediatype": "special",
+      "poster": "/api/v1/posters/slingshot.jpg"
+    },
+    {
+      "id": "legion",
+      "title": "Legion",
+      "release_date": "2017-02-08",
+      "saga": null,
+      "universe": "fox-marvel-cinematic-universe",
+      "mediatype": "show",
+      "poster": "/api/v1/posters/legion.jpg"
+    },
+    {
+      "id": "logan",
+      "title": "Logan",
+      "release_date": "2017-03-03",
+      "saga": "wolverine-trilogy",
+      "universe": "fox-marvel-cinematic-universe",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/logan.jpg"
+    },
+    {
+      "id": "iron-fist-season-1",
+      "title": "Iron Fist Season 1",
+      "release_date": "2017-03-17",
+      "saga": "defenders-saga",
+      "universe": "netflix",
+      "mediatype": "show",
+      "poster": "/api/v1/posters/iron-fist-season-1.jpg"
+    },
+    {
+      "id": "guardians-of-the-galaxy-vol-2",
+      "title": "Guardians of the Galaxy Vol. 2",
+      "release_date": "2017-05-05",
+      "saga": "infinite-saga",
+      "universe": "mcu",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/guardians-of-the-galaxy-vol-2.jpg"
+    },
+    {
+      "id": "spider-man-homecoming",
+      "title": "Spider-Man: Homecoming",
+      "release_date": "2017-07-07",
+      "saga": "infinite-saga",
+      "universe": "mcu",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/spider-man-homecoming.jpg"
+    },
+    {
+      "id": "defenders",
+      "title": "The Defenders",
+      "release_date": "2017-08-18",
+      "saga": "defenders-saga",
+      "universe": "netflix",
+      "mediatype": "show",
+      "poster": "/api/v1/posters/defenders.jpg"
+    },
+    {
+      "id": "inhumans",
+      "title": "Inhumans",
+      "release_date": "2017-09-29",
+      "saga": "infinite-saga",
+      "universe": "marvel-television",
+      "mediatype": "show",
+      "poster": "/api/v1/posters/inhumans.jpg"
+    },
+    {
+      "id": "the-gifted",
+      "title": "The Gifted",
+      "release_date": "2017-10-02",
+      "saga": null,
+      "universe": "fox-marvel-cinematic-universe",
+      "mediatype": "show",
+      "poster": "/api/v1/posters/the-gifted.jpg"
+    },
+    {
+      "id": "thor-ragnarok",
+      "title": "Thor: Ragnarok",
+      "release_date": "2017-11-03",
+      "saga": "infinite-saga",
+      "universe": "mcu",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/thor-ragnarok.jpg"
+    },
+    {
+      "id": "punisher-season-1",
+      "title": "The Punisher Season 1",
+      "release_date": "2017-11-17",
+      "saga": "defenders-saga",
+      "universe": "netflix",
+      "mediatype": "show",
+      "poster": "/api/v1/posters/punisher-season-1.jpg"
+    },
+    {
+      "id": "runaways",
+      "title": "Runaways",
+      "release_date": "2017-11-21",
+      "saga": "infinite-saga",
+      "universe": "marvel-television",
+      "mediatype": "show",
+      "poster": "/api/v1/posters/runaways.jpg"
+    },
+    {
+      "id": "black-panther",
+      "title": "Black Panther",
+      "release_date": "2018-02-16",
+      "saga": "infinite-saga",
+      "universe": "mcu",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/black-panther.jpg"
+    },
+    {
+      "id": "jessica-jones-season-2",
+      "title": "Jessica Jones Season 2",
+      "release_date": "2018-03-08",
+      "saga": "defenders-saga",
+      "universe": "netflix",
+      "mediatype": "show",
+      "poster": "/api/v1/posters/jessica-jones-season-2.jpg"
+    },
+    {
+      "id": "avengers-infinity-war",
+      "title": "Avengers: Infinity War",
+      "release_date": "2018-04-27",
+      "saga": "infinite-saga",
+      "universe": "mcu",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/avengers-infinity-war.jpg"
+    },
+    {
+      "id": "deadpool-2",
+      "title": "Deadpool 2",
+      "release_date": "2018-05-18",
+      "saga": "deadpool-saga",
+      "universe": "fox-marvel-cinematic-universe",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/deadpool-2.jpg"
+    },
+    {
+      "id": "cloak-and-dagger",
+      "title": "Cloak & Dagger",
+      "release_date": "2018-06-07",
+      "saga": "infinite-saga",
+      "universe": "marvel-television",
+      "mediatype": "show",
+      "poster": "/api/v1/posters/cloak-and-dagger.jpg"
+    },
+    {
+      "id": "luke-cage-season-2",
+      "title": "Luke Cage Season 2",
+      "release_date": "2018-06-22",
+      "saga": "defenders-saga",
+      "universe": "netflix",
+      "mediatype": "show",
+      "poster": "/api/v1/posters/luke-cage-season-2.jpg"
+    },
+    {
+      "id": "ant-man-and-the-wasp",
+      "title": "Ant-Man and the Wasp",
+      "release_date": "2018-07-06",
+      "saga": "infinite-saga",
+      "universe": "mcu",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/ant-man-and-the-wasp.jpg"
+    },
+    {
+      "id": "iron-fist-season-2",
+      "title": "Iron Fist Season 2",
+      "release_date": "2018-09-07",
+      "saga": "defenders-saga",
+      "universe": "netflix",
+      "mediatype": "show",
+      "poster": "/api/v1/posters/iron-fist-season-2.jpg"
+    },
+    {
+      "id": "venom",
+      "title": "Venom",
+      "release_date": "2018-10-05",
+      "saga": "sonys-spider-man-universe",
+      "universe": "sonys-spider-man-universe",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/venom.jpg"
+    },
+    {
+      "id": "daredevil-season-3",
+      "title": "Daredevil Season 3",
+      "release_date": "2018-10-19",
+      "saga": "defenders-saga",
+      "universe": "netflix",
+      "mediatype": "show",
+      "poster": "/api/v1/posters/daredevil-season-3.jpg"
+    },
+    {
+      "id": "spider-man-into-the-spider-verse",
+      "title": "Spider-Man: Into the Spider-Verse",
+      "release_date": "2018-12-14",
+      "saga": "animated-spider-verse",
+      "universe": "sonys-spider-man-universe",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/spider-man-into-the-spider-verse.jpg"
+    },
+    {
+      "id": "punisher-season-2",
+      "title": "The Punisher Season 2",
+      "release_date": "2019-01-18",
+      "saga": "defenders-saga",
+      "universe": "netflix",
+      "mediatype": "show",
+      "poster": "/api/v1/posters/punisher-season-2.jpg"
+    },
+    {
+      "id": "captain-marvel",
+      "title": "Captain Marvel",
+      "release_date": "2019-03-08",
+      "saga": "infinite-saga",
+      "universe": "mcu",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/captain-marvel.jpg"
+    },
+    {
+      "id": "avengers-endgame",
+      "title": "Avengers: Endgame",
+      "release_date": "2019-04-26",
+      "saga": "infinite-saga",
+      "universe": "mcu",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/avengers-endgame.jpg"
+    },
+    {
+      "id": "x-men-dark-phoenix",
+      "title": "X-Men: Dark Phoenix",
+      "release_date": "2019-06-07",
+      "saga": "x-men-prequel",
+      "universe": "fox-marvel-cinematic-universe",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/x-men-dark-phoenix.jpg"
+    },
+    {
+      "id": "jessica-jones-season-3",
+      "title": "Jessica Jones Season 3",
+      "release_date": "2019-06-14",
+      "saga": "defenders-saga",
+      "universe": "netflix",
+      "mediatype": "show",
+      "poster": "/api/v1/posters/jessica-jones-season-3.jpg"
+    },
+    {
+      "id": "spider-man-far-from-home",
+      "title": "Spider-Man: Far From Home",
+      "release_date": "2019-07-02",
+      "saga": "infinite-saga",
+      "universe": "mcu",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/spider-man-far-from-home.jpg"
+    },
+    {
+      "id": "the-new-mutants",
+      "title": "The New Mutants",
+      "release_date": "2020-08-28",
+      "saga": null,
+      "universe": "fox-marvel-cinematic-universe",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/the-new-mutants.jpg"
+    },
+    {
+      "id": "helstrom",
+      "title": "Helstrom",
+      "release_date": "2020-10-16",
+      "saga": "infinite-saga",
+      "universe": "marvel-television",
+      "mediatype": "show",
+      "poster": "/api/v1/posters/helstrom.jpg"
+    },
+    {
+      "id": "wandavision",
+      "title": "WandaVision",
+      "release_date": "2021-01-15",
+      "saga": "multiverse-saga",
+      "universe": "mcu",
+      "mediatype": "show",
+      "poster": "/api/v1/posters/wandavision.jpg"
+    },
+    {
+      "id": "the-falcon-and-the-winter-soldier",
+      "title": "The Falcon and the Winter Soldier",
+      "release_date": "2021-03-19",
+      "saga": "multiverse-saga",
+      "universe": "mcu",
+      "mediatype": "show",
+      "poster": "/api/v1/posters/the-falcon-and-the-winter-soldier.jpg"
+    },
+    {
+      "id": "modok",
+      "title": "M.O.D.O.K.",
+      "release_date": "2021-05-21",
+      "saga": null,
+      "universe": "marvel-television",
+      "mediatype": "show",
+      "poster": "/api/v1/posters/modok.jpg"
+    },
+    {
+      "id": "loki-season-1",
+      "title": "Loki (Season 1)",
+      "release_date": "2021-06-09",
+      "saga": "multiverse-saga",
+      "universe": "mcu",
+      "mediatype": "show",
+      "poster": "/api/v1/posters/loki-season-1.jpg"
+    },
+    {
+      "id": "black-widow",
+      "title": "Black Widow",
+      "release_date": "2021-07-09",
+      "saga": "multiverse-saga",
+      "universe": "mcu",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/black-widow.jpg"
+    },
+    {
+      "id": "what-if-season-1",
+      "title": "What If...? (Season 1)",
+      "release_date": "2021-08-11",
+      "saga": "multiverse-saga",
+      "universe": "mcu",
+      "mediatype": "show",
+      "poster": "/api/v1/posters/what-if-season-1.jpg"
+    },
+    {
+      "id": "shang-chi-and-the-legend-of-the-ten-rings",
+      "title": "Shang-Chi and the Legend of the Ten Rings",
+      "release_date": "2021-09-03",
+      "saga": "multiverse-saga",
+      "universe": "mcu",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/shang-chi-and-the-legend-of-the-ten-rings.jpg"
+    },
+    {
+      "id": "venom-let-there-be-carnage",
+      "title": "Venom: Let There Be Carnage",
+      "release_date": "2021-10-01",
+      "saga": "sonys-spider-man-universe",
+      "universe": "sonys-spider-man-universe",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/venom-let-there-be-carnage.jpg"
+    },
+    {
+      "id": "eternals",
+      "title": "Eternals",
+      "release_date": "2021-11-05",
+      "saga": "multiverse-saga",
+      "universe": "mcu",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/eternals.jpg"
+    },
+    {
+      "id": "hitmonkey",
+      "title": "Hit-Monkey",
+      "release_date": "2021-11-17",
+      "saga": null,
+      "universe": "marvel-television",
+      "mediatype": "show",
+      "poster": "/api/v1/posters/hitmonkey.jpg"
+    },
+    {
+      "id": "hawkeye",
+      "title": "Hawkeye",
+      "release_date": "2021-11-24",
+      "saga": "multiverse-saga",
+      "universe": "mcu",
+      "mediatype": "show",
+      "poster": "/api/v1/posters/hawkeye.jpg"
+    },
+    {
+      "id": "spider-man-no-way-home",
+      "title": "Spider-Man: No Way Home",
+      "release_date": "2021-12-17",
+      "saga": "multiverse-saga",
+      "universe": "mcu",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/spider-man-no-way-home.jpg"
+    },
+    {
+      "id": "moon-knight",
+      "title": "Moon Knight",
+      "release_date": "2022-03-30",
+      "saga": "multiverse-saga",
+      "universe": "mcu",
+      "mediatype": "show",
+      "poster": "/api/v1/posters/moon-knight.jpg"
+    },
+    {
+      "id": "morbius",
+      "title": "Morbius",
+      "release_date": "2022-04-01",
+      "saga": "sonys-spider-man-universe",
+      "universe": "sonys-spider-man-universe",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/morbius.jpg"
+    },
+    {
+      "id": "doctor-strange-in-the-multiverse-of-madness",
+      "title": "Doctor Strange in the Multiverse of Madness",
+      "release_date": "2022-05-06",
+      "saga": "multiverse-saga",
+      "universe": "mcu",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/doctor-strange-in-the-multiverse-of-madness.jpg"
+    },
+    {
+      "id": "ms-marvel",
+      "title": "Ms. Marvel",
+      "release_date": "2022-06-08",
+      "saga": "multiverse-saga",
+      "universe": "mcu",
+      "mediatype": "show",
+      "poster": "/api/v1/posters/ms-marvel.jpg"
+    },
+    {
+      "id": "thor-love-and-thunder",
+      "title": "Thor: Love and Thunder",
+      "release_date": "2022-07-08",
+      "saga": "multiverse-saga",
+      "universe": "mcu",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/thor-love-and-thunder.jpg"
+    },
+    {
+      "id": "i-am-groot-season-1",
+      "title": "I Am Groot (Season 1)",
+      "release_date": "2022-08-10",
+      "saga": "multiverse-saga",
+      "universe": "mcu",
+      "mediatype": "show",
+      "poster": "/api/v1/posters/i-am-groot-season-1.jpg"
+    },
+    {
+      "id": "she-hulk-attorney-at-law",
+      "title": "She-Hulk: Attorney at Law",
+      "release_date": "2022-08-18",
+      "saga": "multiverse-saga",
+      "universe": "mcu",
+      "mediatype": "show",
+      "poster": "/api/v1/posters/she-hulk-attorney-at-law.jpg"
+    },
+    {
+      "id": "werewolf-by-night",
+      "title": "Werewolf by Night",
+      "release_date": "2022-09-30",
+      "saga": "multiverse-saga",
+      "universe": "mcu",
+      "mediatype": "special",
+      "poster": "/api/v1/posters/werewolf-by-night.jpg"
+    },
+    {
+      "id": "black-panther-wakanda-forever",
+      "title": "Black Panther: Wakanda Forever",
+      "release_date": "2022-11-11",
+      "saga": "multiverse-saga",
+      "universe": "mcu",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/black-panther-wakanda-forever.jpg"
+    },
+    {
+      "id": "the-guardians-of-the-galaxy-holiday-special",
+      "title": "The Guardians of the Galaxy Holiday Special",
+      "release_date": "2022-11-25",
+      "saga": "multiverse-saga",
+      "universe": "mcu",
+      "mediatype": "special",
+      "poster": "/api/v1/posters/the-guardians-of-the-galaxy-holiday-special.jpg"
+    },
+    {
+      "id": "ant-man-and-the-wasp-quantumania",
+      "title": "Ant-Man and the Wasp: Quantumania",
+      "release_date": "2023-02-17",
+      "saga": "multiverse-saga",
+      "universe": "mcu",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/ant-man-and-the-wasp-quantumania.jpg"
+    },
+    {
+      "id": "guardians-of-the-galaxy-vol-3",
+      "title": "Guardians of the Galaxy Vol. 3",
+      "release_date": "2023-05-05",
+      "saga": "multiverse-saga",
+      "universe": "mcu",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/guardians-of-the-galaxy-vol-3.jpg"
+    },
+    {
+      "id": "spider-man-across-the-spider-verse",
+      "title": "Spider-Man: Across the Spider-Verse",
+      "release_date": "2023-06-02",
+      "saga": "animated-spider-verse",
+      "universe": "sonys-spider-man-universe",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/spider-man-across-the-spider-verse.jpg"
+    },
+    {
+      "id": "secret-invasion",
+      "title": "Secret Invasion",
+      "release_date": "2023-06-21",
+      "saga": "multiverse-saga",
+      "universe": "mcu",
+      "mediatype": "show",
+      "poster": "/api/v1/posters/secret-invasion.jpg"
+    },
+    {
+      "id": "i-am-groot-season-2",
+      "title": "I Am Groot (Season 2)",
+      "release_date": "2023-09-06",
+      "saga": "multiverse-saga",
+      "universe": "mcu",
+      "mediatype": "show",
+      "poster": "/api/v1/posters/i-am-groot-season-2.jpg"
+    },
+    {
+      "id": "loki-season-2",
+      "title": "Loki (Season 2)",
+      "release_date": "2023-10-05",
+      "saga": "multiverse-saga",
+      "universe": "mcu",
+      "mediatype": "show",
+      "poster": "/api/v1/posters/loki-season-2.jpg"
+    },
+    {
+      "id": "the-marvels",
+      "title": "The Marvels",
+      "release_date": "2023-11-10",
+      "saga": "multiverse-saga",
+      "universe": "mcu",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/the-marvels.jpg"
+    },
+    {
+      "id": "what-if-season-2",
+      "title": "What If...? (Season 2)",
+      "release_date": "2023-12-22",
+      "saga": "multiverse-saga",
+      "universe": "mcu",
+      "mediatype": "show",
+      "poster": "/api/v1/posters/what-if-season-2.jpg"
+    },
+    {
+      "id": "echo",
+      "title": "Echo",
+      "release_date": "2024-01-09",
+      "saga": "multiverse-saga",
+      "universe": "mcu",
+      "mediatype": "show",
+      "poster": "/api/v1/posters/echo.jpg"
+    },
+    {
+      "id": "madame-web",
+      "title": "Madame Web",
+      "release_date": "2024-02-14",
+      "saga": "sonys-spider-man-universe",
+      "universe": "sonys-spider-man-universe",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/madame-web.jpg"
+    },
+    {
+      "id": "deadpool-and-wolverine",
+      "title": "Deadpool & Wolverine",
+      "release_date": "2024-07-26",
+      "saga": "multiverse-saga",
+      "universe": "mcu",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/deadpool-and-wolverine.jpg"
+    },
+    {
+      "id": "agatha-all-along",
+      "title": "Agatha All Along",
+      "release_date": "2024-09-18",
+      "saga": "multiverse-saga",
+      "universe": "mcu",
+      "mediatype": "show",
+      "poster": "/api/v1/posters/agatha-all-along.jpg"
+    },
+    {
+      "id": "venom-the-last-dance",
+      "title": "Venom: The Last Dance",
+      "release_date": "2024-10-25",
+      "saga": "sonys-spider-man-universe",
+      "universe": "sonys-spider-man-universe",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/venom-the-last-dance.jpg"
+    },
+    {
+      "id": "kraven-the-hunter",
+      "title": "Kraven the Hunter",
+      "release_date": "2024-12-13",
+      "saga": "sonys-spider-man-universe",
+      "universe": "sonys-spider-man-universe",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/kraven-the-hunter.jpg"
+    },
+    {
+      "id": "what-if-season-3",
+      "title": "What If...? Season 3",
+      "release_date": "2024-12-22",
+      "saga": "multiverse-saga",
+      "universe": "mcu",
+      "mediatype": "show",
+      "poster": "/api/v1/posters/what-if-season-3.jpg"
+    },
+    {
+      "id": "your-friendly-neighborhood-spider-man",
+      "title": "Your Friendly Neighborhood Spider-Man (Season 1)",
+      "release_date": "2025-01-29",
+      "saga": "multiverse-saga",
+      "universe": "mcu",
+      "mediatype": "show",
+      "poster": "/api/v1/posters/your-friendly-neighborhood-spider-man.jpg"
+    },
+    {
+      "id": "captain-america-brave-new-world",
+      "title": "Captain America: Brave New World",
+      "release_date": "2025-02-14",
+      "saga": "multiverse-saga",
+      "universe": "mcu",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/captain-america-brave-new-world.jpg"
+    },
+    {
+      "id": "daredevil-born-again",
+      "title": "Daredevil: Born Again (Season 1)",
+      "release_date": "2025-03-04",
+      "saga": "multiverse-saga",
+      "universe": "mcu",
+      "mediatype": "show",
+      "poster": "/api/v1/posters/daredevil-born-again.jpg"
+    },
+    {
+      "id": "thunderbolts",
+      "title": "Thunderbolts*",
+      "release_date": "2025-05-02",
+      "saga": "multiverse-saga",
+      "universe": "mcu",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/thunderbolts.jpg"
+    },
+    {
+      "id": "ironheart",
+      "title": "Ironheart",
+      "release_date": "2025-06-24",
+      "saga": "multiverse-saga",
+      "universe": "mcu",
+      "mediatype": "show",
+      "poster": "/api/v1/posters/ironheart.jpg"
+    },
+    {
+      "id": "the-fantastic-four-first-steps",
+      "title": "The Fantastic Four: First Steps",
+      "release_date": "2025-07-25",
+      "saga": "multiverse-saga",
+      "universe": "mcu",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/the-fantastic-four-first-steps.jpg"
+    },
+    {
+      "id": "eyes-of-wakanda",
+      "title": "Eyes of Wakanda",
+      "release_date": "2025-08-01",
+      "saga": "multiverse-saga",
+      "universe": "mcu",
+      "mediatype": "show",
+      "poster": "/api/v1/posters/eyes-of-wakanda.jpg"
+    },
+    {
+      "id": "marvel-zombies",
+      "title": "Marvel Zombies",
+      "release_date": "2025-09-24",
+      "saga": "multiverse-saga",
+      "universe": "mcu",
+      "mediatype": "show",
+      "poster": "/api/v1/posters/marvel-zombies.jpg"
+    },
+    {
+      "id": "wonder-man",
+      "title": "Wonder Man",
+      "release_date": "2026-01-27",
+      "saga": "multiverse-saga",
+      "universe": "mcu",
+      "mediatype": "show",
+      "poster": "/api/v1/posters/wonder-man.jpg"
+    },
+    {
+      "id": "daredevil-born-again-season-2",
+      "title": "Daredevil: Born Again Season 2",
+      "release_date": "2026-03-24",
+      "saga": "multiverse-saga",
+      "universe": "mcu",
+      "mediatype": "show",
+      "poster": "/api/v1/posters/daredevil-born-again-season-2.jpg"
+    },
+    {
+      "id": "punisher-one-last-kill",
+      "title": "The Punisher: One Last Kill",
+      "release_date": "2026-05-12",
+      "saga": "multiverse-saga",
+      "universe": "mcu",
+      "mediatype": "special",
+      "poster": "/api/v1/posters/punisher-one-last-kill.jpg"
+    },
+    {
+      "id": "spider-noir",
+      "title": "Spider-Noir",
+      "release_date": "2026-05-27",
+      "saga": "animated-spider-verse",
+      "universe": "sonys-spider-man-universe",
+      "mediatype": "show",
+      "poster": "/api/v1/posters/spider-noir.jpg"
+    },
+    {
+      "id": "spider-man-brand-new-day",
+      "title": "Spider-Man: Brand New Day",
+      "release_date": "2026-07-31",
+      "saga": "multiverse-saga",
+      "universe": "mcu",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/spider-man-brand-new-day.jpg"
+    },
+    {
+      "id": "visionquest",
+      "title": "VisionQuest",
+      "release_date": "2026-10-14",
+      "saga": "multiverse-saga",
+      "universe": "mcu",
+      "mediatype": "show",
+      "poster": "/api/v1/posters/visionquest.jpg"
+    },
+    {
+      "id": "avengers-doomsday",
+      "title": "Avengers: Doomsday",
+      "release_date": "2026-12-18",
+      "saga": "multiverse-saga",
+      "universe": "mcu",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/avengers-doomsday.jpg"
+    },
+    {
+      "id": "spider-man-beyond-the-spider-verse",
+      "title": "Spider-Man: Beyond the Spider-Verse",
+      "release_date": "2027-06-04",
+      "saga": "animated-spider-verse",
+      "universe": "sonys-spider-man-universe",
+      "mediatype": "movie",
+      "poster": "/api/v1/posters/spider-man-beyond-the-spider-verse.jpg"
+    }
+  ],
+  "edges": [
+    {
+      "source": "blade-2",
+      "target": "blade",
+      "type": "required"
+    },
+    {
+      "source": "x2",
+      "target": "x-men",
+      "type": "required"
+    },
+    {
+      "source": "spider-man-2",
+      "target": "spider-man",
+      "type": "required"
+    },
+    {
+      "source": "blade-trinity",
+      "target": "blade-2",
+      "type": "required"
+    },
+    {
+      "source": "elektra",
+      "target": "daredevil",
+      "type": "optional"
+    },
+    {
+      "source": "x-men-the-last-stand",
+      "target": "x2",
+      "type": "required"
+    },
+    {
+      "source": "blade-series",
+      "target": "blade-trinity",
+      "type": "required"
+    },
+    {
+      "source": "spider-man-3",
+      "target": "spider-man-2",
+      "type": "required"
+    },
+    {
+      "source": "fantastic-four-rise-of-the-silver-surfer",
+      "target": "fantastic-four-2005",
+      "type": "required"
+    },
+    {
+      "source": "x-men-origins-wolverine",
+      "target": "x-men-the-last-stand",
+      "type": "optional"
+    },
+    {
+      "source": "iron-man-2",
+      "target": "iron-man",
+      "type": "required"
+    },
+    {
+      "source": "x-men-first-class",
+      "target": "x-men-the-last-stand",
+      "type": "optional"
+    },
+    {
+      "source": "avengers",
+      "target": "iron-man-2",
+      "type": "required"
+    },
+    {
+      "source": "avengers",
+      "target": "thor",
+      "type": "required"
+    },
+    {
+      "source": "avengers",
+      "target": "captain-america-the-first-avenger",
+      "type": "required"
+    },
+    {
+      "source": "avengers",
+      "target": "incredible-hulk",
+      "type": "required"
+    },
+    {
+      "source": "iron-man-3",
+      "target": "avengers",
+      "type": "required"
+    },
+    {
+      "source": "the-wolverine",
+      "target": "x-men-origins-wolverine",
+      "type": "required"
+    },
+    {
+      "source": "agents-of-shield",
+      "target": "iron-man-3",
+      "type": "required"
+    },
+    {
+      "source": "agents-of-shield",
+      "target": "agent-carter",
+      "type": "optional"
+    },
+    {
+      "source": "thor-the-dark-world",
+      "target": "avengers",
+      "type": "required"
+    },
+    {
+      "source": "captain-america-the-winter-soldier",
+      "target": "avengers",
+      "type": "required"
+    },
+    {
+      "source": "the-amazing-spider-man-2",
+      "target": "the-amazing-spider-man",
+      "type": "required"
+    },
+    {
+      "source": "x-men-days-of-future-past",
+      "target": "x-men-first-class",
+      "type": "required"
+    },
+    {
+      "source": "agent-carter",
+      "target": "captain-america-the-first-avenger",
+      "type": "optional"
+    },
+    {
+      "source": "avengers-age-of-ultron",
+      "target": "iron-man-3",
+      "type": "required"
+    },
+    {
+      "source": "avengers-age-of-ultron",
+      "target": "thor-the-dark-world",
+      "type": "required"
+    },
+    {
+      "source": "avengers-age-of-ultron",
+      "target": "captain-america-the-winter-soldier",
+      "type": "required"
+    },
+    {
+      "source": "deadpool",
+      "target": "x-men-the-last-stand",
+      "type": "references"
+    },
+    {
+      "source": "daredevil-season-2",
+      "target": "daredevil-season-1",
+      "type": "required"
+    },
+    {
+      "source": "captain-america-civil-war",
+      "target": "ant-man",
+      "type": "required"
+    },
+    {
+      "source": "captain-america-civil-war",
+      "target": "avengers-age-of-ultron",
+      "type": "required"
+    },
+    {
+      "source": "x-men-apocalypse",
+      "target": "x-men-days-of-future-past",
+      "type": "required"
+    },
+    {
+      "source": "luke-cage-season-1",
+      "target": "jessica-jones-season-1",
+      "type": "optional"
+    },
+    {
+      "source": "slingshot",
+      "target": "agents-of-shield",
+      "type": "required"
+    },
+    {
+      "source": "legion",
+      "target": "x-men-the-last-stand",
+      "type": "optional"
+    },
+    {
+      "source": "logan",
+      "target": "x-men-the-last-stand",
+      "type": "optional"
+    },
+    {
+      "source": "logan",
+      "target": "the-wolverine",
+      "type": "references"
+    },
+    {
+      "source": "guardians-of-the-galaxy-vol-2",
+      "target": "guardians-of-the-galaxy",
+      "type": "required"
+    },
+    {
+      "source": "spider-man-homecoming",
+      "target": "captain-america-civil-war",
+      "type": "required"
+    },
+    {
+      "source": "defenders",
+      "target": "daredevil-season-2",
+      "type": "required"
+    },
+    {
+      "source": "defenders",
+      "target": "jessica-jones-season-1",
+      "type": "required"
+    },
+    {
+      "source": "defenders",
+      "target": "luke-cage-season-1",
+      "type": "required"
+    },
+    {
+      "source": "defenders",
+      "target": "iron-fist-season-1",
+      "type": "required"
+    },
+    {
+      "source": "the-gifted",
+      "target": "x-men-the-last-stand",
+      "type": "references"
+    },
+    {
+      "source": "thor-ragnarok",
+      "target": "doctor-strange",
+      "type": "required"
+    },
+    {
+      "source": "thor-ragnarok",
+      "target": "avengers-age-of-ultron",
+      "type": "required"
+    },
+    {
+      "source": "punisher-season-1",
+      "target": "daredevil-season-2",
+      "type": "required"
+    },
+    {
+      "source": "runaways",
+      "target": "cloak-and-dagger",
+      "type": "optional"
+    },
+    {
+      "source": "black-panther",
+      "target": "captain-america-civil-war",
+      "type": "required"
+    },
+    {
+      "source": "jessica-jones-season-2",
+      "target": "defenders",
+      "type": "required"
+    },
+    {
+      "source": "avengers-infinity-war",
+      "target": "black-panther",
+      "type": "required"
+    },
+    {
+      "source": "avengers-infinity-war",
+      "target": "spider-man-homecoming",
+      "type": "required"
+    },
+    {
+      "source": "avengers-infinity-war",
+      "target": "guardians-of-the-galaxy-vol-2",
+      "type": "required"
+    },
+    {
+      "source": "avengers-infinity-war",
+      "target": "thor-ragnarok",
+      "type": "required"
+    },
+    {
+      "source": "deadpool-2",
+      "target": "deadpool",
+      "type": "required"
+    },
+    {
+      "source": "luke-cage-season-2",
+      "target": "defenders",
+      "type": "required"
+    },
+    {
+      "source": "ant-man-and-the-wasp",
+      "target": "captain-america-civil-war",
+      "type": "required"
+    },
+    {
+      "source": "iron-fist-season-2",
+      "target": "defenders",
+      "type": "required"
+    },
+    {
+      "source": "iron-fist-season-2",
+      "target": "luke-cage-season-2",
+      "type": "optional"
+    },
+    {
+      "source": "daredevil-season-3",
+      "target": "defenders",
+      "type": "required"
+    },
+    {
+      "source": "daredevil-season-3",
+      "target": "iron-fist-season-2",
+      "type": "optional"
+    },
+    {
+      "source": "spider-man-into-the-spider-verse",
+      "target": "venom",
+      "type": "references"
+    },
+    {
+      "source": "punisher-season-2",
+      "target": "punisher-season-1",
+      "type": "required"
+    },
+    {
+      "source": "punisher-season-2",
+      "target": "daredevil-season-3",
+      "type": "optional"
+    },
+    {
+      "source": "avengers-endgame",
+      "target": "avengers-infinity-war",
+      "type": "required"
+    },
+    {
+      "source": "avengers-endgame",
+      "target": "ant-man-and-the-wasp",
+      "type": "required"
+    },
+    {
+      "source": "avengers-endgame",
+      "target": "captain-marvel",
+      "type": "required"
+    },
+    {
+      "source": "x-men-dark-phoenix",
+      "target": "x-men-apocalypse",
+      "type": "required"
+    },
+    {
+      "source": "jessica-jones-season-3",
+      "target": "jessica-jones-season-2",
+      "type": "required"
+    },
+    {
+      "source": "jessica-jones-season-3",
+      "target": "luke-cage-season-2",
+      "type": "optional"
+    },
+    {
+      "source": "spider-man-far-from-home",
+      "target": "avengers-endgame",
+      "type": "required"
+    },
+    {
+      "source": "the-new-mutants",
+      "target": "x-men-the-last-stand",
+      "type": "references"
+    },
+    {
+      "source": "wandavision",
+      "target": "avengers-endgame",
+      "type": "required"
+    },
+    {
+      "source": "the-falcon-and-the-winter-soldier",
+      "target": "avengers-endgame",
+      "type": "required"
+    },
+    {
+      "source": "loki-season-1",
+      "target": "avengers-endgame",
+      "type": "required"
+    },
+    {
+      "source": "black-widow",
+      "target": "avengers-endgame",
+      "type": "required"
+    },
+    {
+      "source": "what-if-season-1",
+      "target": "avengers-endgame",
+      "type": "required"
+    },
+    {
+      "source": "shang-chi-and-the-legend-of-the-ten-rings",
+      "target": "avengers-endgame",
+      "type": "references"
+    },
+    {
+      "source": "venom-let-there-be-carnage",
+      "target": "venom",
+      "type": "required"
+    },
+    {
+      "source": "hawkeye",
+      "target": "the-falcon-and-the-winter-soldier",
+      "type": "required"
+    },
+    {
+      "source": "hawkeye",
+      "target": "black-widow",
+      "type": "required"
+    },
+    {
+      "source": "spider-man-no-way-home",
+      "target": "spider-man-far-from-home",
+      "type": "required"
+    },
+    {
+      "source": "spider-man-no-way-home",
+      "target": "spider-man-3",
+      "type": "optional"
+    },
+    {
+      "source": "spider-man-no-way-home",
+      "target": "the-amazing-spider-man-2",
+      "type": "optional"
+    },
+    {
+      "source": "morbius",
+      "target": "spider-man-homecoming",
+      "type": "references"
+    },
+    {
+      "source": "doctor-strange-in-the-multiverse-of-madness",
+      "target": "wandavision",
+      "type": "required"
+    },
+    {
+      "source": "doctor-strange-in-the-multiverse-of-madness",
+      "target": "spider-man-no-way-home",
+      "type": "required"
+    },
+    {
+      "source": "ms-marvel",
+      "target": "avengers-endgame",
+      "type": "required"
+    },
+    {
+      "source": "thor-love-and-thunder",
+      "target": "avengers-endgame",
+      "type": "required"
+    },
+    {
+      "source": "i-am-groot-season-1",
+      "target": "avengers-endgame",
+      "type": "required"
+    },
+    {
+      "source": "she-hulk-attorney-at-law",
+      "target": "avengers-endgame",
+      "type": "required"
+    },
+    {
+      "source": "she-hulk-attorney-at-law",
+      "target": "daredevil-season-3",
+      "type": "references"
+    },
+    {
+      "source": "she-hulk-attorney-at-law",
+      "target": "shang-chi-and-the-legend-of-the-ten-rings",
+      "type": "references"
+    },
+    {
+      "source": "black-panther-wakanda-forever",
+      "target": "avengers-endgame",
+      "type": "required"
+    },
+    {
+      "source": "ant-man-and-the-wasp-quantumania",
+      "target": "loki-season-1",
+      "type": "required"
+    },
+    {
+      "source": "guardians-of-the-galaxy-vol-3",
+      "target": "avengers-endgame",
+      "type": "required"
+    },
+    {
+      "source": "guardians-of-the-galaxy-vol-3",
+      "target": "the-guardians-of-the-galaxy-holiday-special",
+      "type": "optional"
+    },
+    {
+      "source": "guardians-of-the-galaxy-vol-3",
+      "target": "thor-love-and-thunder",
+      "type": "references"
+    },
+    {
+      "source": "spider-man-across-the-spider-verse",
+      "target": "spider-man-into-the-spider-verse",
+      "type": "required"
+    },
+    {
+      "source": "spider-man-across-the-spider-verse",
+      "target": "spider-man-3",
+      "type": "references"
+    },
+    {
+      "source": "spider-man-across-the-spider-verse",
+      "target": "the-amazing-spider-man-2",
+      "type": "references"
+    },
+    {
+      "source": "spider-man-across-the-spider-verse",
+      "target": "spider-man-homecoming",
+      "type": "references"
+    },
+    {
+      "source": "secret-invasion",
+      "target": "spider-man-far-from-home",
+      "type": "required"
+    },
+    {
+      "source": "i-am-groot-season-2",
+      "target": "i-am-groot-season-1",
+      "type": "required"
+    },
+    {
+      "source": "loki-season-2",
+      "target": "loki-season-1",
+      "type": "required"
+    },
+    {
+      "source": "loki-season-2",
+      "target": "ant-man-and-the-wasp-quantumania",
+      "type": "optional"
+    },
+    {
+      "source": "the-marvels",
+      "target": "ms-marvel",
+      "type": "required"
+    },
+    {
+      "source": "the-marvels",
+      "target": "wandavision",
+      "type": "required"
+    },
+    {
+      "source": "the-marvels",
+      "target": "hawkeye",
+      "type": "references"
+    },
+    {
+      "source": "what-if-season-2",
+      "target": "what-if-season-1",
+      "type": "required"
+    },
+    {
+      "source": "echo",
+      "target": "hawkeye",
+      "type": "required"
+    },
+    {
+      "source": "deadpool-and-wolverine",
+      "target": "deadpool-2",
+      "type": "required"
+    },
+    {
+      "source": "deadpool-and-wolverine",
+      "target": "loki-season-2",
+      "type": "required"
+    },
+    {
+      "source": "deadpool-and-wolverine",
+      "target": "fantastic-four-rise-of-the-silver-surfer",
+      "type": "optional"
+    },
+    {
+      "source": "deadpool-and-wolverine",
+      "target": "x-men-the-last-stand",
+      "type": "optional"
+    },
+    {
+      "source": "deadpool-and-wolverine",
+      "target": "logan",
+      "type": "optional"
+    },
+    {
+      "source": "deadpool-and-wolverine",
+      "target": "blade-series",
+      "type": "references"
+    },
+    {
+      "source": "deadpool-and-wolverine",
+      "target": "elektra",
+      "type": "references"
+    },
+    {
+      "source": "agatha-all-along",
+      "target": "doctor-strange-in-the-multiverse-of-madness",
+      "type": "required"
+    },
+    {
+      "source": "venom-the-last-dance",
+      "target": "venom-let-there-be-carnage",
+      "type": "required"
+    },
+    {
+      "source": "what-if-season-3",
+      "target": "what-if-season-2",
+      "type": "required"
+    },
+    {
+      "source": "your-friendly-neighborhood-spider-man",
+      "target": "doctor-strange-in-the-multiverse-of-madness",
+      "type": "required"
+    },
+    {
+      "source": "captain-america-brave-new-world",
+      "target": "the-falcon-and-the-winter-soldier",
+      "type": "required"
+    },
+    {
+      "source": "captain-america-brave-new-world",
+      "target": "black-widow",
+      "type": "optional"
+    },
+    {
+      "source": "captain-america-brave-new-world",
+      "target": "she-hulk-attorney-at-law",
+      "type": "optional"
+    },
+    {
+      "source": "captain-america-brave-new-world",
+      "target": "eternals",
+      "type": "optional"
+    },
+    {
+      "source": "daredevil-born-again",
+      "target": "daredevil-season-3",
+      "type": "required"
+    },
+    {
+      "source": "daredevil-born-again",
+      "target": "echo",
+      "type": "optional"
+    },
+    {
+      "source": "thunderbolts",
+      "target": "black-widow",
+      "type": "required"
+    },
+    {
+      "source": "thunderbolts",
+      "target": "the-falcon-and-the-winter-soldier",
+      "type": "required"
+    },
+    {
+      "source": "thunderbolts",
+      "target": "captain-america-brave-new-world",
+      "type": "optional"
+    },
+    {
+      "source": "ironheart",
+      "target": "black-panther-wakanda-forever",
+      "type": "required"
+    },
+    {
+      "source": "the-fantastic-four-first-steps",
+      "target": "fantastic-four-rise-of-the-silver-surfer",
+      "type": "references"
+    },
+    {
+      "source": "eyes-of-wakanda",
+      "target": "black-panther-wakanda-forever",
+      "type": "optional"
+    },
+    {
+      "source": "marvel-zombies",
+      "target": "what-if-season-1",
+      "type": "required"
+    },
+    {
+      "source": "wonder-man",
+      "target": "shang-chi-and-the-legend-of-the-ten-rings",
+      "type": "optional"
+    },
+    {
+      "source": "daredevil-born-again-season-2",
+      "target": "daredevil-born-again",
+      "type": "required"
+    },
+    {
+      "source": "punisher-one-last-kill",
+      "target": "punisher-season-2",
+      "type": "required"
+    },
+    {
+      "source": "spider-noir",
+      "target": "spider-man-into-the-spider-verse",
+      "type": "optional"
+    },
+    {
+      "source": "spider-man-brand-new-day",
+      "target": "spider-man-no-way-home",
+      "type": "required"
+    },
+    {
+      "source": "spider-man-brand-new-day",
+      "target": "punisher-one-last-kill",
+      "type": "required"
+    },
+    {
+      "source": "spider-man-brand-new-day",
+      "target": "x-men-the-last-stand",
+      "type": "references"
+    },
+    {
+      "source": "visionquest",
+      "target": "agatha-all-along",
+      "type": "required"
+    },
+    {
+      "source": "avengers-doomsday",
+      "target": "captain-america-brave-new-world",
+      "type": "required"
+    },
+    {
+      "source": "avengers-doomsday",
+      "target": "thunderbolts",
+      "type": "required"
+    },
+    {
+      "source": "avengers-doomsday",
+      "target": "black-panther-wakanda-forever",
+      "type": "required"
+    },
+    {
+      "source": "avengers-doomsday",
+      "target": "loki-season-2",
+      "type": "required"
+    },
+    {
+      "source": "avengers-doomsday",
+      "target": "the-fantastic-four-first-steps",
+      "type": "required"
+    },
+    {
+      "source": "avengers-doomsday",
+      "target": "thor-love-and-thunder",
+      "type": "required"
+    },
+    {
+      "source": "avengers-doomsday",
+      "target": "ant-man-and-the-wasp-quantumania",
+      "type": "required"
+    },
+    {
+      "source": "avengers-doomsday",
+      "target": "shang-chi-and-the-legend-of-the-ten-rings",
+      "type": "required"
+    },
+    {
+      "source": "avengers-doomsday",
+      "target": "deadpool-and-wolverine",
+      "type": "required"
+    },
+    {
+      "source": "avengers-doomsday",
+      "target": "doctor-strange-in-the-multiverse-of-madness",
+      "type": "required"
+    },
+    {
+      "source": "avengers-doomsday",
+      "target": "x-men-the-last-stand",
+      "type": "required"
+    },
+    {
+      "source": "avengers-doomsday",
+      "target": "spider-man-brand-new-day",
+      "type": "optional"
+    },
+    {
+      "source": "spider-man-beyond-the-spider-verse",
+      "target": "spider-man-across-the-spider-verse",
+      "type": "required"
+    }
+  ]
+}

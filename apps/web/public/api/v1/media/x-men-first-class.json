@@ -1,0 +1,30 @@
+{
+  "id": "x-men-first-class",
+  "title": "X-Men: First Class",
+  "release_date": "2011-06-03",
+  "saga": "x-men-prequel",
+  "mediatype": "movie",
+  "poster": "/api/v1/posters/x-men-first-class.jpg",
+  "summary": "In the 1960s, superpowered humans Charles Xavier and Erik Lensherr work together to find others like them, but Erik's vengeful pursuit of an ambitious mutant who ruined his life causes a schism to divide them. (source: IMDb)",
+  "connections": {
+    "required": [],
+    "optional": [
+      {
+        "saga_id": "x-men-original-trilogy"
+      }
+    ],
+    "references": []
+  },
+  "universe": "fox-marvel-cinematic-universe",
+  "reception": {
+    "imdb_rating": "7.7",
+    "imdb_votes": "730,000",
+    "rotten_tomatoes": "86%",
+    "metascore": "65",
+    "box_office": "$353,624,124",
+    "rated": "PG-13",
+    "director": "Matthew Vaughn",
+    "actors": "James McAvoy, Michael Fassbender, Jennifer Lawrence, Kevin Bacon, Rose Byrne",
+    "awards": "15 wins & 45 nominations total."
+  }
+}

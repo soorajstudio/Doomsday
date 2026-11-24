@@ -1,0 +1,27 @@
+{
+  "id": "daredevil-season-1",
+  "title": "Daredevil Season 1",
+  "release_date": "2015-04-10",
+  "end_date": "2015-04-10",
+  "saga": "defenders-saga",
+  "mediatype": "show",
+  "poster": "/api/v1/posters/daredevil-season-1.jpg",
+  "summary": "A blind lawyer by day, vigilante by night. Matt Murdock fights the crime of New York as Daredevil. (source: IMDb)",
+  "connections": {
+    "required": [],
+    "optional": [],
+    "references": []
+  },
+  "universe": "netflix",
+  "reception": {
+    "imdb_rating": "8.6",
+    "imdb_votes": "470,000",
+    "rotten_tomatoes": "99%",
+    "metascore": "75",
+    "box_office": "N/A",
+    "rated": "TV-MA",
+    "director": "Drew Goddard",
+    "actors": "Charlie Cox, Vincent D'Onofrio, Deborah Ann Woll, Elden Henson",
+    "awards": "Nominated for 5 Primetime Emmys. 11 wins & 40 nominations total."
+  }
+}

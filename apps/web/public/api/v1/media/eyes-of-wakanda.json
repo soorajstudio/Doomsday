@@ -1,0 +1,32 @@
+{
+  "id": "eyes-of-wakanda",
+  "title": "Eyes of Wakanda",
+  "release_date": "2025-08-01",
+  "end_date": "2025-08-01",
+  "saga": "multiverse-saga",
+  "phase": 6,
+  "mediatype": "show",
+  "poster": "/api/v1/posters/eyes-of-wakanda.jpg",
+  "summary": "Wakandan warriors who, throughout history, have traveled the world to retrieve dangerous vibranium artifacts. (source: IMDb)",
+  "connections": {
+    "required": [],
+    "optional": [
+      {
+        "media_id": "black-panther-wakanda-forever"
+      }
+    ],
+    "references": []
+  },
+  "universe": "mcu",
+  "reception": {
+    "imdb_rating": "7.0",
+    "imdb_votes": "50,000",
+    "rotten_tomatoes": "75%",
+    "metascore": "65",
+    "box_office": "N/A",
+    "rated": "TV-14",
+    "director": "Marvel Studios",
+    "actors": "Marvel Ensemble Cast",
+    "awards": "Part of MCU continuity."
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "x-men",
+  "title": "X-Men",
+  "release_date": "2000-07-14",
+  "saga": "x-men-original-trilogy",
+  "mediatype": "movie",
+  "poster": "/api/v1/posters/x-men.jpg",
+  "summary": "In a world where mutants (evolved super-powered humans) exist and are discriminated against, two groups form for an inevitable clash: the supremacist Brotherhood, and the pacifist X-Men. (source: IMDb)",
+  "connections": {
+    "required": [],
+    "optional": [],
+    "references": []
+  },
+  "universe": "fox-marvel-cinematic-universe",
+  "reception": {
+    "imdb_rating": "7.3",
+    "imdb_votes": "640,000",
+    "rotten_tomatoes": "82%",
+    "metascore": "64",
+    "box_office": "$296,339,527",
+    "rated": "PG-13",
+    "director": "Bryan Singer",
+    "actors": "Patrick Stewart, Hugh Jackman, Ian McKellen, Famke Janssen, Halle Berry",
+    "awards": "13 wins & 27 nominations total."
+  }
+}

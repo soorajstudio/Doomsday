@@ -1,0 +1,36 @@
+{
+  "id": "daredevil-born-again",
+  "title": "Daredevil: Born Again (Season 1)",
+  "release_date": "2025-03-04",
+  "end_date": "2025-03-04",
+  "saga": "multiverse-saga",
+  "phase": 5,
+  "mediatype": "show",
+  "poster": "/api/v1/posters/daredevil-born-again.jpg",
+  "summary": "Matt Murdock finds himself on a collision course with Wilson Fisk when their past identities begin to emerge. (source: IMDb)",
+  "connections": {
+    "required": [
+      {
+        "media_id": "daredevil-season-3"
+      }
+    ],
+    "optional": [
+      {
+        "media_id": "echo"
+      }
+    ],
+    "references": []
+  },
+  "universe": "mcu",
+  "reception": {
+    "imdb_rating": "8.5",
+    "imdb_votes": "45,000",
+    "rotten_tomatoes": "89%",
+    "metascore": "76",
+    "box_office": "N/A",
+    "rated": "TV-MA",
+    "director": "Dario Scardapane",
+    "actors": "Charlie Cox, Vincent D'Onofrio, Jon Bernthal, Deborah Ann Woll, Elden Henson",
+    "awards": "Phase 5 Disney+ release."
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "id": "loki-season-1",
+  "title": "Loki (Season 1)",
+  "release_date": "2021-06-09",
+  "end_date": "2021-06-09",
+  "saga": "multiverse-saga",
+  "phase": 4,
+  "mediatype": "show",
+  "poster": "/api/v1/posters/loki-season-1.jpg",
+  "summary": "The mercurial villain Loki resumes his role as the God of Mischief in a new series that takes place after the events of “Avengers: Endgame.” (source: IMDb)",
+  "connections": {
+    "required": [
+      {
+        "media_id": "avengers-endgame"
+      }
+    ],
+    "optional": [],
+    "references": []
+  },
+  "universe": "mcu",
+  "reception": {
+    "imdb_rating": "7.0",
+    "imdb_votes": "50,000",
+    "rotten_tomatoes": "75%",
+    "metascore": "65",
+    "box_office": "N/A",
+    "rated": "TV-14",
+    "director": "Marvel Studios",
+    "actors": "Marvel Ensemble Cast",
+    "awards": "Part of MCU continuity."
+  }
+}

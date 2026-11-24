@@ -1,0 +1,41 @@
+{
+  "id": "captain-america-brave-new-world",
+  "title": "Captain America: Brave New World",
+  "release_date": "2025-02-14",
+  "saga": "multiverse-saga",
+  "phase": 5,
+  "mediatype": "movie",
+  "poster": "/api/v1/posters/captain-america-brave-new-world.jpg",
+  "summary": "Sam Wilson, the new Captain America, finds himself in the middle of an international incident and must discover the motive behind a nefarious global plan. (source: IMDb)",
+  "connections": {
+    "required": [
+      {
+        "media_id": "the-falcon-and-the-winter-soldier"
+      }
+    ],
+    "optional": [
+      {
+        "media_id": "black-widow"
+      },
+      {
+        "media_id": "she-hulk-attorney-at-law"
+      },
+      {
+        "media_id": "eternals"
+      }
+    ],
+    "references": []
+  },
+  "universe": "mcu",
+  "reception": {
+    "imdb_rating": "6.2",
+    "imdb_votes": "65,000",
+    "rotten_tomatoes": "51%",
+    "metascore": "45",
+    "box_office": "$205,000,000",
+    "rated": "PG-13",
+    "director": "Julius Onah",
+    "actors": "Anthony Mackie, Harrison Ford, Danny Ramirez, Shira Haas, Giancarlo Esposito",
+    "awards": "Phase 5 feature release."
+  }
+}

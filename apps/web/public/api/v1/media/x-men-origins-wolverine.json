@@ -1,0 +1,30 @@
+{
+  "id": "x-men-origins-wolverine",
+  "title": "X-Men Origins: Wolverine",
+  "release_date": "2009-05-01",
+  "saga": "wolverine-trilogy",
+  "mediatype": "movie",
+  "poster": "/api/v1/posters/x-men-origins-wolverine.jpg",
+  "summary": "The early years of James Logan, featuring his rivalry with his brother Victor Creed, his service in the special forces team Weapon X, and his experimentation into the metal-lined mutant Wolverine. (source: IMDb)",
+  "connections": {
+    "required": [],
+    "optional": [
+      {
+        "saga_id": "x-men-original-trilogy"
+      }
+    ],
+    "references": []
+  },
+  "universe": "fox-marvel-cinematic-universe",
+  "reception": {
+    "imdb_rating": "6.5",
+    "imdb_votes": "540,000",
+    "rotten_tomatoes": "38%",
+    "metascore": "40",
+    "box_office": "$373,062,864",
+    "rated": "PG-13",
+    "director": "Gavin Hood",
+    "actors": "Hugh Jackman, Liev Schreiber, Danny Huston, Will.i.am, Ryan Reynolds",
+    "awards": "3 wins & 14 nominations total."
+  }
+}

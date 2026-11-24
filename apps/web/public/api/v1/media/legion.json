@@ -1,0 +1,30 @@
+{
+  "id": "legion",
+  "title": "Legion",
+  "release_date": "2017-02-08",
+  "end_date": "2019-08-12",
+  "mediatype": "show",
+  "poster": "/api/v1/posters/legion.jpg",
+  "summary": "David Haller is a troubled young man diagnosed as schizophrenic, but after a strange encounter he discovers special powers that will change his life forever. (source: IMDb)",
+  "connections": {
+    "required": [],
+    "optional": [
+      {
+        "saga_id": "x-men-original-trilogy"
+      }
+    ],
+    "references": []
+  },
+  "universe": "fox-marvel-cinematic-universe",
+  "reception": {
+    "imdb_rating": "8.1",
+    "imdb_votes": "105,000",
+    "rotten_tomatoes": "91%",
+    "metascore": "82",
+    "box_office": "N/A",
+    "rated": "TV-MA",
+    "director": "Noah Hawley",
+    "actors": "Dan Stevens, Rachel Keller, Aubrey Plaza, Bill Irwin, Jean Smart",
+    "awards": "Nominated for 1 Primetime Emmy. 3 wins & 17 nominations total."
+  }
+}

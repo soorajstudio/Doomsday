@@ -1,0 +1,30 @@
+{
+  "id": "the-wolverine",
+  "title": "The Wolverine",
+  "release_date": "2013-07-26",
+  "saga": "wolverine-trilogy",
+  "mediatype": "movie",
+  "poster": "/api/v1/posters/the-wolverine.jpg",
+  "summary": "Wolverine comes to Japan to meet an old friend whose life he saved years ago, and gets embroiled in a conspiracy involving yakuza and mutants. (source: IMDb)",
+  "connections": {
+    "required": [
+      {
+        "media_id": "x-men-origins-wolverine"
+      }
+    ],
+    "optional": [],
+    "references": []
+  },
+  "universe": "fox-marvel-cinematic-universe",
+  "reception": {
+    "imdb_rating": "6.7",
+    "imdb_votes": "480,000",
+    "rotten_tomatoes": "71%",
+    "metascore": "61",
+    "box_office": "$414,828,246",
+    "rated": "PG-13",
+    "director": "James Mangold",
+    "actors": "Hugh Jackman, Tao Okamoto, Rila Fukushima, Hiroyuki Sanada, Svetlana Khodchenkova",
+    "awards": "1 win & 12 nominations total."
+  }
+}

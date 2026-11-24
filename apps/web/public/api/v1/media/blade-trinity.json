@@ -1,0 +1,30 @@
+{
+  "id": "blade-trinity",
+  "title": "Blade: Trinity",
+  "release_date": "2004-12-10",
+  "saga": "blade-saga",
+  "mediatype": "movie",
+  "poster": "/api/v1/posters/blade-trinity.jpg",
+  "summary": "Blade, now a wanted man by the FBI, must join forces with the Nightstalkers to face his most challenging enemy yet: Dracula. (source: IMDb)",
+  "connections": {
+    "required": [
+      {
+        "media_id": "blade-2"
+      }
+    ],
+    "optional": [],
+    "references": []
+  },
+  "universe": "new-line-cinema",
+  "reception": {
+    "imdb_rating": "5.8",
+    "imdb_votes": "180,000",
+    "rotten_tomatoes": "24%",
+    "metascore": "34",
+    "box_office": "$132,042,669",
+    "rated": "R",
+    "director": "David S. Goyer",
+    "actors": "Wesley Snipes, Kris Kristofferson, Jessica Biel, Ryan Reynolds",
+    "awards": "1 win & 4 nominations total."
+  }
+}

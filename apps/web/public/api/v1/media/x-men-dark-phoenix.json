@@ -1,0 +1,30 @@
+{
+  "id": "x-men-dark-phoenix",
+  "title": "X-Men: Dark Phoenix",
+  "release_date": "2019-06-07",
+  "saga": "x-men-prequel",
+  "mediatype": "movie",
+  "poster": "/api/v1/posters/x-men-dark-phoenix.jpg",
+  "summary": "Jean Grey begins to develop incredible powers that corrupt and turn her into a Dark Phoenix, causing the X-Men to have to decide if her life is worth more than all of humanity. (source: IMDb)",
+  "connections": {
+    "required": [
+      {
+        "media_id": "x-men-apocalypse"
+      }
+    ],
+    "optional": [],
+    "references": []
+  },
+  "universe": "fox-marvel-cinematic-universe",
+  "reception": {
+    "imdb_rating": "5.7",
+    "imdb_votes": "200,000",
+    "rotten_tomatoes": "22%",
+    "metascore": "43",
+    "box_office": "$252,442,974",
+    "rated": "PG-13",
+    "director": "Simon Kinberg",
+    "actors": "James McAvoy, Michael Fassbender, Jennifer Lawrence, Nicholas Hoult, Sophie Turner",
+    "awards": "2 wins & 6 nominations total."
+  }
+}

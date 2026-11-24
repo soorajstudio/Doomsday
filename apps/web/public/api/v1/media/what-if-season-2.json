@@ -1,0 +1,32 @@
+{
+  "id": "what-if-season-2",
+  "title": "What If...? (Season 2)",
+  "release_date": "2023-12-22",
+  "end_date": "2023-12-22",
+  "saga": "multiverse-saga",
+  "phase": 5,
+  "mediatype": "show",
+  "poster": "/api/v1/posters/what-if-season-2.jpg",
+  "summary": "Exploring pivotal moments from the Marvel Cinematic Universe and turning them on their head, leading the audience into uncharted territory. (source: IMDb)",
+  "connections": {
+    "required": [
+      {
+        "media_id": "what-if-season-1"
+      }
+    ],
+    "optional": [],
+    "references": []
+  },
+  "universe": "mcu",
+  "reception": {
+    "imdb_rating": "7.3",
+    "imdb_votes": "145,000",
+    "rotten_tomatoes": "89%",
+    "metascore": "78",
+    "box_office": "N/A",
+    "rated": "TV-14",
+    "director": "Bryan Andrews, Stephan Franck",
+    "actors": "Jeffrey Wright, Hayley Atwell, Lake Bell, Karen Gillan",
+    "awards": "Won 1 Annie Award. 2 wins & 6 nominations total."
+  }
+}

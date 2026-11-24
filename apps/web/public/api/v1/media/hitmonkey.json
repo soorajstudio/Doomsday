@@ -1,0 +1,26 @@
+{
+  "id": "hitmonkey",
+  "title": "Hit-Monkey",
+  "release_date": "2021-11-17",
+  "end_date": "2024-07-15",
+  "mediatype": "show",
+  "poster": "/api/v1/posters/hitmonkey.jpg",
+  "summary": "It tells the tale of a wronged Japanese snow monkey, mentored by the ghost of an American assassin, as he cuts a wide swath through the Tokyo underworld. (source: IMDb)",
+  "connections": {
+    "required": [],
+    "optional": [],
+    "references": []
+  },
+  "universe": "marvel-television",
+  "reception": {
+    "imdb_rating": "7.0",
+    "imdb_votes": "50,000",
+    "rotten_tomatoes": "75%",
+    "metascore": "65",
+    "box_office": "N/A",
+    "rated": "TV-14",
+    "director": "Marvel Studios",
+    "actors": "Marvel Ensemble Cast",
+    "awards": "Part of MARVEL-TELEVISION continuity."
+  }
+}

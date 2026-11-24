@@ -1,0 +1,34 @@
+{
+  "id": "captain-america-civil-war",
+  "title": "Captain America: Civil War",
+  "release_date": "2016-05-06",
+  "saga": "infinite-saga",
+  "phase": 3,
+  "mediatype": "movie",
+  "poster": "/api/v1/posters/captain-america-civil-war.jpg",
+  "summary": "Political involvement in the Avengers' affairs causes a rift between Captain America and Iron Man. (source: IMDb)",
+  "connections": {
+    "required": [
+      {
+        "media_id": "ant-man"
+      },
+      {
+        "media_id": "avengers-age-of-ultron"
+      }
+    ],
+    "optional": [],
+    "references": []
+  },
+  "universe": "mcu",
+  "reception": {
+    "imdb_rating": "7.8",
+    "imdb_votes": "800,000",
+    "rotten_tomatoes": "90%",
+    "metascore": "75",
+    "box_office": "$1,155,046,416",
+    "rated": "PG-13",
+    "director": "Anthony Russo, Joe Russo",
+    "actors": "Chris Evans, Robert Downey Jr., Scarlett Johansson, Sebastian Stan, Anthony Mackie",
+    "awards": "16 wins & 74 nominations total."
+  }
+}

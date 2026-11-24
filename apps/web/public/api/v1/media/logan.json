@@ -1,0 +1,34 @@
+{
+  "id": "logan",
+  "title": "Logan",
+  "release_date": "2017-03-03",
+  "saga": "wolverine-trilogy",
+  "mediatype": "movie",
+  "poster": "/api/v1/posters/logan.jpg",
+  "summary": "In a future where mutants are nearly extinct, an elderly and weary Logan leads a quiet life. But when Laura, a mutant child pursued by scientists, comes to him for help, he must get her to safety. (source: IMDb)",
+  "connections": {
+    "required": [],
+    "optional": [
+      {
+        "saga_id": "x-men-original-trilogy"
+      }
+    ],
+    "references": [
+      {
+        "media_id": "the-wolverine"
+      }
+    ]
+  },
+  "universe": "fox-marvel-cinematic-universe",
+  "reception": {
+    "imdb_rating": "8.1",
+    "imdb_votes": "850,000",
+    "rotten_tomatoes": "94%",
+    "metascore": "77",
+    "box_office": "$619,179,950",
+    "rated": "R",
+    "director": "James Mangold",
+    "actors": "Hugh Jackman, Patrick Stewart, Dafne Keen, Boyd Holbrook, Stephen Merchant",
+    "awards": "Nominated for 1 Oscar. 29 wins & 82 nominations total."
+  }
+}

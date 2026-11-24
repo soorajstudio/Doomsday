@@ -1,0 +1,31 @@
+{
+  "id": "ant-man-and-the-wasp-quantumania",
+  "title": "Ant-Man and the Wasp: Quantumania",
+  "release_date": "2023-02-17",
+  "saga": "multiverse-saga",
+  "phase": 5,
+  "mediatype": "movie",
+  "poster": "/api/v1/posters/ant-man-and-the-wasp-quantumania.jpg",
+  "summary": "Scott Lang and Hope Van Dyne are dragged into the Quantum Realm, along with Hope's parents and Scott's daughter Cassie. Together they must find a way to escape, but what secrets is Hope's mother hiding? And who is the mysterious Kang? (source: IMDb)",
+  "connections": {
+    "required": [
+      {
+        "media_id": "loki-season-1"
+      }
+    ],
+    "optional": [],
+    "references": []
+  },
+  "universe": "mcu",
+  "reception": {
+    "imdb_rating": "6.1",
+    "imdb_votes": "230,000",
+    "rotten_tomatoes": "46%",
+    "metascore": "48",
+    "box_office": "$476,071,180",
+    "rated": "PG-13",
+    "director": "Peyton Reed",
+    "actors": "Paul Rudd, Evangeline Lilly, Jonathan Majors, Kathryn Newton, Michelle Pfeiffer",
+    "awards": "4 wins & 9 nominations total."
+  }
+}

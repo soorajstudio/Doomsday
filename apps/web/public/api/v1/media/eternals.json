@@ -1,0 +1,27 @@
+{
+  "id": "eternals",
+  "title": "Eternals",
+  "release_date": "2021-11-05",
+  "saga": "multiverse-saga",
+  "phase": 4,
+  "mediatype": "movie",
+  "poster": "/api/v1/posters/eternals.jpg",
+  "summary": "The saga of the Eternals, a race of immortal beings who lived on Earth and shaped its history and civilizations. (source: IMDb)",
+  "connections": {
+    "required": [],
+    "optional": [],
+    "references": []
+  },
+  "universe": "mcu",
+  "reception": {
+    "imdb_rating": "6.3",
+    "imdb_votes": "390,000",
+    "rotten_tomatoes": "47%",
+    "metascore": "52",
+    "box_office": "$402,064,899",
+    "rated": "PG-13",
+    "director": "Chloé Zhao",
+    "actors": "Gemma Chan, Richard Madden, Kumail Nanjiani, Lia McHugh, Angelina Jolie",
+    "awards": "4 wins & 28 nominations total."
+  }
+}
