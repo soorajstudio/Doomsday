@@ -75,10 +75,10 @@
   width: 100%;
   max-width: 1280px;
   aspect-ratio: 16 / 9;
-  max-height: calc(100vh - 10rem);
+  max-height: calc(100vh - 9rem);
   position: relative;
   z-index: 20;
-  filter: drop-shadow(0 25px 45px rgba(0, 0, 0, 0.95)) drop-shadow(0 0 25px rgba(16, 185, 129, 0.25));
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.85)) drop-shadow(0 0 30px rgba(16, 185, 129, 0.15));
 }
 
 .netflix-curved-screen-clip-wrap {
@@ -91,20 +91,15 @@
   border-radius: 20px 20px 0 0;
 }
 
-/* Screen Border Glow Highlight */
-.netflix-curved-screen-clip-wrap::before {
-  content: '';
+/* Crisp SVG border overlay following the exact curved screen shape */
+.netflix-curved-screen-border-svg {
   position: absolute;
   inset: 0;
-  border-radius: inherit;
-  padding: 1.5px;
-  background: radial-gradient(at top left, rgba(255, 255, 255, 0.35) 0%, rgba(16, 185, 129, 0.25) 45%, transparent 75%);
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
+  width: 100%;
+  height: 100%;
   pointer-events: none;
-  z-index: 30;
+  z-index: 35;
+  overflow: visible;
 }
 
 .netflix-curved-canvas {
@@ -112,61 +107,47 @@
   height: 100%;
   display: block;
   object-fit: cover;
+  filter: contrast(1.04) brightness(1.02);
 }
 
-/* Cinematic Shadow Overlays inside the Screen */
-.netflix-canvas-gradient-left {
-  position: absolute;
-  inset: 0;
-  width: 65%;
-  background: linear-gradient(90deg, rgba(4, 8, 7, 0.92) 0%, rgba(4, 8, 7, 0.65) 50%, transparent 100%);
-  pointer-events: none;
-  z-index: 5;
-}
-
-.netflix-canvas-gradient-bottom {
+/* Subtle, cinematic bottom shadow (keeps artwork bright & vibrant) */
+.netflix-canvas-subtle-bottom {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  height: 60%;
-  background: linear-gradient(0deg, rgba(4, 8, 7, 0.98) 0%, rgba(4, 8, 7, 0.5) 65%, transparent 100%);
+  height: 25%;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.45) 0%, transparent 100%);
   pointer-events: none;
   z-index: 5;
-}
-
-.netflix-canvas-vignette {
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at center, transparent 40%, rgba(4, 8, 7, 0.7) 100%);
-  pointer-events: none;
-  z-index: 6;
 }
 
 /* Subtitles Overlay Banner */
 .netflix-subtitles-banner {
   position: absolute;
-  bottom: 6rem;
+  bottom: 2rem;
   left: 50%;
   transform: translateX(-50%);
-  background: rgba(0, 0, 0, 0.85);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 6px;
-  padding: 0.4rem 1.4rem;
+  background: rgba(10, 10, 10, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 9999px;
+  padding: 0.45rem 1.6rem;
   z-index: 15;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   text-align: center;
-  max-width: 75%;
+  max-width: 80%;
   pointer-events: none;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
   animation: fadeIn 0.3s ease;
 }
 
 .subtitles-text {
-  color: #fef08a;
-  font-size: 0.92rem;
+  color: #fde047;
+  font-size: 0.88rem;
   font-weight: 700;
-  letter-spacing: 0.5px;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
+  letter-spacing: 0.6px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 /* Bottom-Left Netflix Content & CTA Overlay */
@@ -393,22 +374,43 @@
   to { transform: rotate(360deg); }
 }
 
-/* Bottom subtle scroll prompt */
+/* Bottom subtle scroll prompt matching website dark pill theme */
 .netflix-bottom-scroll-prompt {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
-  color: var(--emerald-light);
-  font-size: 0.82rem;
-  font-weight: 600;
-  letter-spacing: 0.5px;
+  gap: 0.5rem;
+  padding: 0.5rem 1.25rem;
+  border-radius: 9999px;
+  background: rgba(18, 18, 18, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  color: #a1a1aa;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.3px;
   cursor: pointer;
-  margin-top: 0.85rem;
-  transition: all 0.2s ease;
-  animation: pulsePrompt 2s infinite ease-in-out;
+  margin-top: 1.1rem;
+  transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.5);
+  animation: pulsePrompt 2.5s infinite ease-in-out;
 }
 
 .netflix-bottom-scroll-prompt:hover {
+  background: rgba(28, 28, 28, 0.92);
+  border-color: rgba(255, 255, 255, 0.35);
+  color: #ffffff;
+  transform: translateY(2px);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.7);
+}
+
+.netflix-bottom-scroll-prompt svg {
+  color: #71717a;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.netflix-bottom-scroll-prompt:hover svg {
   color: #ffffff;
   transform: translateY(2px);
 }

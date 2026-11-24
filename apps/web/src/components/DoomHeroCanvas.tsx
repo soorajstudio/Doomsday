@@ -352,10 +352,8 @@ export function DoomHeroCanvas() {
             {/* The Scrubbing / Playing Canvas */}
             <canvas ref={canvasRef} width={1280} height={720} className="netflix-curved-canvas" />
 
-            {/* Cinematic Gradient Shadow Overlays */}
-            <div className="netflix-canvas-gradient-left" />
-            <div className="netflix-canvas-gradient-bottom" />
-            <div className="netflix-canvas-vignette" />
+            {/* Subtle bottom shadow for cinematic depth */}
+            <div className="netflix-canvas-subtle-bottom" />
 
             {/* Subtitles Overlay Banner */}
             {showSubtitles && (
@@ -374,15 +372,52 @@ export function DoomHeroCanvas() {
               </div>
             )}
           </div>
+
+          {/* Crisp, clearly visible Curved Cinema Screen Border & Ambient Glow */}
+          <svg
+            className="netflix-curved-screen-border-svg"
+            viewBox="0 0 1000 562.5"
+            preserveAspectRatio="none"
+            aria-hidden="true"
+          >
+            {/* Soft Ambient Glow */}
+            <path
+              d="M 1 1 L 999 1 L 999 528.75 Q 500 561.5 1 528.75 Z"
+              fill="none"
+              stroke="rgba(255, 255, 255, 0.2)"
+              strokeWidth="4"
+              filter="url(#screen-glow-filter)"
+            />
+            {/* Crisp High-Definition Border Stroke */}
+            <path
+              d="M 1 1 L 999 1 L 999 528.75 Q 500 561.5 1 528.75 Z"
+              fill="none"
+              stroke="url(#screen-border-gradient)"
+              strokeWidth="2"
+            />
+            <defs>
+              <linearGradient id="screen-border-gradient" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stopColor="rgba(255, 255, 255, 0.65)" />
+                <stop offset="50%" stopColor="rgba(255, 255, 255, 0.35)" />
+                <stop offset="100%" stopColor="rgba(255, 255, 255, 0.6)" />
+              </linearGradient>
+              <filter id="screen-glow-filter" x="-10%" y="-10%" width="120%" height="120%">
+                <feGaussianBlur stdDeviation="4" result="blur" />
+              </filter>
+            </defs>
+          </svg>
         </div>
 
         {/* Bottom subtle scroll prompt */}
         <div
           className="netflix-bottom-scroll-prompt"
           onClick={() => scrollTo("explore-section")}
+          role="button"
+          tabIndex={0}
+          aria-label="Scroll down to explore Multiverse and Movies"
         >
-          <span>Scroll down to explore Multiverse &amp; Movies</span>
-          <ChevronDown size={16} />
+          <span>Scroll to explore Multiverse &amp; Movies</span>
+          <ChevronDown size={15} />
         </div>
       </div>
     </div>
