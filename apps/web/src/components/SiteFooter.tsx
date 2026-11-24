@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const githubUrl = "https://github.com/RedDTG/mcu-flowchart";
+const githubUrl = "https://github.com/soorajstudio/Doomsday";
 const footerLinks = [
     { href: "/all-media", label: "Explore" },
     { href: "https://soorajstudio.github.io/Marvel-Movies", label: "Watching Order" },
