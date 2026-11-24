@@ -2,18 +2,7 @@
 
 import React, { useEffect, useRef, useState, useCallback } from "react";
 import Link from "next/link";
-import {
-  Play,
-  Pause,
-  Volume2,
-  VolumeX,
-  Maximize,
-  Minimize,
-  Subtitles,
-  Info,
-  X,
-  ChevronDown,
-} from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import "./DoomHeroCanvas.css";
 
 const TOTAL_FRAMES = 166;
@@ -25,37 +14,6 @@ const SUBTITLES_LIST = [
   "Kneel before Victor von Doom — Supreme Sovereign of existence.",
 ];
 
-const MOVIE_METADATA = {
-  title: "Avengers: Doomsday",
-  subtitle: "The Sovereign Era",
-  studio: "Marvel Studios",
-  year: "2026",
-  epoch: "Phase 6 • Multiverse Saga Finale Part I",
-  runtime: "2h 55m",
-  format: "IMAX 70mm • Dolby Cinema",
-  rating: "U/A 16+",
-  genres: ["Cosmic Epic", "Dark Fantasy", "Superhero Action", "Multiverse War"],
-  synopsis:
-    "As cosmic incursions pulverize reality, Earth's Mightiest Heroes and the Fantastic Four face an inescapable truth: gods, kings, and heroes have failed. Into the celestial void steps Victor von Doom. Armed with Beyonder omnipotence, ancient arcane sorcery, and supreme intellect, the Lord of Latveria re-engineers existence into Battleworld. Submit, or be erased.",
-  cast: [
-    { name: "Robert Downey Jr.", role: "Victor von Doom / God Emperor Doom" },
-    { name: "Pedro Pascal", role: "Reed Richards / Mister Fantastic" },
-    { name: "Benedict Cumberbatch", role: "Stephen Strange / Sheriff of Agamotto" },
-    { name: "Vanessa Kirby", role: "Sue Storm / Invisible Woman" },
-    { name: "Anthony Mackie", role: "Sam Wilson / Captain America" },
-    { name: "Chris Hemsworth", role: "Thor Odinson" },
-    { name: "Florence Pugh", role: "Yelena Belova" },
-    { name: "Sebastian Stan", role: "Bucky Barnes" },
-    { name: "Tom Holland", role: "Peter Parker / Spider-Man" },
-    { name: "Joseph Quinn", role: "Johnny Storm / Human Torch" },
-    { name: "Ebon Moss-Bachrach", role: "Ben Grimm / The Thing" },
-    { name: "Tom Hiddleston", role: "Loki / God of Stories" },
-  ],
-  directors: "Anthony & Joe Russo (The Russo Brothers)",
-  screenplay: "Stephen McFeely",
-  theaters: "May 2026",
-};
-
 export function DoomHeroCanvas() {
   const containerRef = useRef<HTMLDivElement>(null);
   const billboardScreenRef = useRef<HTMLDivElement>(null);
@@ -66,13 +24,10 @@ export function DoomHeroCanvas() {
   const hasDrawnInitialRef = useRef<boolean>(false);
 
   const [loadProgress, setLoadProgress] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying] = useState(false);
   const [currentFrame, setCurrentFrame] = useState(0);
-  const [isMuted, setIsMuted] = useState(true);
-  const [isFullscreen, setIsFullscreen] = useState(false);
-  const [showSubtitles, setShowSubtitles] = useState(true);
+  const [showSubtitles] = useState(true);
   const [subtitleIndex, setSubtitleIndex] = useState(0);
-  const [showDossier, setShowDossier] = useState(false);
   const [activeTab, setActiveTab] = useState<"trailers" | "flowchart" | "sagas" | "more">("trailers");
 
   const getCandidateFrameUrls = (index: number) => {
@@ -329,23 +284,6 @@ export function DoomHeroCanvas() {
     };
   }, [isPlaying, drawFrame]);
 
-  const togglePlay = () => setIsPlaying((prev) => !prev);
-  const toggleMute = () => setIsMuted((prev) => !prev);
-  const toggleSubtitles = () => setShowSubtitles((prev) => !prev);
-
-  const toggleFullscreen = () => {
-    const el = billboardScreenRef.current;
-    if (!el) return;
-
-    if (!document.fullscreenElement) {
-      el.requestFullscreen().catch(() => {});
-      setIsFullscreen(true);
-    } else {
-      document.exitFullscreen().catch(() => {});
-      setIsFullscreen(false);
-    }
-  };
-
   const scrollTo = (id: string) => {
     const el = document.getElementById(id);
     if (el) {
@@ -428,99 +366,6 @@ export function DoomHeroCanvas() {
               </div>
             )}
 
-            {/* Bottom-Left Content & Navigation Overlay */}
-            <div className="netflix-billboard-content-left">
-              <div className="netflix-badge-row">
-                <span className="netflix-brand-red">NETFLIX</span>
-                <span className="netflix-badge-sub">ORIGINAL PRODUCTION</span>
-              </div>
-
-              <div className="netflix-title-row">
-                <img
-                  src="/assets/avengers-doomsday-title-logo.webp"
-                  alt="Avengers: Doomsday"
-                  className="netflix-billboard-logo"
-                />
-              </div>
-
-              <div className="netflix-cta-email-form">
-                <Link href="/flowchart" className="netflix-join-btn">
-                  <span>Use the Flowchart</span>
-                </Link>
-                <Link
-                  href="/all-media"
-                  style={{
-                    background: "rgba(18, 18, 18, 0.75)",
-                    border: "1px solid rgba(255, 255, 255, 0.3)",
-                    borderRadius: "9999px",
-                    padding: "0.65rem 1.45rem",
-                    color: "#ffffff",
-                    fontSize: "0.88rem",
-                    fontWeight: 600,
-                    backdropFilter: "blur(12px)",
-                    display: "inline-flex",
-                    alignItems: "center",
-                    transition: "all 0.2s ease",
-                  }}
-                >
-                  <span>Explore every saga</span>
-                </Link>
-              </div>
-
-              <p className="netflix-pricing-tagline">
-                The easiest way to navigate the Marvel multiverse • In Theaters May 2026
-              </p>
-            </div>
-
-            {/* Bottom-Right Media Controls */}
-            <div className="netflix-media-controls-row">
-              <button
-                className={`media-icon-btn ${isPlaying ? "playing" : ""}`}
-                onClick={togglePlay}
-                aria-label={isPlaying ? "Pause Sequence" : "Play Sequence"}
-                title={isPlaying ? "Pause Sequence" : "Play Sequence"}
-              >
-                {isPlaying ? <Pause size={17} /> : <Play size={17} fill="currentColor" />}
-              </button>
-
-              <button
-                className="media-icon-btn"
-                onClick={toggleMute}
-                aria-label={isMuted ? "Unmute Audio" : "Mute Audio"}
-                title={isMuted ? "Unmute Audio" : "Mute Audio"}
-              >
-                {isMuted ? <VolumeX size={17} /> : <Volume2 size={17} />}
-              </button>
-
-              <button
-                className={`media-icon-btn ${showSubtitles ? "active-subtitles" : ""}`}
-                onClick={toggleSubtitles}
-                aria-label="Toggle Subtitles"
-                title="Toggle Subtitles"
-              >
-                <Subtitles size={17} />
-              </button>
-
-              <button
-                className="media-icon-btn"
-                onClick={toggleFullscreen}
-                aria-label="Toggle Fullscreen"
-                title="Toggle Fullscreen"
-              >
-                {isFullscreen ? <Minimize size={17} /> : <Maximize size={17} />}
-              </button>
-            </div>
-
-            {/* Top-Right Dossier Pill Button */}
-            <button
-              className="billboard-dossier-pill-btn"
-              onClick={() => setShowDossier(true)}
-              aria-label="Open Imperial Dossier"
-            >
-              <Info size={14} />
-              <span>Dossier &amp; Cast</span>
-            </button>
-
             {/* Loading Indicator */}
             {loadProgress < 100 && (
               <div className="netflix-billboard-loading">
@@ -540,69 +385,6 @@ export function DoomHeroCanvas() {
           <ChevronDown size={16} />
         </div>
       </div>
-
-      {/* Dossier Modal */}
-      {showDossier && (
-        <div className="modal-backdrop" onClick={() => setShowDossier(false)}>
-          <div
-            className="dossier-modal-container"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <button
-              className="modal-close"
-              onClick={() => setShowDossier(false)}
-              aria-label="Close dossier"
-            >
-              <X size={20} />
-            </button>
-
-            <div className="dossier-header">
-              <span className="dossier-kicker">CLASSIFIED DOCUMENT • BATTLEWORLD PROTOCOL</span>
-              <h2 className="dossier-title">{MOVIE_METADATA.title}</h2>
-              <p className="dossier-tagline">{MOVIE_METADATA.subtitle}</p>
-            </div>
-
-            <div className="dossier-meta-row">
-              <span className="pill pill-year">{MOVIE_METADATA.year}</span>
-              <span className="pill pill-epoch">{MOVIE_METADATA.epoch}</span>
-              <span className="pill pill-runtime">{MOVIE_METADATA.runtime}</span>
-              <span className="pill pill-rating">{MOVIE_METADATA.rating}</span>
-              <span className="pill pill-format">{MOVIE_METADATA.format}</span>
-            </div>
-
-            <div className="dossier-body">
-              <div>
-                <h3 className="dossier-section-heading">Imperial Synopsis</h3>
-                <p className="dossier-synopsis-text">{MOVIE_METADATA.synopsis}</p>
-              </div>
-
-              <div>
-                <h3 className="dossier-section-heading">Confirmed Main Cast</h3>
-                <div className="cast-grid">
-                  {MOVIE_METADATA.cast.map((member, index) => (
-                    <div key={index} className="cast-card">
-                      <span className="cast-actor-name">{member.name}</span>
-                      <span className="cast-character-role">{member.role}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="dossier-credits">
-                <p className="dossier-credit-text">
-                  <strong>Directing Duo:</strong> {MOVIE_METADATA.directors}
-                </p>
-                <p className="dossier-credit-text">
-                  <strong>Screenplay:</strong> {MOVIE_METADATA.screenplay}
-                </p>
-                <p className="dossier-credit-text">
-                  <strong>World Premiere:</strong> {MOVIE_METADATA.theaters}
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 }
