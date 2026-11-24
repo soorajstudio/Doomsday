@@ -3,7 +3,6 @@ import Link from "next/link";
 const githubUrl = "https://github.com/RedDTG/mcu-flowchart";
 const footerLinks = [
     { href: "/all-media", label: "Explore" },
-    { href: "/flowchart", label: "Flowchart" },
     { href: "/watching-order", label: "Q&A" },
 ] as const;
 

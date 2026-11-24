@@ -28,7 +28,7 @@ export function DoomHeroCanvas() {
   const [currentFrame, setCurrentFrame] = useState(0);
   const [showSubtitles] = useState(true);
   const [subtitleIndex, setSubtitleIndex] = useState(0);
-  const [activeTab, setActiveTab] = useState<"trailers" | "flowchart" | "sagas" | "more">("trailers");
+  const [activeTab, setActiveTab] = useState<"trailers" | "sagas" | "more">("trailers");
 
   const getCandidateFrameUrls = (index: number) => {
     const frameNum = String(index).padStart(3, "0");
@@ -314,13 +314,6 @@ export function DoomHeroCanvas() {
           >
             Trailers
           </button>
-          <Link
-            href="/flowchart"
-            className="pill-tab"
-            style={{ textDecoration: "none" }}
-          >
-            Flowchart
-          </Link>
           <Link
             href="/all-media"
             className="pill-tab"
