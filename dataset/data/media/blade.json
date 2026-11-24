@@ -1,0 +1,15 @@
+﻿{
+    "id": "blade",
+    "title": "Blade",
+    "release_date": "1998-08-21",
+    "saga": "blade-saga",
+    "mediatype": "movie",
+    "poster": "/posters/blade.jpg",
+    "summary": "A half-vampire, half-mortal man becomes a protector of the mortal race, while slaying evil vampires. (source: IMDb)",
+    "connections": {
+        "required": [],
+        "optional": [],
+        "references": []
+    },
+    "universe": "new-line-cinema"
+}

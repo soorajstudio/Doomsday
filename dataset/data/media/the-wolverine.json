@@ -1,0 +1,20 @@
+﻿{
+    "id": "the-wolverine",
+    "title": "The Wolverine",
+    "release_date": "2013-07-26",
+    "saga": "wolverine-trilogy",
+    "mediatype": "movie",
+    "poster": "/posters/the-wolverine.jpg",
+    "summary": "Wolverine comes to Japan to meet an old friend whose life he saved years ago, and gets embroiled in a conspiracy involving yakuza and mutants. (source: IMDb)",
+    "connections": {
+        "required": [
+            {
+                "media_id": "x-men-origins-wolverine"
+            }
+        ],
+        "optional": [
+        ],
+        "references": []
+    },
+    "universe": "fox-marvel-cinematic-universe"
+}

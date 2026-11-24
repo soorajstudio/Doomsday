@@ -1,0 +1,19 @@
+﻿{
+    "id": "legion",
+    "title": "Legion",
+    "release_date": "2017-02-08",
+    "end_date": "2019-08-12",
+    "mediatype": "show",
+    "poster": "/posters/legion.jpg",
+    "summary": "David Haller is a troubled young man diagnosed as schizophrenic, but after a strange encounter he discovers special powers that will change his life forever. (source: IMDb)",
+    "connections": {
+        "required": [],
+        "optional": [
+            {
+                "saga_id": "x-men-original-trilogy"
+            }
+        ],
+        "references": []
+    },
+    "universe": "fox-marvel-cinematic-universe"
+}

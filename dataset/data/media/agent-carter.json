@@ -1,0 +1,20 @@
+﻿{
+    "id": "agent-carter",
+    "title": "Agent Carter",
+    "release_date": "2015-01-06",
+    "end_date": "2016-01-19",
+    "saga": "infinite-saga",
+    "mediatype": "show",
+    "poster": "/posters/agent-carter.jpg",
+    "summary": "In 1946, Peggy Carter is relegated to secretarial duties in the Strategic Scientific Reserve (SSR). When Howard Stark is accused of treason, he secretly recruits Peggy to clear his name with the help of his butler, Edwin Jarvis. (source: IMDb)",
+    "connections": {
+        "required": [],
+        "optional": [
+            {
+                "media_id": "captain-america-the-first-avenger"
+            }
+        ],
+        "references": []
+    },
+    "universe": "marvel-television"
+}

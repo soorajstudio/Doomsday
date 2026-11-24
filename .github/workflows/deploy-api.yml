@@ -1,0 +1,93 @@
+name: Deploy API with Docker Compose
+
+on:
+  push:
+    branches: ["stable"]
+    paths:
+      - "apps/web/**"
+      - "apps/api/**"
+      - "dataset/**"
+      - "docker-compose.yml"
+      - "docker-compose.server.yml"
+      - "apps/web/Dockerfile"
+      - "apps/web/next.config.ts"
+      - "apps/api/Dockerfile"
+      - ".github/workflows/deploy-api.yml"
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Compute lowercase image owner
+        id: vars
+        run: echo "owner_lc=${GITHUB_REPOSITORY_OWNER,,}" >> "$GITHUB_OUTPUT"
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Login to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and push API image
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: apps/api/Dockerfile
+          push: true
+          tags: |
+            ghcr.io/${{ steps.vars.outputs.owner_lc }}/mcu-flowchart-api:latest
+            ghcr.io/${{ steps.vars.outputs.owner_lc }}/mcu-flowchart-api:${{ github.sha }}
+
+      - name: Build and push Web image
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: apps/web/Dockerfile
+          push: true
+          build-args: |
+            API_INTERNAL_URL=http://api:8001
+          tags: |
+            ghcr.io/${{ steps.vars.outputs.owner_lc }}/mcu-flowchart-web:latest
+            ghcr.io/${{ steps.vars.outputs.owner_lc }}/mcu-flowchart-web:${{ github.sha }}
+
+  deploy:
+    needs: build-and-push
+    runs-on: [self-hosted, linux, x64]
+    permissions:
+      contents: read
+      packages: read
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Compute lowercase image owner
+        id: vars
+        run: echo "owner_lc=${GITHUB_REPOSITORY_OWNER,,}" >> "$GITHUB_OUTPUT"
+
+      - name: Deploy with Docker Compose on self-hosted runner
+        env:
+          API_IMAGE: ghcr.io/${{ steps.vars.outputs.owner_lc }}/mcu-flowchart-api:latest
+          WEB_IMAGE: ghcr.io/${{ steps.vars.outputs.owner_lc }}/mcu-flowchart-web:latest
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          COMPOSE_PROJECT_NAME: mcu-flowchart
+        run: |
+          set -e
+          cd "$GITHUB_WORKSPACE"
+          echo "$GITHUB_TOKEN" | docker login ghcr.io -u "${{ github.actor }}" --password-stdin
+          docker compose -f docker-compose.server.yml pull
+          docker compose -f docker-compose.server.yml down --remove-orphans || true
+          docker rm -f mcu-flowchart-api mcu-flowchart-web 2>/dev/null || true
+          docker compose -f docker-compose.server.yml up -d
+          docker image prune -f

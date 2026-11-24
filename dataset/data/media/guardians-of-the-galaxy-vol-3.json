@@ -1,0 +1,28 @@
+﻿{
+  "id": "guardians-of-the-galaxy-vol-3",
+  "title": "Guardians of the Galaxy Vol. 3",
+  "release_date": "2023-05-05",
+  "saga": "multiverse-saga",
+  "phase": 5,
+  "mediatype": "movie",
+  "poster": "/posters/guardians-of-the-galaxy-vol-3.jpg",
+  "summary": "Still reeling from the loss of Gamora, Peter Quill rallies his team to defend the universe and one of their own - a mission that could mean the end of the Guardians if not successful. (source: IMDb)",
+  "connections": {
+    "required": [
+      {
+        "media_id": "avengers-endgame"
+      }
+    ],
+    "optional": [
+      {
+        "media_id": "the-guardians-of-the-galaxy-holiday-special"
+      }
+    ],
+    "references": [
+      {
+        "media_id": "thor-love-and-thunder"
+      }
+    ]
+  },
+  "universe": "mcu"
+}

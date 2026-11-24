@@ -1,0 +1,21 @@
+﻿{
+    "id": "ironheart",
+    "title": "Ironheart",
+    "release_date": "2025-06-24",
+    "end_date": "2025-06-24",
+    "saga": "multiverse-saga",
+    "phase": 5,
+    "mediatype": "show",
+    "poster": "/posters/ironheart.jpg",
+    "summary": "Genius teenage inventor Riri Williams creates the most advanced suit of armor since Iron Man. (source: IMDb)",
+    "connections": {
+        "required": [
+            {
+                "media_id": "black-panther-wakanda-forever"
+            }
+        ],
+        "optional": [],
+        "references": []
+    },
+    "universe": "mcu"
+}

@@ -1,0 +1,131 @@
+﻿{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Marvel Media",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "title",
+    "release_date",
+    "universe",
+    "summary",
+    "mediatype",
+    "poster",
+    "connections"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "release_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "end_date": {
+      "type": ["string", "null"],
+      "format": "date"
+    },
+    "saga": {
+      "type": "string",
+      "minLength": 1
+    },
+    "phase": {
+      "type": ["integer", "null"]
+    },
+    "universe": {
+      "type": "string",
+      "enum": [
+        "mcu",
+        "marvel-television",
+        "fox-marvel-cinematic-universe",
+        "sonys-spider-man-universe",
+        "columbia-pictures",
+        "new-line-cinema",
+        "netflix"
+      ]
+    },
+    "mediatype": {
+      "type": "string",
+      "enum": ["movie", "show", "special"]
+    },
+    "poster": {
+      "type": "string",
+      "minLength": 1
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "connections": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "required",
+        "optional",
+        "references"
+      ],
+      "properties": {
+        "required": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/connection"
+          }
+        },
+        "optional": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/connection"
+          }
+        },
+        "references": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/connection"
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "connection": {
+      "type": "object",
+      "additionalProperties": false,
+      "oneOf": [
+        {
+          "required": [
+            "media_id"
+          ]
+        },
+        {
+          "required": [
+            "saga_id"
+          ]
+        }
+      ],
+      "properties": {
+        "media_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "saga_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "reason": {
+          "type": "string"
+        },
+        "importance": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      }
+    }
+  }
+}
+

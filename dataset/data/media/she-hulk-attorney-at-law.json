@@ -1,0 +1,28 @@
+﻿{
+    "id": "she-hulk-attorney-at-law",
+    "title": "She-Hulk: Attorney at Law",
+    "release_date": "2022-08-18",
+    "end_date": "2022-08-18",
+    "saga": "multiverse-saga",
+    "phase": 4,
+    "mediatype": "show",
+    "poster": "/posters/she-hulk-attorney-at-law.jpg",
+    "summary": "Jennifer Walters navigates the complicated life of a single, 30-something attorney who also happens to be a green 6-foot-7-inch superpowered Hulk. (source: IMDb)",
+    "connections": {
+        "required": [
+            {
+                "media_id": "avengers-endgame"
+            }
+        ],
+        "optional": [],
+        "references": [
+            {
+                "media_id": "daredevil-season-3"
+            },
+            {
+                "media_id": "shang-chi-and-the-legend-of-the-ten-rings"
+            }
+        ]
+    },
+    "universe": "mcu"
+}

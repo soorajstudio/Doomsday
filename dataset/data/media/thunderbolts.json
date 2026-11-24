@@ -1,0 +1,27 @@
+﻿{
+  "id": "thunderbolts",
+  "title": "Thunderbolts*",
+  "release_date": "2025-05-02",
+  "saga": "multiverse-saga",
+  "phase": 5,
+  "mediatype": "movie",
+  "poster": "/posters/thunderbolts.jpg",
+  "summary": "After finding themselves ensnared in a death trap, an unconventional team of antiheroes must go on a dangerous mission that will force them to confront the darkest corners of their pasts. (source: IMDb)",
+  "connections": {
+    "required": [
+      {
+        "media_id": "black-widow"
+      },
+      {
+        "media_id": "the-falcon-and-the-winter-soldier"
+      }
+    ],
+    "optional": [
+      {
+        "media_id": "captain-america-brave-new-world"
+      }
+    ],
+    "references": []
+  },
+  "universe": "mcu"
+}

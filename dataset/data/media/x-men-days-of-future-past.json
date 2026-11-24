@@ -1,0 +1,19 @@
+﻿{
+    "id": "x-men-days-of-future-past",
+    "title": "X-Men: Days of Future Past",
+    "release_date": "2014-05-23",
+    "saga": "x-men-prequel",
+    "mediatype": "movie",
+    "poster": "/posters/x-men-days-of-future-past.jpg",
+    "summary": "The X-Men send Wolverine to the past in a desperate effort to change history and prevent an event that results in doom for both humans and mutants. (source: IMDb)",
+    "connections": {
+        "required": [
+            {
+                "media_id": "x-men-first-class"
+            }
+        ],
+        "optional": [],
+        "references": []
+    },
+    "universe": "fox-marvel-cinematic-universe"
+}

@@ -1,0 +1,16 @@
+﻿{
+    "id": "helstrom",
+    "title": "Helstrom",
+    "release_date": "2020-10-16",
+    "end_date": "2020-10-16",
+    "saga": "infinite-saga",
+    "mediatype": "show",
+    "poster": "/posters/helstrom.jpg",
+    "summary": "Daimon and Ana Helstrom are the son and daughter of a mysterious and powerful serial killer. The siblings have a complicated dynamic as they track down the terrorizing worst of humanity - each with their attitude and skills. (source: IMDB)",
+    "connections": {
+        "required": [],
+        "optional": [],
+        "references": []
+    },
+    "universe": "marvel-television"
+}

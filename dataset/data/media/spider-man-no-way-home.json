@@ -1,0 +1,27 @@
+{
+  "id": "spider-man-no-way-home",
+  "title": "Spider-Man: No Way Home",
+  "release_date": "2021-12-17",
+  "saga": "multiverse-saga",
+  "phase": 4,
+  "mediatype": "movie",
+  "poster": "/posters/spider-man-no-way-home.jpg",
+  "summary": "With Spider-Man's identity now revealed, Peter asks Doctor Strange for help. When a spell goes wrong, dangerous foes from other worlds start to appear. (source: IMDb)",
+  "connections": {
+    "required": [
+      {
+        "media_id": "spider-man-far-from-home"
+      }
+    ],
+    "optional": [
+      {
+        "saga_id": "raimi-trilogy"
+      },
+      {
+        "saga_id": "amazing-spider-man-saga"
+      }
+    ],
+    "references": []
+  },
+  "universe": "mcu"
+}

@@ -1,0 +1,15 @@
+﻿{
+    "id": "fantastic-four-2005",
+    "title": "Fantastic Four",
+    "release_date": "2005-07-08",
+    "saga": "fantastic-four-saga",
+    "mediatype": "movie",
+    "poster": "/posters/fantastic-four-2005.jpg",
+    "summary": "A group of astronauts gain superpowers after a cosmic radiation exposure and must use them to oppose the plans of their enemy, Doctor Victor Von Doom. (source: IMDb)",
+    "connections": {
+        "required": [],
+        "optional": [],
+        "references": []
+    },
+    "universe": "fox-marvel-cinematic-universe"
+}

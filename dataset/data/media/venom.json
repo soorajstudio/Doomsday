@@ -1,0 +1,15 @@
+﻿{
+    "id": "venom",
+    "title": "Venom",
+    "release_date": "2018-10-05",
+    "saga": "sonys-spider-man-universe",
+    "mediatype": "movie",
+    "poster": "/posters/venom.jpg",
+    "summary": "A failed reporter is bonded to an alien entity, one of many symbiotes who have invaded Earth. But the being takes a liking to Earth and decides to protect it. (source: IMDb)",
+    "connections": {
+        "required": [],
+        "optional": [],
+        "references": []
+    },
+    "universe": "sonys-spider-man-universe"
+}

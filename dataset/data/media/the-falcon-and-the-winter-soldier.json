@@ -1,0 +1,21 @@
+﻿{
+    "id": "the-falcon-and-the-winter-soldier",
+    "title": "The Falcon and the Winter Soldier",
+    "release_date": "2021-03-19",
+    "end_date": "2021-03-19",
+    "saga": "multiverse-saga",
+    "phase": 4,
+    "mediatype": "show",
+    "poster": "/posters/the-falcon-and-the-winter-soldier.jpg",
+    "summary": "Following the events of 'Avengers: Endgame,' Sam Wilson/Falcon and Bucky Barnes/Winter Soldier team up in a global adventure that tests their abilities -- and their patience. (source: IMDb)",
+    "connections": {
+        "required": [
+            {
+                "media_id": "avengers-endgame"
+            }
+        ],
+        "optional": [],
+        "references": []
+    },
+    "universe": "mcu"
+}

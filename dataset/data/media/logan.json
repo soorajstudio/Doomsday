@@ -1,0 +1,23 @@
+﻿{
+    "id": "logan",
+    "title": "Logan",
+    "release_date": "2017-03-03",
+    "saga": "wolverine-trilogy",
+    "mediatype": "movie",
+    "poster": "/posters/logan.jpg",
+    "summary": "In a future where mutants are nearly extinct, an elderly and weary Logan leads a quiet life. But when Laura, a mutant child pursued by scientists, comes to him for help, he must get her to safety. (source: IMDb)",
+    "connections": {
+        "required": [],
+        "optional": [
+            {
+                "saga_id": "x-men-original-trilogy"
+            }
+        ],
+        "references": [
+            {
+                "media_id": "the-wolverine"
+            }
+        ]
+    },
+    "universe": "fox-marvel-cinematic-universe"
+}

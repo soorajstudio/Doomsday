@@ -1,0 +1,19 @@
+﻿{
+    "id": "deadpool",
+    "title": "Deadpool",
+    "release_date": "2016-02-12",
+    "saga": "deadpool-saga",
+    "mediatype": "movie",
+    "poster": "/posters/deadpool.jpg",
+    "summary": "A wisecracking mercenary gets experimented on and becomes immortal yet hideously scarred, and sets out to track down the man who ruined his looks. (source: IMDb)",
+    "connections": {
+        "required": [],
+        "optional": [],
+        "references": [
+            {
+                "saga_id": "x-men-original-trilogy"
+            }
+        ]
+    },
+    "universe": "fox-marvel-cinematic-universe"
+}

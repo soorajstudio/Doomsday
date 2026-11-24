@@ -1,0 +1,19 @@
+{
+    "id": "the-gifted",
+    "title": "The Gifted",
+    "release_date": "2017-10-02",
+    "end_date": "2019-02-26",
+    "mediatype": "show",
+    "poster": "/posters/the-gifted.jpg",
+    "summary": "In a world where mutated humans are treated with distrust and fear, an institute for mutants battles to achieve peaceful co-existence with humanity. (source: IMDb)",
+    "connections": {
+        "required": [],
+        "optional": [],
+        "references": [
+            {
+                "saga_id": "x-men-original-trilogy"
+            }
+        ]
+    },
+    "universe": "fox-marvel-cinematic-universe"
+}

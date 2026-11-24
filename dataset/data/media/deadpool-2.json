@@ -1,0 +1,19 @@
+﻿{
+    "id": "deadpool-2",
+    "title": "Deadpool 2",
+    "release_date": "2018-05-18",
+    "saga": "deadpool-saga",
+    "mediatype": "movie",
+    "poster": "/posters/deadpool-2.jpg",
+    "summary": "Foul-mouthed mutant mercenary Wade Wilson (a.k.a. Deadpool) assembles a team of fellow mutant rogues to protect a young boy with abilities from the brutal, time-traveling cyborg Cable. (source: IMDb)",
+    "connections": {
+        "required": [
+            {
+                "media_id": "deadpool"
+            }
+        ],
+        "optional": [],
+        "references": []
+    },
+    "universe": "fox-marvel-cinematic-universe"
+}

@@ -1,0 +1,19 @@
+﻿{
+    "id": "blade-trinity",
+    "title": "Blade: Trinity",
+    "release_date": "2004-12-10",
+    "saga": "blade-saga",
+    "mediatype": "movie",
+    "poster": "/posters/blade-trinity.jpg",
+    "summary": "Blade, now a wanted man by the FBI, must join forces with the Nightstalkers to face his most challenging enemy yet: Dracula. (source: IMDb)",
+    "connections": {
+        "required": [
+            {
+                "media_id": "blade-2"
+            }
+        ],
+        "optional": [],
+        "references": []
+    },
+    "universe": "new-line-cinema"
+}

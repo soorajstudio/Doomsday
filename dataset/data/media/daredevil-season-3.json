@@ -1,0 +1,24 @@
+﻿{
+    "id": "daredevil-season-3",
+    "title": "Daredevil Season 3",
+    "release_date": "2018-10-19",
+    "end_date": "2018-10-19",
+    "saga": "defenders-saga",
+    "mediatype": "show",
+    "poster": "/posters/daredevil-season-3.jpg",
+    "summary": "A blind lawyer by day, vigilante by night. Matt Murdock fights the crime of New York as Daredevil. (source: IMDb)",
+    "connections": {
+        "required": [
+            {
+                "media_id": "defenders"
+            }
+        ],
+        "optional": [
+            {
+                "media_id": "iron-fist-season-2"
+            }
+        ],
+        "references": []
+    },
+    "universe": "netflix"
+}

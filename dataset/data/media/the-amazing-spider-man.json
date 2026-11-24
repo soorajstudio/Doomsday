@@ -1,0 +1,15 @@
+{
+    "id": "the-amazing-spider-man",
+    "title": "The Amazing Spider-Man",
+    "release_date": "2012-07-03",
+    "mediatype": "movie",
+    "poster": "/posters/the-amazing-spider-man-2012.jpg",
+    "summary": "After Peter Parker is bitten by a genetically altered spider, he gains newfound, spider-like powers and ventures out to save the city from the machinations of a mysterious reptilian foe. (source: IMDb)",
+    "connections": {
+        "required": [],
+        "optional": [],
+        "references": []
+    },
+    "universe": "columbia-pictures",
+    "saga": "amazing-spider-man-saga"
+}

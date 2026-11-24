@@ -1,0 +1,24 @@
+﻿{
+    "id": "jessica-jones-season-3",
+    "title": "Jessica Jones Season 3",
+    "release_date": "2019-06-14",
+    "end_date": "2019-06-14",
+    "saga": "defenders-saga",
+    "mediatype": "show",
+    "poster": "/posters/jessica-jones-season-3.jpg",
+    "summary": "Following the tragic end of her brief superhero career, Jessica Jones tries to rebuild her life as a private investigator, dealing with cases involving people with remarkable abilities in New York City. (source: IMDB)",
+    "connections": {
+        "required": [
+            {
+                "media_id": "jessica-jones-season-2"
+            }
+        ],
+        "optional": [
+            {
+                "media_id": "luke-cage-season-2"
+            }
+        ],
+        "references": []
+    },
+    "universe": "netflix"
+}

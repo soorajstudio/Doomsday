@@ -1,0 +1,19 @@
+﻿{
+    "id": "morbius",
+    "title": "Morbius",
+    "release_date": "2022-04-01",
+    "saga": "sonys-spider-man-universe",
+    "mediatype": "movie",
+    "poster": "/posters/morbius.jpg",
+    "summary": "Biochemist Michael Morbius tries to cure himself of a rare blood disease, but he inadvertently infects himself with a form of vampirism instead. (source: IMDb)",
+    "connections": {
+        "required": [],
+        "optional": [],
+        "references": [
+            {
+                "media_id": "spider-man-homecoming"
+            }
+        ]
+    },
+    "universe": "sonys-spider-man-universe"
+}

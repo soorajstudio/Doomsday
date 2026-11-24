@@ -1,0 +1,19 @@
+﻿{
+    "id": "venom-let-there-be-carnage",
+    "title": "Venom: Let There Be Carnage",
+    "release_date": "2021-10-01",
+    "saga": "sonys-spider-man-universe",
+    "mediatype": "movie",
+    "poster": "/posters/venom-let-there-be-carnage.jpg",
+    "summary": "Eddie Brock attempts to reignite his career by interviewing serial killer Cletus Kasady, who becomes the host of the symbiote Carnage and escapes prison after a failed execution. (source: IMDb)",
+    "connections": {
+        "required": [
+            {
+                "media_id": "venom"
+            }
+        ],
+        "optional": [],
+        "references": []
+    },
+    "universe": "sonys-spider-man-universe"
+}
