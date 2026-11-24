@@ -376,24 +376,27 @@ export function DoomHeroCanvas() {
           >
             Trailers
           </button>
-          <button
-            className={`pill-tab ${activeTab === "flowchart" ? "active" : ""}`}
-            onClick={() => {
-              setActiveTab("flowchart");
-              window.location.href = "/flowchart";
-            }}
+          <Link
+            href="/flowchart"
+            className="pill-tab"
+            style={{ textDecoration: "none" }}
           >
             Flowchart
-          </button>
-          <button
-            className={`pill-tab ${activeTab === "sagas" ? "active" : ""}`}
-            onClick={() => {
-              setActiveTab("sagas");
-              window.location.href = "/all-media";
-            }}
+          </Link>
+          <Link
+            href="/all-media"
+            className="pill-tab"
+            style={{ textDecoration: "none" }}
           >
             All Sagas
-          </button>
+          </Link>
+          <Link
+            href="/watching-order"
+            className="pill-tab"
+            style={{ textDecoration: "none" }}
+          >
+            Watching Order
+          </Link>
           <button
             className={`pill-tab ${activeTab === "more" ? "active" : ""}`}
             onClick={() => {
