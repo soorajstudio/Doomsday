@@ -1,0 +1,34 @@
+{
+  "id": "thor-ragnarok",
+  "title": "Thor: Ragnarok",
+  "release_date": "2017-11-03",
+  "saga": "infinite-saga",
+  "phase": 3,
+  "mediatype": "movie",
+  "poster": "/api/v1/posters/thor-ragnarok.jpg",
+  "summary": "Imprisoned on the planet Sakaar, Thor must race against time to return to Asgard and stop Ragnarok, the destruction of his world, at the hands of the powerful and ruthless villain Hela. (source: IMDb)",
+  "connections": {
+    "required": [
+      {
+        "media_id": "doctor-strange"
+      },
+      {
+        "media_id": "avengers-age-of-ultron"
+      }
+    ],
+    "optional": [],
+    "references": []
+  },
+  "universe": "mcu",
+  "reception": {
+    "imdb_rating": "7.9",
+    "imdb_votes": "840,000",
+    "rotten_tomatoes": "93%",
+    "metascore": "74",
+    "box_office": "$855,301,806",
+    "rated": "PG-13",
+    "director": "Taika Waititi",
+    "actors": "Chris Hemsworth, Tom Hiddleston, Cate Blanchett, Idris Elba, Jeff Goldblum, Mark Ruffalo",
+    "awards": "6 wins & 49 nominations total."
+  }
+}

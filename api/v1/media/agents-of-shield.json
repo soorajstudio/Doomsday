@@ -1,0 +1,35 @@
+{
+  "id": "agents-of-shield",
+  "title": "Agents of S.H.I.E.L.D.",
+  "release_date": "2013-09-24",
+  "end_date": "2020-05-27",
+  "saga": "infinite-saga",
+  "mediatype": "show",
+  "poster": "/api/v1/posters/agents-of-shield.jpg",
+  "summary": "The missions of the Strategic Homeland Intervention, Enforcement and Logistics Division. (source: IMDb)\n\nNote: This show is quite a mess for watching order since every episode takes place at a different time along the entire Infinity Saga. If you don't want to take the risk to spoil yourself, we recommand you to watch it all after Avengers: Endgame.",
+  "connections": {
+    "required": [
+      {
+        "media_id": "iron-man-3"
+      }
+    ],
+    "optional": [
+      {
+        "media_id": "agent-carter"
+      }
+    ],
+    "references": []
+  },
+  "universe": "marvel-television",
+  "reception": {
+    "imdb_rating": "7.5",
+    "imdb_votes": "230,000",
+    "rotten_tomatoes": "95%",
+    "metascore": "74",
+    "box_office": "N/A",
+    "rated": "TV-PG",
+    "director": "Joss Whedon, Jed Whedon, Maurissa Tancharoen",
+    "actors": "Clark Gregg, Ming-Na Wen, Brett Dalton, Chloe Bennet, Iain De Caestecker",
+    "awards": "Nominated for 2 Primetime Emmys. 6 wins & 49 nominations total."
+  }
+}

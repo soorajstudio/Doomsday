@@ -1,0 +1,31 @@
+{
+  "id": "agent-carter",
+  "title": "Agent Carter",
+  "release_date": "2015-01-06",
+  "end_date": "2016-01-19",
+  "saga": "infinite-saga",
+  "mediatype": "show",
+  "poster": "/api/v1/posters/agent-carter.jpg",
+  "summary": "In 1946, Peggy Carter is relegated to secretarial duties in the Strategic Scientific Reserve (SSR). When Howard Stark is accused of treason, he secretly recruits Peggy to clear his name with the help of his butler, Edwin Jarvis. (source: IMDb)",
+  "connections": {
+    "required": [],
+    "optional": [
+      {
+        "media_id": "captain-america-the-first-avenger"
+      }
+    ],
+    "references": []
+  },
+  "universe": "marvel-television",
+  "reception": {
+    "imdb_rating": "7.8",
+    "imdb_votes": "87,000",
+    "rotten_tomatoes": "86%",
+    "metascore": "73",
+    "box_office": "N/A",
+    "rated": "TV-PG",
+    "director": "Christopher Markus, Stephen McFeely",
+    "actors": "Hayley Atwell, James D'Arcy, Enver Gjokaj, Chad Michael Murray",
+    "awards": "Nominated for 3 Primetime Emmys. 3 wins & 8 nominations total."
+  }
+}

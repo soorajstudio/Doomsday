@@ -1,0 +1,35 @@
+{
+  "id": "punisher-season-2",
+  "title": "The Punisher Season 2",
+  "release_date": "2019-01-18",
+  "end_date": "2019-01-18",
+  "saga": "defenders-saga",
+  "mediatype": "show",
+  "poster": "/api/v1/posters/punisher-season-2.jpg",
+  "summary": "After his revenge on those who murdered his family, aimless Marine veteran Frank Castle finds a new meaning in life as a vigilante known as \"The Punisher\". (source: IMDB)",
+  "connections": {
+    "required": [
+      {
+        "media_id": "punisher-season-1"
+      }
+    ],
+    "optional": [
+      {
+        "media_id": "daredevil-season-3"
+      }
+    ],
+    "references": []
+  },
+  "universe": "netflix",
+  "reception": {
+    "imdb_rating": "8.3",
+    "imdb_votes": "260,000",
+    "rotten_tomatoes": "61%",
+    "metascore": "58",
+    "box_office": "N/A",
+    "rated": "TV-MA",
+    "director": "Steve Lightfoot",
+    "actors": "Jon Bernthal, Ben Barnes, Amber Rose Revah, Jason R. Moore, Floriana Lima",
+    "awards": "Nominated for 1 Primetime Emmy."
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "id": "the-gifted",
+  "title": "The Gifted",
+  "release_date": "2017-10-02",
+  "end_date": "2019-02-26",
+  "mediatype": "show",
+  "poster": "/api/v1/posters/the-gifted.jpg",
+  "summary": "In a world where mutated humans are treated with distrust and fear, an institute for mutants battles to achieve peaceful co-existence with humanity. (source: IMDb)",
+  "connections": {
+    "required": [],
+    "optional": [],
+    "references": [
+      {
+        "saga_id": "x-men-original-trilogy"
+      }
+    ]
+  },
+  "universe": "fox-marvel-cinematic-universe",
+  "reception": {
+    "imdb_rating": "7.3",
+    "imdb_votes": "68,000",
+    "rotten_tomatoes": "79%",
+    "metascore": "66",
+    "box_office": "N/A",
+    "rated": "TV-14",
+    "director": "Matt Nix",
+    "actors": "Stephen Moyer, Amy Acker, Sean Teale, Natalie Alyn Lind",
+    "awards": "1 win & 4 nominations total."
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "doctor-strange",
+  "title": "Doctor Strange",
+  "release_date": "2016-11-04",
+  "saga": "infinite-saga",
+  "phase": 3,
+  "mediatype": "movie",
+  "poster": "/api/v1/posters/doctor-strange.jpg",
+  "summary": "While on a journey of physical and spiritual healing, a brilliant neurosurgeon is drawn into the world of the mystic arts.",
+  "connections": {
+    "required": [],
+    "optional": [],
+    "references": []
+  },
+  "universe": "mcu",
+  "reception": {
+    "imdb_rating": "7.5",
+    "imdb_votes": "810,000",
+    "rotten_tomatoes": "89%",
+    "metascore": "72",
+    "box_office": "$677,796,076",
+    "rated": "PG-13",
+    "director": "Scott Derrickson",
+    "actors": "Benedict Cumberbatch, Chiwetel Ejiofor, Rachel McAdams, Benedict Wong, Mads Mikkelsen",
+    "awards": "Nominated for 1 Oscar. 20 wins & 67 nominations total."
+  }
+}

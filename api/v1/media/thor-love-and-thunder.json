@@ -1,0 +1,31 @@
+{
+  "id": "thor-love-and-thunder",
+  "title": "Thor: Love and Thunder",
+  "release_date": "2022-07-08",
+  "saga": "multiverse-saga",
+  "phase": 4,
+  "mediatype": "movie",
+  "poster": "/api/v1/posters/thor-love-and-thunder.jpg",
+  "summary": "Thor enlists the help of Valkyrie, Korg and ex-girlfriend Jane Foster to fight Gorr the God Butcher, who intends to make the gods extinct. (source: IMDb)",
+  "connections": {
+    "required": [
+      {
+        "media_id": "avengers-endgame"
+      }
+    ],
+    "optional": [],
+    "references": []
+  },
+  "universe": "mcu",
+  "reception": {
+    "imdb_rating": "6.2",
+    "imdb_votes": "400,000",
+    "rotten_tomatoes": "63%",
+    "metascore": "57",
+    "box_office": "$760,928,081",
+    "rated": "PG-13",
+    "director": "Taika Waititi",
+    "actors": "Chris Hemsworth, Natalie Portman, Christian Bale, Tessa Thompson, Taika Waititi",
+    "awards": "4 wins & 27 nominations total."
+  }
+}

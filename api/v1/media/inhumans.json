@@ -1,0 +1,27 @@
+{
+  "id": "inhumans",
+  "title": "Inhumans",
+  "release_date": "2017-09-29",
+  "end_date": "2017-09-29",
+  "saga": "infinite-saga",
+  "mediatype": "show",
+  "poster": "/api/v1/posters/inhumans.jpg",
+  "summary": "An isolated community of superhumans fight to protect themselves. (source: IMDb)",
+  "connections": {
+    "required": [],
+    "optional": [],
+    "references": []
+  },
+  "universe": "marvel-television",
+  "reception": {
+    "imdb_rating": "4.9",
+    "imdb_votes": "28,000",
+    "rotten_tomatoes": "11%",
+    "metascore": "27",
+    "box_office": "N/A",
+    "rated": "TV-PG",
+    "director": "Scott Buck",
+    "actors": "Anson Mount, Serinda Swan, Ken Leung, Eme Ikwuakor, Iwan Rheon",
+    "awards": "1 nomination total."
+  }
+}

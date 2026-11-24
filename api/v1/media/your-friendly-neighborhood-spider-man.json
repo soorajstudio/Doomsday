@@ -1,0 +1,32 @@
+{
+  "id": "your-friendly-neighborhood-spider-man",
+  "title": "Your Friendly Neighborhood Spider-Man (Season 1)",
+  "release_date": "2025-01-29",
+  "end_date": "2025-02-19",
+  "saga": "multiverse-saga",
+  "phase": 5,
+  "mediatype": "show",
+  "poster": "/api/v1/posters/your-friendly-neighborhood-spider-man.jpg",
+  "summary": "Peter Parker is on his way to becoming a hero, but his path to get there is anything but ordinary. (source: IMDb)",
+  "connections": {
+    "required": [
+      {
+        "media_id": "doctor-strange-in-the-multiverse-of-madness"
+      }
+    ],
+    "optional": [],
+    "references": []
+  },
+  "universe": "mcu",
+  "reception": {
+    "imdb_rating": "7.5",
+    "imdb_votes": "12,000",
+    "rotten_tomatoes": "95%",
+    "metascore": "79",
+    "box_office": "N/A",
+    "rated": "TV-Y7",
+    "director": "Jeff Trammell",
+    "actors": "Hudson Thames, Colman Domingo, Eugene Byrd, Grace Song",
+    "awards": "Marvel Animation release."
+  }
+}

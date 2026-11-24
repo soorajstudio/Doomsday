@@ -1,0 +1,40 @@
+{
+  "id": "spider-man-across-the-spider-verse",
+  "title": "Spider-Man: Across the Spider-Verse",
+  "release_date": "2023-06-02",
+  "saga": "animated-spider-verse",
+  "mediatype": "movie",
+  "poster": "/api/v1/posters/spider-man-across-the-spider-verse.jpg",
+  "summary": "Traveling across the multiverse, Miles Morales meets a new team of Spider-People, made up of heroes from different dimensions. But when the heroes clash over how to deal with a new threat, Miles finds himself at a crossroads. (source: IMDb)",
+  "connections": {
+    "required": [
+      {
+        "media_id": "spider-man-into-the-spider-verse"
+      }
+    ],
+    "optional": [],
+    "references": [
+      {
+        "saga_id": "raimi-trilogy"
+      },
+      {
+        "saga_id": "amazing-spider-man-saga"
+      },
+      {
+        "media_id": "spider-man-homecoming"
+      }
+    ]
+  },
+  "universe": "sonys-spider-man-universe",
+  "reception": {
+    "imdb_rating": "8.6",
+    "imdb_votes": "420,000",
+    "rotten_tomatoes": "95%",
+    "metascore": "86",
+    "box_office": "$690,897,910",
+    "rated": "PG",
+    "director": "Joaquim Dos Santos, Kemp Powers, Justin K. Thompson",
+    "actors": "Shameik Moore, Hailee Steinfeld, Brian Tyree Henry, Luna Lauren Velez, Oscar Isaac",
+    "awards": "Nominated for 1 Oscar. 92 wins & 144 nominations total."
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "id": "daredevil-season-2",
+  "title": "Daredevil Season 2",
+  "release_date": "2016-03-18",
+  "end_date": "2016-03-18",
+  "saga": "defenders-saga",
+  "mediatype": "show",
+  "poster": "/api/v1/posters/daredevil-season-2.jpg",
+  "summary": "A blind lawyer by day, vigilante by night. Matt Murdock fights the crime of New York as Daredevil. (source: IMDb)",
+  "connections": {
+    "required": [
+      {
+        "media_id": "daredevil-season-1"
+      }
+    ],
+    "optional": [],
+    "references": []
+  },
+  "universe": "netflix",
+  "reception": {
+    "imdb_rating": "8.5",
+    "imdb_votes": "470,000",
+    "rotten_tomatoes": "81%",
+    "metascore": "68",
+    "box_office": "N/A",
+    "rated": "TV-MA",
+    "director": "Douglas Petrie, Marco Ramirez",
+    "actors": "Charlie Cox, Jon Bernthal, Elodie Yung, Deborah Ann Woll",
+    "awards": "Nominated for 2 Primetime Emmys."
+  }
+}

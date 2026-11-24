@@ -1,0 +1,31 @@
+{
+  "id": "luke-cage-season-2",
+  "title": "Luke Cage Season 2",
+  "release_date": "2018-06-22",
+  "end_date": "2018-06-22",
+  "saga": "defenders-saga",
+  "mediatype": "show",
+  "poster": "/api/v1/posters/luke-cage-season-2.jpg",
+  "summary": "When a sabotaged experiment gives him super strength and unbreakable skin, Luke Cage becomes a fugitive attempting to rebuild his life in Harlem and must confront his past and fight a battle for the heart of his city. (source: IMDB)",
+  "connections": {
+    "required": [
+      {
+        "media_id": "defenders"
+      }
+    ],
+    "optional": [],
+    "references": []
+  },
+  "universe": "netflix",
+  "reception": {
+    "imdb_rating": "7.3",
+    "imdb_votes": "145,000",
+    "rotten_tomatoes": "85%",
+    "metascore": "64",
+    "box_office": "N/A",
+    "rated": "TV-MA",
+    "director": "Cheo Hodari Coker",
+    "actors": "Mike Colter, Simone Missick, Theo Rossi, Mustafa Shakir",
+    "awards": "Nominated for 1 Primetime Emmy."
+  }
+}

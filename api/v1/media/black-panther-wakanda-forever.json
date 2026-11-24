@@ -1,0 +1,31 @@
+{
+  "id": "black-panther-wakanda-forever",
+  "title": "Black Panther: Wakanda Forever",
+  "release_date": "2022-11-11",
+  "saga": "multiverse-saga",
+  "phase": 4,
+  "mediatype": "movie",
+  "poster": "/api/v1/posters/black-panther-wakanda-forever.jpg",
+  "summary": "The people of Wakanda fight to protect their home from intervening world powers as they mourn the death of King T'Challa. (source: IMDb)",
+  "connections": {
+    "required": [
+      {
+        "media_id": "avengers-endgame"
+      }
+    ],
+    "optional": [],
+    "references": []
+  },
+  "universe": "mcu",
+  "reception": {
+    "imdb_rating": "6.7",
+    "imdb_votes": "310,000",
+    "rotten_tomatoes": "84%",
+    "metascore": "67",
+    "box_office": "$859,208,836",
+    "rated": "PG-13",
+    "director": "Ryan Coogler",
+    "actors": "Letitia Wright, Lupita Nyong'o, Danai Gurira, Winston Duke, Tenoch Huerta Mejía",
+    "awards": "Won 1 Oscar. 42 wins & 157 nominations total."
+  }
+}

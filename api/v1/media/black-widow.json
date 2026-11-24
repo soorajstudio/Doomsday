@@ -1,0 +1,31 @@
+{
+  "id": "black-widow",
+  "title": "Black Widow",
+  "release_date": "2021-07-09",
+  "saga": "multiverse-saga",
+  "phase": 4,
+  "mediatype": "movie",
+  "poster": "/api/v1/posters/black-widow.jpg",
+  "summary": "Natasha Romanoff confronts the darker parts of her ledger when a dangerous conspiracy with ties to her past arises. (source: IMDb)",
+  "connections": {
+    "required": [
+      {
+        "media_id": "avengers-endgame"
+      }
+    ],
+    "optional": [],
+    "references": []
+  },
+  "universe": "mcu",
+  "reception": {
+    "imdb_rating": "6.7",
+    "imdb_votes": "420,000",
+    "rotten_tomatoes": "79%",
+    "metascore": "67",
+    "box_office": "$379,751,655",
+    "rated": "PG-13",
+    "director": "Cate Shortland",
+    "actors": "Scarlett Johansson, Florence Pugh, David Harbour, Rachel Weisz",
+    "awards": "7 wins & 33 nominations total."
+  }
+}

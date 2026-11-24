@@ -1,0 +1,32 @@
+{
+  "id": "ms-marvel",
+  "title": "Ms. Marvel",
+  "release_date": "2022-06-08",
+  "end_date": "2022-06-08",
+  "saga": "multiverse-saga",
+  "phase": 4,
+  "mediatype": "show",
+  "poster": "/api/v1/posters/ms-marvel.jpg",
+  "summary": "Kamala, a superhero fan with an imagination--particularly when it comes to Captain Marvel--feels like she doesn't fit in at school and sometimes even at home, that is until she gets superpowers like the heroes she admires. (source: IMDb)",
+  "connections": {
+    "required": [
+      {
+        "media_id": "avengers-endgame"
+      }
+    ],
+    "optional": [],
+    "references": []
+  },
+  "universe": "mcu",
+  "reception": {
+    "imdb_rating": "6.3",
+    "imdb_votes": "120,000",
+    "rotten_tomatoes": "98%",
+    "metascore": "78",
+    "box_office": "N/A",
+    "rated": "TV-14",
+    "director": "Adil El Arbi, Bilall Fallah, Meera Menon, Sharmeen Obaid-Chinoy",
+    "actors": "Iman Vellani, Matt Lintz, Zenobia Shroff, Rish Shah",
+    "awards": "Won 2 Primetime Emmys. 6 wins & 22 nominations total."
+  }
+}

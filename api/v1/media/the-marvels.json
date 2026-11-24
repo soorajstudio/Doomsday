@@ -1,0 +1,38 @@
+{
+  "id": "the-marvels",
+  "title": "The Marvels",
+  "release_date": "2023-11-10",
+  "saga": "multiverse-saga",
+  "phase": 5,
+  "mediatype": "movie",
+  "poster": "/api/v1/posters/the-marvels.jpg",
+  "summary": "Carol Danvers gets her powers entangled with those of Kamala Khan and Monica Rambeau, forcing them to work together to save the universe. (source: IMDb)",
+  "connections": {
+    "required": [
+      {
+        "media_id": "ms-marvel"
+      },
+      {
+        "media_id": "wandavision"
+      }
+    ],
+    "optional": [],
+    "references": [
+      {
+        "media_id": "hawkeye"
+      }
+    ]
+  },
+  "universe": "mcu",
+  "reception": {
+    "imdb_rating": "5.5",
+    "imdb_votes": "140,000",
+    "rotten_tomatoes": "62%",
+    "metascore": "50",
+    "box_office": "$206,136,555",
+    "rated": "PG-13",
+    "director": "Nia DaCosta",
+    "actors": "Brie Larson, Teyonah Parris, Iman Vellani, Zawe Ashton, Samuel L. Jackson",
+    "awards": "1 win & 11 nominations total."
+  }
+}

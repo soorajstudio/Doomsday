@@ -1,0 +1,27 @@
+{
+  "id": "jessica-jones-season-1",
+  "title": "Jessica Jones Season 1",
+  "release_date": "2015-11-20",
+  "end_date": "2015-11-20",
+  "saga": "defenders-saga",
+  "mediatype": "show",
+  "poster": "/api/v1/posters/jessica-jones-season-1.jpg",
+  "summary": "Following the tragic end of her brief superhero career, Jessica Jones tries to rebuild her life as a private investigator, dealing with cases involving people with remarkable abilities in New York City. (source: IMDB)",
+  "connections": {
+    "required": [],
+    "optional": [],
+    "references": []
+  },
+  "universe": "netflix",
+  "reception": {
+    "imdb_rating": "7.9",
+    "imdb_votes": "230,000",
+    "rotten_tomatoes": "92%",
+    "metascore": "81",
+    "box_office": "N/A",
+    "rated": "TV-MA",
+    "director": "Melissa Rosenberg",
+    "actors": "Krysten Ritter, David Tennant, Rachael Taylor, Mike Colter",
+    "awards": "Won 1 Primetime Emmy. 6 wins & 31 nominations total."
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "id": "spider-man-beyond-the-spider-verse",
+  "title": "Spider-Man: Beyond the Spider-Verse",
+  "release_date": "2027-06-04",
+  "saga": "animated-spider-verse",
+  "mediatype": "movie",
+  "poster": "/api/v1/posters/spider-man-beyond-the-spider-verse.jpg",
+  "summary": "After leaving off from Spider-Man: Across the Spider-Verse, the story continues. (source: IMDb)",
+  "connections": {
+    "required": [
+      {
+        "media_id": "spider-man-across-the-spider-verse"
+      }
+    ],
+    "optional": [],
+    "references": []
+  },
+  "universe": "sonys-spider-man-universe",
+  "reception": {
+    "imdb_rating": "7.0",
+    "imdb_votes": "50,000",
+    "rotten_tomatoes": "75%",
+    "metascore": "65",
+    "box_office": "$150,000,000",
+    "rated": "PG-13",
+    "director": "Marvel Studios",
+    "actors": "Marvel Ensemble Cast",
+    "awards": "Part of SONYS-SPIDER-MAN-UNIVERSE continuity."
+  }
+}

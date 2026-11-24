@@ -1,0 +1,35 @@
+{
+  "id": "hawkeye",
+  "title": "Hawkeye",
+  "release_date": "2021-11-24",
+  "end_date": "2021-11-24",
+  "saga": "multiverse-saga",
+  "phase": 4,
+  "mediatype": "show",
+  "poster": "/api/v1/posters/hawkeye.jpg",
+  "summary": "Clint Barton aka Hawkeye has the mission to get back to his family for Christmas. But when a threat from his past shows up, Hawkeye reluctantly teams up with Kate Bishop, a skilled archer and his biggest fan, to unravel a conspiracy. (source: IMDb)",
+  "connections": {
+    "required": [
+      {
+        "media_id": "the-falcon-and-the-winter-soldier"
+      },
+      {
+        "media_id": "black-widow"
+      }
+    ],
+    "optional": [],
+    "references": []
+  },
+  "universe": "mcu",
+  "reception": {
+    "imdb_rating": "7.5",
+    "imdb_votes": "210,000",
+    "rotten_tomatoes": "92%",
+    "metascore": "77",
+    "box_office": "N/A",
+    "rated": "TV-14",
+    "director": "Rhys Thomas, Bert & Bertie",
+    "actors": "Jeremy Renner, Hailee Steinfeld, Florence Pugh, Vera Farmiga, Vincent D'Onofrio",
+    "awards": "Nominated for 2 Primetime Emmys. 4 wins & 22 nominations total."
+  }
+}

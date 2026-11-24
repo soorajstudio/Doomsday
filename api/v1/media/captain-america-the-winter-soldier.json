@@ -1,0 +1,31 @@
+{
+  "id": "captain-america-the-winter-soldier",
+  "title": "Captain America: The Winter Soldier",
+  "release_date": "2014-04-04",
+  "saga": "infinite-saga",
+  "phase": 2,
+  "mediatype": "movie",
+  "poster": "/api/v1/posters/captain-america-the-winter-soldier.jpg",
+  "summary": "As Steve Rogers struggles to embrace his role in the modern world, he teams up with a fellow Avenger and S.H.I.E.L.D agent, Black Widow, to battle a new threat from history: an assassin known as the Winter Soldier. (source: IMDb)",
+  "connections": {
+    "required": [
+      {
+        "media_id": "avengers"
+      }
+    ],
+    "optional": [],
+    "references": []
+  },
+  "universe": "mcu",
+  "reception": {
+    "imdb_rating": "7.8",
+    "imdb_votes": "910,000",
+    "rotten_tomatoes": "90%",
+    "metascore": "70",
+    "box_office": "$714,421,503",
+    "rated": "PG-13",
+    "director": "Anthony Russo, Joe Russo",
+    "actors": "Chris Evans, Samuel L. Jackson, Scarlett Johansson, Robert Redford, Sebastian Stan",
+    "awards": "Nominated for 1 Oscar. 5 wins & 52 nominations total."
+  }
+}

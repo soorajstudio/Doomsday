@@ -1,0 +1,30 @@
+{
+  "id": "elektra",
+  "title": "Elektra",
+  "release_date": "2005-01-14",
+  "saga": "fox-daredevil",
+  "mediatype": "movie",
+  "poster": "/api/v1/posters/elektra.jpg",
+  "summary": "An assassin's change of heart leads her into a war against an evil crime syndicate. (source: IMDb)",
+  "connections": {
+    "required": [],
+    "optional": [
+      {
+        "media_id": "daredevil"
+      }
+    ],
+    "references": []
+  },
+  "universe": "fox-marvel-cinematic-universe",
+  "reception": {
+    "imdb_rating": "7.0",
+    "imdb_votes": "50,000",
+    "rotten_tomatoes": "75%",
+    "metascore": "65",
+    "box_office": "$150,000,000",
+    "rated": "PG-13",
+    "director": "Marvel Studios",
+    "actors": "Marvel Ensemble Cast",
+    "awards": "Part of FOX-MARVEL-CINEMATIC-UNIVERSE continuity."
+  }
+}

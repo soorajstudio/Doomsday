@@ -1,0 +1,31 @@
+{
+  "id": "blade-series",
+  "title": "Blade: The Series",
+  "release_date": "2006-06-28",
+  "end_date": "2006-09-13",
+  "saga": "blade-saga",
+  "mediatype": "show",
+  "poster": "/api/v1/posters/blade-series.jpg",
+  "summary": "The adventures of the half human/vampire hunter. (source: IMDb)",
+  "connections": {
+    "required": [
+      {
+        "media_id": "blade-trinity"
+      }
+    ],
+    "optional": [],
+    "references": []
+  },
+  "universe": "new-line-cinema",
+  "reception": {
+    "imdb_rating": "6.3",
+    "imdb_votes": "7,800",
+    "rotten_tomatoes": "50%",
+    "metascore": "49",
+    "box_office": "N/A",
+    "rated": "TV-MA",
+    "director": "David S. Goyer",
+    "actors": "Sticky Fingaz, Jill Wagner, Neil Jackson, Nelson Lee",
+    "awards": "1 nomination total."
+  }
+}

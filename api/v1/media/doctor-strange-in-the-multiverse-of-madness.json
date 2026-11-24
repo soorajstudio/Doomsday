@@ -1,0 +1,34 @@
+{
+  "id": "doctor-strange-in-the-multiverse-of-madness",
+  "title": "Doctor Strange in the Multiverse of Madness",
+  "release_date": "2022-05-06",
+  "saga": "multiverse-saga",
+  "phase": 4,
+  "mediatype": "movie",
+  "poster": "/api/v1/posters/doctor-strange-in-the-multiverse-of-madness.jpg",
+  "summary": "Doctor Strange teams up with a mysterious teenage girl who can travel across multiverses, to battle other-universe versions of himself which threaten to wipe out the multiverse. They seek help from the Scarlet Witch, Wong and others. (source: IMDb)",
+  "connections": {
+    "required": [
+      {
+        "media_id": "wandavision"
+      },
+      {
+        "media_id": "spider-man-no-way-home"
+      }
+    ],
+    "optional": [],
+    "references": []
+  },
+  "universe": "mcu",
+  "reception": {
+    "imdb_rating": "6.9",
+    "imdb_votes": "500,000",
+    "rotten_tomatoes": "74%",
+    "metascore": "60",
+    "box_office": "$955,775,804",
+    "rated": "PG-13",
+    "director": "Sam Raimi",
+    "actors": "Benedict Cumberbatch, Elizabeth Olsen, Chiwetel Ejiofor, Benedict Wong, Xochitl Gomez",
+    "awards": "7 wins & 45 nominations total."
+  }
+}

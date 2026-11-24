@@ -1,0 +1,27 @@
+{
+  "id": "werewolf-by-night",
+  "title": "Werewolf by Night",
+  "release_date": "2022-09-30",
+  "saga": "multiverse-saga",
+  "phase": 4,
+  "mediatype": "special",
+  "poster": "/api/v1/posters/werewolf-by-night.jpg",
+  "summary": "Follows a lycanthrope superhero who fights evil using the abilities given to him by a curse brought on by his bloodline. (source: IMDb)",
+  "connections": {
+    "required": [],
+    "optional": [],
+    "references": []
+  },
+  "universe": "mcu",
+  "reception": {
+    "imdb_rating": "7.1",
+    "imdb_votes": "90,000",
+    "rotten_tomatoes": "89%",
+    "metascore": "69",
+    "box_office": "N/A",
+    "rated": "TV-14",
+    "director": "Michael Giacchino",
+    "actors": "Gael García Bernal, Laura Donnelly, Harriet Sansom Harris",
+    "awards": "Won 1 Saturn Award. 2 wins & 10 nominations total."
+  }
+}

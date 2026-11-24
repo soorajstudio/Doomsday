@@ -1,0 +1,26 @@
+{
+  "id": "madame-web",
+  "title": "Madame Web",
+  "release_date": "2024-02-14",
+  "saga": "sonys-spider-man-universe",
+  "mediatype": "movie",
+  "poster": "/api/v1/posters/madame-web.jpg",
+  "summary": "Forced to confront her past, Cassandra Webb, a Manhattan paramedic that may have clairvoyant abilities, forms a relationship with three young women destined for powerful futures, if they can survive their threatening present. (source: IMDb)",
+  "connections": {
+    "required": [],
+    "optional": [],
+    "references": []
+  },
+  "universe": "sonys-spider-man-universe",
+  "reception": {
+    "imdb_rating": "4.0",
+    "imdb_votes": "75,000",
+    "rotten_tomatoes": "11%",
+    "metascore": "26",
+    "box_office": "$100,498,764",
+    "rated": "PG-13",
+    "director": "S.J. Clarkson",
+    "actors": "Dakota Johnson, Sydney Sweeney, Celeste O'Connor, Isabela Merced, Tahar Rahim",
+    "awards": "Sony's Spider-Man Universe release."
+  }
+}

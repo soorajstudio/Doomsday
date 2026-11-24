@@ -1,0 +1,31 @@
+{
+  "id": "spider-man-far-from-home",
+  "title": "Spider-Man: Far From Home",
+  "release_date": "2019-07-02",
+  "saga": "infinite-saga",
+  "phase": 3,
+  "mediatype": "movie",
+  "poster": "/api/v1/posters/spider-man-far-from-home.jpg",
+  "summary": "Peter Parker, the beloved superhero Spider-Man, faces four destructive elemental monsters while on holiday in Europe. Soon, he receives help from Mysterio, a fellow hero with mysterious origins. (source: IMDb)",
+  "connections": {
+    "required": [
+      {
+        "media_id": "avengers-endgame"
+      }
+    ],
+    "optional": [],
+    "references": []
+  },
+  "universe": "mcu",
+  "reception": {
+    "imdb_rating": "7.4",
+    "imdb_votes": "580,000",
+    "rotten_tomatoes": "90%",
+    "metascore": "69",
+    "box_office": "$1,131,927,996",
+    "rated": "PG-13",
+    "director": "Jon Watts",
+    "actors": "Tom Holland, Samuel L. Jackson, Jake Gyllenhaal, Marisa Tomei, Zendaya",
+    "awards": "10 wins & 26 nominations total."
+  }
+}

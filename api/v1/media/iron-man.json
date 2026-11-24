@@ -1,0 +1,27 @@
+{
+  "id": "iron-man",
+  "title": "Iron Man",
+  "release_date": "2008-05-02",
+  "saga": "infinite-saga",
+  "phase": 1,
+  "mediatype": "movie",
+  "poster": "/api/v1/posters/iron-man.jpg",
+  "summary": "After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil. (source: IMDb)",
+  "connections": {
+    "required": [],
+    "optional": [],
+    "references": []
+  },
+  "universe": "mcu",
+  "reception": {
+    "imdb_rating": "7.9",
+    "imdb_votes": "1,150,000",
+    "rotten_tomatoes": "94%",
+    "metascore": "79",
+    "box_office": "$585,796,247",
+    "rated": "PG-13",
+    "director": "Jon Favreau",
+    "actors": "Robert Downey Jr., Gwyneth Paltrow, Terrence Howard, Jeff Bridges",
+    "awards": "Nominated for 2 Oscars. 24 wins & 74 nominations total."
+  }
+}

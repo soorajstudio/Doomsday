@@ -1,0 +1,26 @@
+{
+  "id": "blade",
+  "title": "Blade",
+  "release_date": "1998-08-21",
+  "saga": "blade-saga",
+  "mediatype": "movie",
+  "poster": "/api/v1/posters/blade.jpg",
+  "summary": "A half-vampire, half-mortal man becomes a protector of the mortal race, while slaying evil vampires. (source: IMDb)",
+  "connections": {
+    "required": [],
+    "optional": [],
+    "references": []
+  },
+  "universe": "new-line-cinema",
+  "reception": {
+    "imdb_rating": "7.1",
+    "imdb_votes": "290,000",
+    "rotten_tomatoes": "59%",
+    "metascore": "47",
+    "box_office": "$131,183,530",
+    "rated": "R",
+    "director": "Stephen Norrington",
+    "actors": "Wesley Snipes, Stephen Dorff, Kris Kristofferson, N'Bushe Wright",
+    "awards": "6 wins & 10 nominations total."
+  }
+}

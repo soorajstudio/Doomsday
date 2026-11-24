@@ -1,0 +1,27 @@
+{
+  "id": "helstrom",
+  "title": "Helstrom",
+  "release_date": "2020-10-16",
+  "end_date": "2020-10-16",
+  "saga": "infinite-saga",
+  "mediatype": "show",
+  "poster": "/api/v1/posters/helstrom.jpg",
+  "summary": "Daimon and Ana Helstrom are the son and daughter of a mysterious and powerful serial killer. The siblings have a complicated dynamic as they track down the terrorizing worst of humanity - each with their attitude and skills. (source: IMDB)",
+  "connections": {
+    "required": [],
+    "optional": [],
+    "references": []
+  },
+  "universe": "marvel-television",
+  "reception": {
+    "imdb_rating": "6.7",
+    "imdb_votes": "8,500",
+    "rotten_tomatoes": "27%",
+    "metascore": "40",
+    "box_office": "N/A",
+    "rated": "TV-MA",
+    "director": "Paul Zbyszewski",
+    "actors": "Tom Austen, Sydney Lemmon, Elizabeth Marvel, Robert Wisdom",
+    "awards": "1 nomination total."
+  }
+}

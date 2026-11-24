@@ -1,0 +1,26 @@
+{
+  "id": "fantastic-four-2005",
+  "title": "Fantastic Four",
+  "release_date": "2005-07-08",
+  "saga": "fantastic-four-saga",
+  "mediatype": "movie",
+  "poster": "/api/v1/posters/fantastic-four-2005.jpg",
+  "summary": "A group of astronauts gain superpowers after a cosmic radiation exposure and must use them to oppose the plans of their enemy, Doctor Victor Von Doom. (source: IMDb)",
+  "connections": {
+    "required": [],
+    "optional": [],
+    "references": []
+  },
+  "universe": "fox-marvel-cinematic-universe",
+  "reception": {
+    "imdb_rating": "5.7",
+    "imdb_votes": "350,000",
+    "rotten_tomatoes": "28%",
+    "metascore": "40",
+    "box_office": "$333,535,934",
+    "rated": "PG-13",
+    "director": "Tim Story",
+    "actors": "Ioan Gruffudd, Jessica Alba, Chris Evans, Michael Chiklis, Julian McMahon",
+    "awards": "3 wins & 10 nominations total."
+  }
+}

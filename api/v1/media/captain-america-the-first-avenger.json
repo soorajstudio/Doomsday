@@ -1,0 +1,27 @@
+{
+  "id": "captain-america-the-first-avenger",
+  "title": "Captain America: The First Avenger",
+  "release_date": "2011-07-22",
+  "saga": "infinite-saga",
+  "phase": 1,
+  "mediatype": "movie",
+  "poster": "/api/v1/posters/captain-america-the-first-avenger.jpg",
+  "summary": "Steve Rogers devient Captain America durant la Seconde Guerre mondiale. (source: IMDb)",
+  "connections": {
+    "required": [],
+    "optional": [],
+    "references": []
+  },
+  "universe": "mcu",
+  "reception": {
+    "imdb_rating": "6.9",
+    "imdb_votes": "870,000",
+    "rotten_tomatoes": "80%",
+    "metascore": "66",
+    "box_office": "$370,569,774",
+    "rated": "PG-13",
+    "director": "Joe Johnston",
+    "actors": "Chris Evans, Hugo Weaving, Samuel L. Jackson, Hayley Atwell, Sebastian Stan",
+    "awards": "4 wins & 48 nominations total."
+  }
+}

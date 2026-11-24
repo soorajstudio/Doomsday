@@ -1,0 +1,30 @@
+{
+  "id": "x2",
+  "title": "X2",
+  "release_date": "2003-05-02",
+  "saga": "x-men-original-trilogy",
+  "mediatype": "movie",
+  "poster": "/api/v1/posters/x2.jpg",
+  "summary": "When anti-mutant Colonel William Stryker kidnaps Professor X and attacks his school, the X-Men must ally with their archenemy Magneto to stop him. (source: IMDb)",
+  "connections": {
+    "required": [
+      {
+        "media_id": "x-men"
+      }
+    ],
+    "optional": [],
+    "references": []
+  },
+  "universe": "fox-marvel-cinematic-universe",
+  "reception": {
+    "imdb_rating": "7.4",
+    "imdb_votes": "580,000",
+    "rotten_tomatoes": "85%",
+    "metascore": "68",
+    "box_office": "$407,711,549",
+    "rated": "PG-13",
+    "director": "Bryan Singer",
+    "actors": "Patrick Stewart, Hugh Jackman, Ian McKellen, Halle Berry, Famke Janssen",
+    "awards": "6 wins & 41 nominations total."
+  }
+}

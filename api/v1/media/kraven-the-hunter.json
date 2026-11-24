@@ -1,0 +1,26 @@
+{
+  "id": "kraven-the-hunter",
+  "title": "Kraven the Hunter",
+  "release_date": "2024-12-13",
+  "saga": "sonys-spider-man-universe",
+  "mediatype": "movie",
+  "poster": "/api/v1/posters/kraven-the-hunter.jpg",
+  "summary": "Kraven's complex relationship with his ruthless father, Nikolai Kravinoff, starts him down a path of vengeance with brutal consequences, motivating him to become not only the greatest hunter in the world, but also one of its most feared. (source: IMDb)",
+  "connections": {
+    "required": [],
+    "optional": [],
+    "references": []
+  },
+  "universe": "sonys-spider-man-universe",
+  "reception": {
+    "imdb_rating": "5.4",
+    "imdb_votes": "25,000",
+    "rotten_tomatoes": "15%",
+    "metascore": "33",
+    "box_office": "$62,000,000",
+    "rated": "R",
+    "director": "J.C. Chandor",
+    "actors": "Aaron Taylor-Johnson, Russell Crowe, Ariana DeBose, Fred Hechinger",
+    "awards": "Sony's Spider-Man Universe release."
+  }
+}

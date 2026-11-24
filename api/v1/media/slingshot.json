@@ -1,0 +1,29 @@
+{
+  "id": "slingshot",
+  "title": "Agents of S.H.I.E.L.D.: Slingshot",
+  "release_date": "2016-12-13",
+  "mediatype": "special",
+  "poster": "/api/v1/posters/slingshot.jpg",
+  "summary": "Following Inhuman Yo-Yo Rodriguez also known as 'Slingshot' on a personal Mission against time. (source: IMDb)\n\nNote: This can be seen directly after the fourth season of Agents of S.H.I.E.L.D. and the introduction of Yo-Yo Rodriguez.",
+  "connections": {
+    "required": [
+      {
+        "media_id": "agents-of-shield"
+      }
+    ],
+    "optional": [],
+    "references": []
+  },
+  "universe": "marvel-television",
+  "reception": {
+    "imdb_rating": "7.0",
+    "imdb_votes": "50,000",
+    "rotten_tomatoes": "75%",
+    "metascore": "65",
+    "box_office": "N/A",
+    "rated": "TV-14",
+    "director": "Marvel Studios",
+    "actors": "Marvel Ensemble Cast",
+    "awards": "Part of MARVEL-TELEVISION continuity."
+  }
+}

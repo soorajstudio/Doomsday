@@ -1,0 +1,25 @@
+{
+  "id": "fantastic-four-2015",
+  "title": "Fantastic Four",
+  "release_date": "2015-08-07",
+  "mediatype": "movie",
+  "poster": "/api/v1/posters/fantastic-four-2015.jpg",
+  "summary": "Four young outsiders teleport to an alternate and dangerous universe which alters their physical form in shocking ways. The four must learn to harness their new abilities and work together to save Earth from a former friend turned enemy. (source: IMDb)",
+  "connections": {
+    "required": [],
+    "optional": [],
+    "references": []
+  },
+  "universe": "fox-marvel-cinematic-universe",
+  "reception": {
+    "imdb_rating": "4.3",
+    "imdb_votes": "170,000",
+    "rotten_tomatoes": "9%",
+    "metascore": "27",
+    "box_office": "$167,882,881",
+    "rated": "PG-13",
+    "director": "Josh Trank",
+    "actors": "Miles Teller, Michael B. Jordan, Kate Mara, Jamie Bell, Toby Kebbell",
+    "awards": "3 wins & 5 nominations total."
+  }
+}

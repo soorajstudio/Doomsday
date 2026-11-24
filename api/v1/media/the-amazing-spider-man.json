@@ -1,0 +1,26 @@
+{
+  "id": "the-amazing-spider-man",
+  "title": "The Amazing Spider-Man",
+  "release_date": "2012-07-03",
+  "mediatype": "movie",
+  "poster": "/api/v1/posters/the-amazing-spider-man-2012.jpg",
+  "summary": "After Peter Parker is bitten by a genetically altered spider, he gains newfound, spider-like powers and ventures out to save the city from the machinations of a mysterious reptilian foe. (source: IMDb)",
+  "connections": {
+    "required": [],
+    "optional": [],
+    "references": []
+  },
+  "universe": "columbia-pictures",
+  "saga": "amazing-spider-man-saga",
+  "reception": {
+    "imdb_rating": "6.9",
+    "imdb_votes": "730,000",
+    "rotten_tomatoes": "71%",
+    "metascore": "66",
+    "box_office": "$757,930,663",
+    "rated": "PG-13",
+    "director": "Marc Webb",
+    "actors": "Andrew Garfield, Emma Stone, Rhys Ifans, Denis Leary",
+    "awards": "3 wins & 33 nominations total."
+  }
+}

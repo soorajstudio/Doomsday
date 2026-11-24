@@ -1,0 +1,30 @@
+{
+  "id": "the-amazing-spider-man-2",
+  "title": "The Amazing Spider-Man 2",
+  "release_date": "2014-05-02",
+  "mediatype": "movie",
+  "poster": "/api/v1/posters/the-amazing-spider-man-2-2014.jpg",
+  "summary": "When New York is put under siege by Oscorp, it is up to Spider-Man to save the city he swore to protect as well as his loved ones. (source: IMDb)",
+  "connections": {
+    "required": [
+      {
+        "media_id": "the-amazing-spider-man"
+      }
+    ],
+    "optional": [],
+    "references": []
+  },
+  "universe": "columbia-pictures",
+  "saga": "amazing-spider-man-saga",
+  "reception": {
+    "imdb_rating": "6.6",
+    "imdb_votes": "570,000",
+    "rotten_tomatoes": "51%",
+    "metascore": "53",
+    "box_office": "$708,982,323",
+    "rated": "PG-13",
+    "director": "Marc Webb",
+    "actors": "Andrew Garfield, Emma Stone, Jamie Foxx, Dane DeHaan, Paul Giamatti",
+    "awards": "3 wins & 26 nominations total."
+  }
+}

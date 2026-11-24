@@ -1,0 +1,30 @@
+{
+  "id": "x-men-the-last-stand",
+  "title": "X-Men: The Last Stand",
+  "release_date": "2006-05-26",
+  "saga": "x-men-original-trilogy",
+  "mediatype": "movie",
+  "poster": "/api/v1/posters/x-men-the-last-stand.jpg",
+  "summary": "The human government develops a cure for mutations, and Jean Grey becomes a darker uncontrollable persona called the Phoenix who allies with Magneto, causing escalation into an all-out battle for the X-Men. (source: IMDb)",
+  "connections": {
+    "required": [
+      {
+        "media_id": "x2"
+      }
+    ],
+    "optional": [],
+    "references": []
+  },
+  "universe": "fox-marvel-cinematic-universe",
+  "reception": {
+    "imdb_rating": "6.6",
+    "imdb_votes": "540,000",
+    "rotten_tomatoes": "57%",
+    "metascore": "58",
+    "box_office": "$460,435,291",
+    "rated": "PG-13",
+    "director": "Brett Ratner",
+    "actors": "Patrick Stewart, Hugh Jackman, Halle Berry, Ian McKellen, Famke Janssen",
+    "awards": "7 wins & 37 nominations total."
+  }
+}

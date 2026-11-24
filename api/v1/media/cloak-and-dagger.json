@@ -1,0 +1,27 @@
+{
+  "id": "cloak-and-dagger",
+  "title": "Cloak & Dagger",
+  "release_date": "2018-06-07",
+  "end_date": "2019-04-04",
+  "saga": "infinite-saga",
+  "mediatype": "show",
+  "poster": "/api/v1/posters/cloak-and-dagger.jpg",
+  "summary": "Two teenagers from very different backgrounds find themselves burdened and awakened to newly acquired superpowers while growing closer together every day. (source: IMDB)",
+  "connections": {
+    "required": [],
+    "optional": [],
+    "references": []
+  },
+  "universe": "marvel-television",
+  "reception": {
+    "imdb_rating": "6.6",
+    "imdb_votes": "30,000",
+    "rotten_tomatoes": "87%",
+    "metascore": "68",
+    "box_office": "N/A",
+    "rated": "TV-14",
+    "director": "Joe Pokaski",
+    "actors": "Olivia Holt, Aubrey Joseph, Gloria Reuben, Andrea Roth",
+    "awards": "1 win & 5 nominations total."
+  }
+}

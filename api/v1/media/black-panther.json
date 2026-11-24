@@ -1,0 +1,31 @@
+{
+  "id": "black-panther",
+  "title": "Black Panther",
+  "release_date": "2018-02-16",
+  "saga": "infinite-saga",
+  "phase": 3,
+  "mediatype": "movie",
+  "poster": "/api/v1/posters/black-panther.jpg",
+  "summary": "T'Challa, heir to the hidden but advanced kingdom of Wakanda, must step forward to lead his people into a new future and must confront a challenger from his country's past. (source: IMDb)",
+  "connections": {
+    "required": [
+      {
+        "media_id": "captain-america-civil-war"
+      }
+    ],
+    "optional": [],
+    "references": []
+  },
+  "universe": "mcu",
+  "reception": {
+    "imdb_rating": "7.3",
+    "imdb_votes": "820,000",
+    "rotten_tomatoes": "96%",
+    "metascore": "88",
+    "box_office": "$1,349,926,083",
+    "rated": "PG-13",
+    "director": "Ryan Coogler",
+    "actors": "Chadwick Boseman, Michael B. Jordan, Lupita Nyong'o, Danai Gurira",
+    "awards": "Won 3 Oscars. 117 wins & 283 nominations total."
+  }
+}
