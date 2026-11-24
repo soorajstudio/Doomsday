@@ -28,7 +28,6 @@ export function DoomHeroCanvas() {
   const [currentFrame, setCurrentFrame] = useState(0);
   const [showSubtitles] = useState(true);
   const [subtitleIndex, setSubtitleIndex] = useState(0);
-  const [activeTab, setActiveTab] = useState<"trailers" | "sagas" | "more">("trailers");
 
   const getCandidateFrameUrls = (index: number) => {
     const frameNum = String(index).padStart(3, "0");
@@ -303,42 +302,6 @@ export function DoomHeroCanvas() {
       </svg>
 
       <div className="netflix-hero-sticky">
-        {/* Floating Top Pill Nav */}
-        <div className="netflix-curved-nav-pill">
-          <button
-            className={`pill-tab ${activeTab === "trailers" ? "active" : ""}`}
-            onClick={() => {
-              setActiveTab("trailers");
-              window.scrollTo({ top: 0, behavior: "smooth" });
-            }}
-          >
-            Trailers
-          </button>
-          <Link
-            href="/all-media"
-            className="pill-tab"
-            style={{ textDecoration: "none" }}
-          >
-            All Sagas
-          </Link>
-          <a
-            href="https://soorajstudio.github.io/Marvel-Movies"
-            className="pill-tab"
-            style={{ textDecoration: "none" }}
-          >
-            Watching Order
-          </a>
-          <button
-            className={`pill-tab ${activeTab === "more" ? "active" : ""}`}
-            onClick={() => {
-              setActiveTab("more");
-              scrollTo("explore-section");
-            }}
-          >
-            Explore Movies &gt;
-          </button>
-        </div>
-
         {/* The Curved Cinema Screen Billboard Container */}
         <div className="netflix-curved-screen-frame" ref={billboardScreenRef}>
           <div className="netflix-curved-screen-clip-wrap">

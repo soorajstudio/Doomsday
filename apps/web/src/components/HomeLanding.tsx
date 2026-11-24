@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useMemo, useRef, useState } from "react";
+import { AppNavbar } from "./AppNavbar";
 import { DoomHeroCanvas } from "./DoomHeroCanvas";
 import { apiV1Path, resolvePosterUrl } from "../lib/api";
 
@@ -439,6 +440,8 @@ export function HomeLanding() {
 
   return (
     <div className="min-h-screen bg-black text-zinc-100">
+      <AppNavbar />
+
       {/* Full-viewport Netflix Curved Screen Billboard with 200vh ScrollTrigger scrubbing */}
       <DoomHeroCanvas />
 

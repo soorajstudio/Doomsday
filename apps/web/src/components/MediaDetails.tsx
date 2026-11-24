@@ -498,7 +498,7 @@ export function MediaDetails({ mediaId }: { mediaId: string }) {
     <div className="min-h-screen bg-linear-to-b from-zinc-900 to-black text-zinc-100">
       <AppNavbar />
 
-      <main className="mx-auto max-w-7xl px-4 py-6 sm:py-10">
+      <main className="mx-auto max-w-7xl px-4 pt-20 pb-6 sm:pt-24 sm:pb-10">
         <div className="space-y-8">
           <section className="min-w-0 flex-1 rounded-2xl border border-zinc-800 bg-zinc-900/30 p-4 sm:p-6">
             <div className="flex flex-col gap-8 lg:flex-row lg:items-start">
