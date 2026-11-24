@@ -3,7 +3,7 @@ import Link from "next/link";
 const githubUrl = "https://github.com/RedDTG/mcu-flowchart";
 const footerLinks = [
     { href: "/all-media", label: "Explore" },
-    { href: "/watching-order", label: "Q&A" },
+    { href: "https://soorajstudio.github.io/Marvel-Movies", label: "Watching Order" },
 ] as const;
 
 export function SiteFooter() {

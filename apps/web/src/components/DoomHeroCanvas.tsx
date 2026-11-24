@@ -321,13 +321,13 @@ export function DoomHeroCanvas() {
           >
             All Sagas
           </Link>
-          <Link
-            href="/watching-order"
+          <a
+            href="https://soorajstudio.github.io/Marvel-Movies"
             className="pill-tab"
             style={{ textDecoration: "none" }}
           >
             Watching Order
-          </Link>
+          </a>
           <button
             className={`pill-tab ${activeTab === "more" ? "active" : ""}`}
             onClick={() => {
