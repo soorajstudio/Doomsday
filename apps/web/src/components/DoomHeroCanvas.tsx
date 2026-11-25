@@ -292,15 +292,6 @@ export function DoomHeroCanvas() {
 
   return (
     <div className="netflix-hero-wrapper" ref={containerRef}>
-      {/* SVG Clip Path for Cinema Screen Curved Bottom */}
-      <svg width="0" height="0" style={{ position: "absolute" }}>
-        <defs>
-          <clipPath id="netflix-curved-screen-clip" clipPathUnits="objectBoundingBox">
-            <path d="M 0 0 L 1 0 L 1 0.94 Q 0.5 1.0 0 0.94 Z" />
-          </clipPath>
-        </defs>
-      </svg>
-
       <div className="netflix-hero-sticky">
         {/* The Curved Cinema Screen Billboard Container */}
         <div className="netflix-curved-screen-frame" ref={billboardScreenRef}>
@@ -328,40 +319,6 @@ export function DoomHeroCanvas() {
               </div>
             )}
           </div>
-
-          {/* Crisp, clearly visible Curved Cinema Screen Border & Ambient Glow */}
-          <svg
-            className="netflix-curved-screen-border-svg"
-            viewBox="0 0 1000 562.5"
-            preserveAspectRatio="none"
-            aria-hidden="true"
-          >
-            {/* Soft Ambient Glow */}
-            <path
-              d="M 1 1 L 999 1 L 999 528.75 Q 500 561.5 1 528.75 Z"
-              fill="none"
-              stroke="rgba(255, 255, 255, 0.2)"
-              strokeWidth="4"
-              filter="url(#screen-glow-filter)"
-            />
-            {/* Crisp High-Definition Border Stroke */}
-            <path
-              d="M 1 1 L 999 1 L 999 528.75 Q 500 561.5 1 528.75 Z"
-              fill="none"
-              stroke="url(#screen-border-gradient)"
-              strokeWidth="2"
-            />
-            <defs>
-              <linearGradient id="screen-border-gradient" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stopColor="rgba(255, 255, 255, 0.65)" />
-                <stop offset="50%" stopColor="rgba(255, 255, 255, 0.35)" />
-                <stop offset="100%" stopColor="rgba(255, 255, 255, 0.6)" />
-              </linearGradient>
-              <filter id="screen-glow-filter" x="-10%" y="-10%" width="120%" height="120%">
-                <feGaussianBlur stdDeviation="4" result="blur" />
-              </filter>
-            </defs>
-          </svg>
         </div>
 
         {/* Bottom subtle scroll prompt */}
