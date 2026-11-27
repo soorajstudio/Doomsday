@@ -368,57 +368,6 @@
   text-shadow: 0 0 12px rgba(52, 211, 153, 0.5);
 }
 
-/* Bottom subtle scroll prompt matching website dark pill theme */
-.netflix-bottom-scroll-prompt {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.45rem 1.15rem;
-  border-radius: 9999px;
-  background: rgba(18, 18, 18, 0.78);
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  color: #a1a1aa;
-  font-size: 0.78rem;
-  font-weight: 500;
-  letter-spacing: 0.3px;
-  cursor: pointer;
-  margin-top: 0.55rem;
-  transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1);
-  user-select: none;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.5);
-  animation: pulsePrompt 2.5s infinite ease-in-out;
-}
-
-.netflix-bottom-scroll-prompt:hover {
-  background: rgba(28, 28, 28, 0.92);
-  border-color: rgba(255, 255, 255, 0.35);
-  color: #ffffff;
-  transform: translateY(2px);
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.7);
-}
-
-.netflix-bottom-scroll-prompt svg {
-  color: #71717a;
-  transition: transform 0.2s ease, color 0.2s ease;
-}
-
-.netflix-bottom-scroll-prompt:hover svg {
-  color: #ffffff;
-  transform: translateY(2px);
-}
-
-@keyframes pulsePrompt {
-  0%, 100% { opacity: 0.6; }
-  50% { opacity: 1; }
-}
-
-@keyframes bounceDown {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(4px); }
-}
-
 /* Overlay 2 & 3: Epic Decrees */
 .overlay-decree {
   justify-content: center;
@@ -731,11 +680,6 @@
     aspect-ratio: 4 / 5;
     min-height: 350px;
     max-height: calc(100vh - 10.5rem);
-  }
-  .netflix-bottom-scroll-prompt {
-    margin-top: 0.35rem;
-    padding: 0.35rem 0.9rem;
-    font-size: 0.72rem;
   }
   .netflix-subtitles-banner {
     bottom: 45%;

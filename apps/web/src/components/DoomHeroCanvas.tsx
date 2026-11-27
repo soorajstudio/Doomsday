@@ -2,7 +2,6 @@
 
 import React, { useEffect, useRef, useState, useCallback } from "react";
 import Link from "next/link";
-import { ChevronDown } from "lucide-react";
 import "./DoomHeroCanvas.css";
 
 const TOTAL_FRAMES = 166;
@@ -418,18 +417,6 @@ export function DoomHeroCanvas() {
               <span>NOW IN THEATERS WORLDWIDE</span>
             </div>
           )}
-        </div>
-
-        {/* Bottom subtle scroll prompt */}
-        <div
-          className="netflix-bottom-scroll-prompt"
-          onClick={() => scrollTo("explore-section")}
-          role="button"
-          tabIndex={0}
-          aria-label="Scroll down to explore Multiverse and Movies"
-        >
-          <span>Scroll to explore Multiverse &amp; Movies</span>
-          <ChevronDown size={15} />
         </div>
       </div>
     </div>
