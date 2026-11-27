@@ -14,6 +14,29 @@ const SUBTITLES_LIST = [
   "Kneel before Victor von Doom — Supreme Sovereign of existence.",
 ];
 
+interface TimeRemaining {
+  days: number;
+  hours: number;
+  minutes: number;
+  seconds: number;
+  isExpired: boolean;
+}
+
+// Avengers: Doomsday Official Release Date
+const DOOMSDAY_TARGET = new Date("2026-12-18T00:00:00");
+
+function computeTimeRemaining(): TimeRemaining {
+  const diff = DOOMSDAY_TARGET.getTime() - Date.now();
+  if (diff <= 0) {
+    return { days: 0, hours: 0, minutes: 0, seconds: 0, isExpired: true };
+  }
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+  return { days, hours, minutes, seconds, isExpired: false };
+}
+
 export function DoomHeroCanvas() {
   const containerRef = useRef<HTMLDivElement>(null);
   const billboardScreenRef = useRef<HTMLDivElement>(null);
@@ -28,6 +51,16 @@ export function DoomHeroCanvas() {
   const [currentFrame, setCurrentFrame] = useState(0);
   const [showSubtitles] = useState(true);
   const [subtitleIndex, setSubtitleIndex] = useState(0);
+  const [countdown, setCountdown] = useState<TimeRemaining | null>(null);
+
+  // Update Countdown Live
+  useEffect(() => {
+    setCountdown(computeTimeRemaining());
+    const interval = setInterval(() => {
+      setCountdown(computeTimeRemaining());
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
 
   const getCandidateFrameUrls = (index: number) => {
     const frameNum = String(index).padStart(3, "0");
@@ -319,6 +352,72 @@ export function DoomHeroCanvas() {
               </div>
             )}
           </div>
+        </div>
+
+        {/* Cinematic Doomsday Release Countdown Animation */}
+        <div
+          className="doom-countdown-container"
+          onClick={() => scrollTo("explore-section")}
+          role="button"
+          tabIndex={0}
+          aria-label="Avengers: Doomsday Release Countdown"
+        >
+          <div className="doom-countdown-label">
+            <span className="doom-countdown-pulse-dot" />
+            <span className="doom-countdown-tag">COUNTDOWN TO DOOMSDAY</span>
+            <span className="doom-countdown-divider">•</span>
+            <span className="doom-countdown-date">DECEMBER 18, 2026</span>
+          </div>
+
+          {!countdown || !countdown.isExpired ? (
+            <div className="doom-countdown-grid">
+              <div className="doom-countdown-segment">
+                <div className="doom-countdown-number-box">
+                  <span className="doom-countdown-digit">
+                    {countdown ? String(countdown.days).padStart(2, "0") : "00"}
+                  </span>
+                </div>
+                <span className="doom-countdown-unit">DAYS</span>
+              </div>
+
+              <span className="doom-countdown-colon">:</span>
+
+              <div className="doom-countdown-segment">
+                <div className="doom-countdown-number-box">
+                  <span className="doom-countdown-digit">
+                    {countdown ? String(countdown.hours).padStart(2, "0") : "00"}
+                  </span>
+                </div>
+                <span className="doom-countdown-unit">HOURS</span>
+              </div>
+
+              <span className="doom-countdown-colon">:</span>
+
+              <div className="doom-countdown-segment">
+                <div className="doom-countdown-number-box">
+                  <span className="doom-countdown-digit">
+                    {countdown ? String(countdown.minutes).padStart(2, "0") : "00"}
+                  </span>
+                </div>
+                <span className="doom-countdown-unit">MINS</span>
+              </div>
+
+              <span className="doom-countdown-colon">:</span>
+
+              <div className="doom-countdown-segment">
+                <div className="doom-countdown-number-box">
+                  <span className="doom-countdown-digit doom-digit-sec">
+                    {countdown ? String(countdown.seconds).padStart(2, "0") : "00"}
+                  </span>
+                </div>
+                <span className="doom-countdown-unit">SECS</span>
+              </div>
+            </div>
+          ) : (
+            <div className="doom-countdown-now-playing">
+              <span>NOW IN THEATERS WORLDWIDE</span>
+            </div>
+          )}
         </div>
 
         {/* Bottom subtle scroll prompt */}

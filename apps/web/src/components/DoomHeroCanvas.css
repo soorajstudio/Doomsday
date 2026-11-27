@@ -229,23 +229,162 @@
   to { transform: rotate(360deg); }
 }
 
+/* Cinematic Doomsday Release Countdown HUD */
+.doom-countdown-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.85rem;
+  padding: 0.55rem 1.4rem;
+  border-radius: 16px;
+  background: rgba(12, 18, 15, 0.82);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7), 0 0 20px rgba(16, 185, 129, 0.1);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
+  cursor: pointer;
+  z-index: 25;
+}
+
+.doom-countdown-container:hover {
+  border-color: rgba(16, 185, 129, 0.55);
+  background: rgba(16, 24, 20, 0.92);
+  box-shadow: 0 10px 36px rgba(0, 0, 0, 0.8), 0 0 28px rgba(16, 185, 129, 0.2);
+  transform: translateY(-1px);
+}
+
+.doom-countdown-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.doom-countdown-pulse-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #ef4444;
+  box-shadow: 0 0 8px #ef4444;
+  animation: doomDotPulse 1.8s infinite ease-in-out;
+}
+
+@keyframes doomDotPulse {
+  0%, 100% { opacity: 0.4; transform: scale(0.9); }
+  50% { opacity: 1; transform: scale(1.3); }
+}
+
+.doom-countdown-tag {
+  color: #fde047;
+  text-shadow: 0 0 10px rgba(253, 224, 71, 0.35);
+}
+
+.doom-countdown-divider {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.doom-countdown-date {
+  color: #94a3b8;
+}
+
+.doom-countdown-grid {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.doom-countdown-segment {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.18rem;
+}
+
+.doom-countdown-number-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  height: 34px;
+  padding: 0 0.45rem;
+  background: rgba(6, 10, 8, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.doom-countdown-digit {
+  font-family: var(--font-geist-mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.doom-digit-sec {
+  color: #34d199;
+  text-shadow: 0 0 12px rgba(52, 211, 153, 0.45);
+  animation: secGlow 1s infinite alternate;
+}
+
+@keyframes secGlow {
+  0% { text-shadow: 0 0 8px rgba(52, 211, 153, 0.3); }
+  100% { text-shadow: 0 0 14px rgba(52, 211, 153, 0.7); }
+}
+
+.doom-countdown-colon {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: rgba(16, 185, 129, 0.65);
+  margin-bottom: 0.75rem;
+  animation: colonBlink 1s infinite;
+}
+
+@keyframes colonBlink {
+  0%, 100% { opacity: 0.9; }
+  50% { opacity: 0.25; }
+}
+
+.doom-countdown-unit {
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  color: #64748b;
+}
+
+.doom-countdown-now-playing {
+  padding: 0.4rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  color: #34d199;
+  text-shadow: 0 0 12px rgba(52, 211, 153, 0.5);
+}
+
 /* Bottom subtle scroll prompt matching website dark pill theme */
 .netflix-bottom-scroll-prompt {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.5rem 1.25rem;
+  padding: 0.45rem 1.15rem;
   border-radius: 9999px;
   background: rgba(18, 18, 18, 0.78);
   border: 1px solid rgba(255, 255, 255, 0.14);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   color: #a1a1aa;
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   font-weight: 500;
   letter-spacing: 0.3px;
   cursor: pointer;
-  margin-top: 1.1rem;
+  margin-top: 0.55rem;
   transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1);
   user-select: none;
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.5);
@@ -562,10 +701,41 @@
     margin-bottom: -10px;
   }
   .pill-tab { padding: 0.35rem 0.7rem; font-size: 0.72rem; flex-shrink: 0; }
+  
+  .doom-countdown-container {
+    padding: 0.38rem 0.85rem;
+    gap: 0.25rem;
+    margin-top: 0.45rem;
+  }
+  .doom-countdown-label {
+    font-size: 0.58rem;
+    letter-spacing: 0.8px;
+  }
+  .doom-countdown-number-box {
+    min-width: 36px;
+    height: 28px;
+    padding: 0 0.35rem;
+  }
+  .doom-countdown-digit {
+    font-size: 0.92rem;
+  }
+  .doom-countdown-unit {
+    font-size: 0.5rem;
+  }
+  .doom-countdown-colon {
+    font-size: 0.92rem;
+    margin-bottom: 0.6rem;
+  }
+  
   .netflix-curved-screen-frame {
     aspect-ratio: 4 / 5;
-    min-height: 390px;
-    max-height: calc(100vh - 6.5rem);
+    min-height: 350px;
+    max-height: calc(100vh - 10.5rem);
+  }
+  .netflix-bottom-scroll-prompt {
+    margin-top: 0.35rem;
+    padding: 0.35rem 0.9rem;
+    font-size: 0.72rem;
   }
   .netflix-subtitles-banner {
     bottom: 45%;
