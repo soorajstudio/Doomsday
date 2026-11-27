@@ -40,34 +40,62 @@ function computeTimeRemaining(): TimeRemaining {
   return { days, hours, minutes, seconds, isExpired: false };
 }
 
-function ChronoCard({
+function FlipClockCard({
   value,
   label,
-  isSeconds = false,
 }: {
   value: string;
   label: string;
-  isSeconds?: boolean;
 }) {
-  return (
-    <div className={`doom-chrono-segment ${isSeconds ? "is-seconds" : ""}`}>
-      <div className="doom-chrono-card">
-        <div className="doom-chrono-groove" />
-        <div className="doom-chrono-gloss" />
-        <div className="doom-digit-roller" key={value}>
-          <span className="doom-chrono-number">{value}</span>
-        </div>
-      </div>
-      <span className="doom-chrono-label">{label}</span>
-    </div>
-  );
-}
+  const [currentVal, setCurrentVal] = useState(value);
+  const [prevVal, setPrevVal] = useState(value);
+  const [isFlipping, setIsFlipping] = useState(false);
 
-function ChronoColon() {
+  useEffect(() => {
+    if (value !== currentVal) {
+      setPrevVal(currentVal);
+      setCurrentVal(value);
+      setIsFlipping(true);
+      const timer = setTimeout(() => {
+        setIsFlipping(false);
+      }, 550);
+      return () => clearTimeout(timer);
+    }
+  }, [value, currentVal]);
+
   return (
-    <div className="doom-chrono-colon" aria-hidden="true">
-      <span className="colon-dot" />
-      <span className="colon-dot" />
+    <div className="doom-flip-segment">
+      <div className="doom-flip-card">
+        {/* Static Top Half */}
+        <div className="doom-flip-half doom-flip-top">
+          <span className="doom-flip-digit">{currentVal}</span>
+        </div>
+
+        {/* Static Bottom Half */}
+        <div className="doom-flip-half doom-flip-bottom">
+          <span className="doom-flip-digit">{isFlipping ? prevVal : currentVal}</span>
+        </div>
+
+        {/* 3D Animated Flaps */}
+        {isFlipping && (
+          <>
+            <div className="doom-flip-half doom-flip-top doom-flip-anim-top">
+              <span className="doom-flip-digit">{prevVal}</span>
+              <div className="doom-flip-shadow top-shadow" />
+            </div>
+            <div className="doom-flip-half doom-flip-bottom doom-flip-anim-bottom">
+              <span className="doom-flip-digit">{currentVal}</span>
+              <div className="doom-flip-shadow bottom-shadow" />
+            </div>
+          </>
+        )}
+
+        {/* Physical Mechanical Center Split Groove & Side Hinges */}
+        <div className="doom-flip-groove" />
+        <div className="doom-flip-hinge doom-hinge-left" />
+        <div className="doom-flip-hinge doom-hinge-right" />
+      </div>
+      <span className="doom-flip-label">{label}</span>
     </div>
   );
 }
@@ -416,25 +444,21 @@ export function DoomHeroCanvas() {
         >
           {!countdown || !countdown.isExpired ? (
             <div className="doom-countdown-grid">
-              <ChronoCard
+              <FlipClockCard
                 value={countdown ? String(countdown.days).padStart(2, "0") : "00"}
                 label="DAYS"
               />
-              <ChronoColon />
-              <ChronoCard
+              <FlipClockCard
                 value={countdown ? String(countdown.hours).padStart(2, "0") : "00"}
                 label="HOURS"
               />
-              <ChronoColon />
-              <ChronoCard
+              <FlipClockCard
                 value={countdown ? String(countdown.minutes).padStart(2, "0") : "00"}
-                label="MINS"
+                label="MINUTES"
               />
-              <ChronoColon />
-              <ChronoCard
+              <FlipClockCard
                 value={countdown ? String(countdown.seconds).padStart(2, "0") : "00"}
-                label="SECS"
-                isSeconds
+                label="SECONDS"
               />
             </div>
           ) : (

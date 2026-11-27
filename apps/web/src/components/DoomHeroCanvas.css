@@ -263,202 +263,238 @@
 }
 
 /* ============================================================
-   Cinematic Doomsday Release Chronometer HUD
+   Authentic 3D Mechanical Split-Flap Countdown Timer
    ============================================================ */
 .doom-countdown-container {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 0.85rem;
-  padding: 0.45rem 1.05rem;
-  border-radius: 14px;
-  background: rgba(10, 16, 13, 0.84);
-  border: 1px solid rgba(16, 185, 129, 0.32);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
+  margin-top: 1rem;
+  padding: 0.75rem 1.25rem 0.65rem;
+  border-radius: 18px;
+  background: rgba(14, 14, 17, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   box-shadow: 
-    0 10px 32px rgba(0, 0, 0, 0.85),
-    0 0 24px rgba(16, 185, 129, 0.12),
-    inset 0 1px 0 rgba(255, 255, 255, 0.12);
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  user-select: none;
+    0 16px 40px rgba(0, 0, 0, 0.85),
+    0 0 30px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
   cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.2, 0, 0, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+  user-select: none;
   z-index: 25;
 }
 
 .doom-countdown-container:hover {
-  border-color: rgba(16, 185, 129, 0.65);
-  background: rgba(13, 22, 17, 0.92);
-  box-shadow: 
-    0 12px 42px rgba(0, 0, 0, 0.9),
-    0 0 32px rgba(16, 185, 129, 0.25),
-    inset 0 1px 0 rgba(255, 255, 255, 0.18);
   transform: translateY(-2px);
+  border-color: rgba(245, 158, 11, 0.35);
+  box-shadow: 
+    0 20px 48px rgba(0, 0, 0, 0.92),
+    0 0 25px rgba(245, 158, 11, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
 }
 
 .doom-countdown-grid {
   display: flex;
-  align-items: center;
-  gap: 0.5rem;
+  align-items: flex-start;
+  gap: 0.85rem;
 }
 
-/* Individual Chronometer Segment (Card + Unit Label) */
-.doom-chrono-segment {
+/* Individual Flip Segment */
+.doom-flip-segment {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* Luxury Chronometer Dual-Tone Card */
-.doom-chrono-card {
+/* 3D Flip Card Container */
+.doom-flip-card {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 48px;
-  height: 40px;
-  padding: 0 0.55rem;
-  background: linear-gradient(180deg, #101914 0%, #060a08 100%);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-top-color: rgba(255, 255, 255, 0.18);
-  border-bottom-color: rgba(16, 185, 129, 0.25);
-  border-radius: 9px;
+  width: 74px;
+  height: 84px;
+  perspective: 480px;
+  border-radius: 14px;
+  background-color: #121215;
   box-shadow: 
-    0 4px 14px rgba(0, 0, 0, 0.75),
-    inset 0 1px 1px rgba(255, 255, 255, 0.12),
-    inset 0 -1px 2px rgba(0, 0, 0, 0.8);
-  overflow: hidden;
+    0 10px 24px rgba(0, 0, 0, 0.85),
+    0 2px 6px rgba(0, 0, 0, 0.6),
+    inset 0 1px 1px rgba(255, 255, 255, 0.12);
 }
 
-/* Horizontal split line across center */
-.doom-chrono-groove {
+/* Flap Halves (Top & Bottom) */
+.doom-flip-half {
   position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: rgba(0, 0, 0, 0.9);
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.08);
-  z-index: 4;
-  pointer-events: none;
-}
-
-/* Specular glass reflection top half */
-.doom-chrono-gloss {
-  position: absolute;
-  top: 0;
   left: 0;
   right: 0;
   height: 50%;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.01) 100%);
-  pointer-events: none;
-  z-index: 3;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
-/* Digit Rolling Entrance Animation */
-.doom-digit-roller {
+.doom-flip-half.doom-flip-top {
+  top: 0;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+  background: linear-gradient(180deg, #28282e 0%, #1c1c21 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: none;
+  transform-origin: bottom;
+}
+
+.doom-flip-half.doom-flip-bottom {
+  top: 50%;
+  border-bottom-left-radius: 14px;
+  border-bottom-right-radius: 14px;
+  background: linear-gradient(180deg, #141417 0%, #1a1a1f 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: none;
+  transform-origin: top;
+}
+
+/* Digit Typography & Center Alignment across Seam */
+.doom-flip-digit {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 84px;
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: digitRollIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  z-index: 2;
-}
-
-@keyframes digitRollIn {
-  0% {
-    transform: translateY(-50%) scale(0.95);
-    opacity: 0.15;
-    filter: blur(2px);
-  }
-  100% {
-    transform: translateY(0) scale(1);
-    opacity: 1;
-    filter: blur(0);
-  }
-}
-
-.doom-chrono-number {
   font-family: var(--font-geist-mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace);
   font-variant-numeric: tabular-nums;
-  font-size: 1.25rem;
+  font-size: 2.75rem;
   font-weight: 800;
-  letter-spacing: 1.5px;
-  color: #f8fafc;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.9);
+  color: #f1f3f5;
+  letter-spacing: -1.5px;
   line-height: 1;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.95);
+  user-select: none;
 }
 
-/* Active Seconds Pulse & Glowing Finish */
-.doom-chrono-segment.is-seconds .doom-chrono-card {
-  border-color: rgba(52, 211, 153, 0.45);
-  box-shadow: 
-    0 4px 16px rgba(0, 0, 0, 0.75),
-    0 0 16px rgba(16, 185, 129, 0.22),
-    inset 0 1px 1px rgba(255, 255, 255, 0.2);
+.doom-flip-half.doom-flip-top .doom-flip-digit {
+  top: 0;
 }
 
-.doom-chrono-segment.is-seconds .doom-chrono-number {
-  color: #34d399;
-  text-shadow: 0 0 12px rgba(52, 211, 153, 0.65), 0 2px 6px rgba(0, 0, 0, 0.9);
+.doom-flip-half.doom-flip-bottom .doom-flip-digit {
+  top: -42px;
 }
 
-/* LED Dual-Dot Glowing Colon */
-.doom-chrono-colon {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  height: 40px;
-  padding: 0 0.15rem;
-  margin-bottom: 0.95rem;
+/* Realistic Split Groove & Side Pivoting Hinges */
+.doom-flip-groove {
+  position: absolute;
+  top: calc(50% - 1px);
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: rgba(0, 0, 0, 0.95);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.07);
+  z-index: 25;
+  pointer-events: none;
 }
 
-.doom-chrono-colon .colon-dot {
+.doom-flip-hinge {
+  position: absolute;
+  top: calc(50% - 4px);
   width: 3.5px;
-  height: 3.5px;
-  border-radius: 50%;
-  background-color: #34d399;
-  box-shadow: 0 0 8px #34d399, 0 0 14px rgba(52, 211, 153, 0.45);
-  animation: colonBreathe 1s infinite ease-in-out;
+  height: 8px;
+  background: #09090b;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 26;
+  pointer-events: none;
+}
+.doom-hinge-left {
+  left: 0;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  border-left: none;
+}
+.doom-hinge-right {
+  right: 0;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-right: none;
 }
 
-@keyframes colonBreathe {
-  0%, 100% {
-    opacity: 0.95;
-    transform: scale(1);
-    box-shadow: 0 0 8px #34d399, 0 0 14px rgba(52, 211, 153, 0.45);
+/* 3D Mechanical Flip Animation */
+.doom-flip-anim-top {
+  z-index: 15;
+  backface-visibility: hidden;
+  animation: flipAnimTop 0.28s cubic-bezier(0.45, 0, 0.7, 1) forwards;
+}
+
+.doom-flip-anim-bottom {
+  z-index: 14;
+  backface-visibility: hidden;
+  transform: rotateX(90deg);
+  animation: flipAnimBottom 0.28s cubic-bezier(0.2, 0, 0.45, 1) 0.26s forwards;
+}
+
+@keyframes flipAnimTop {
+  0% {
+    transform: rotateX(0deg);
   }
-  50% {
-    opacity: 0.22;
-    transform: scale(0.75);
-    box-shadow: 0 0 2px rgba(52, 211, 153, 0.2);
+  100% {
+    transform: rotateX(-90deg);
   }
 }
 
-/* Unit Labels (DAYS, HOURS, MINS, SECS) */
-.doom-chrono-label {
-  font-size: 0.54rem;
-  font-weight: 700;
-  letter-spacing: 1.1px;
-  color: #94a3b8;
+@keyframes flipAnimBottom {
+  0% {
+    transform: rotateX(90deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+
+/* Flip Lighting / Shadow Shifts */
+.doom-flip-shadow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.top-shadow {
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.9) 100%);
+  opacity: 0;
+  animation: topShadowAnim 0.28s cubic-bezier(0.45, 0, 0.7, 1) forwards;
+}
+.bottom-shadow {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.9) 0%, transparent 100%);
+  opacity: 1;
+  animation: bottomShadowAnim 0.28s cubic-bezier(0.2, 0, 0.45, 1) 0.26s forwards;
+}
+
+@keyframes topShadowAnim {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes bottomShadowAnim {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* Warm Golden / Amber Unit Labels */
+.doom-flip-label {
+  margin-top: 0.55rem;
+  font-family: inherit;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: #f59e0b;
   text-transform: uppercase;
-  margin-top: 0.28rem;
-}
-
-.doom-chrono-segment.is-seconds .doom-chrono-label {
-  color: #34d399;
-  letter-spacing: 1.3px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
 }
 
 .doom-countdown-now-playing {
-  padding: 0.4rem 1rem;
-  font-size: 0.85rem;
+  padding: 0.5rem 1.25rem;
+  font-size: 0.95rem;
   font-weight: 800;
-  letter-spacing: 1.5px;
-  color: #34d399;
-  text-shadow: 0 0 12px rgba(52, 211, 153, 0.5);
+  letter-spacing: 1.8px;
+  color: #f59e0b;
+  text-shadow: 0 0 16px rgba(245, 158, 11, 0.5);
 }
 
 /* Overlay 2 & 3: Epic Decrees */
@@ -745,37 +781,39 @@
   .pill-tab { padding: 0.35rem 0.7rem; font-size: 0.72rem; flex-shrink: 0; }
   
   .doom-countdown-container {
-    padding: 0.35rem 0.75rem;
-    margin-top: 0.45rem;
-    border-radius: 12px;
+    padding: 0.55rem 0.85rem 0.5rem;
+    margin-top: 0.65rem;
+    border-radius: 14px;
   }
   .doom-countdown-grid {
-    gap: 0.35rem;
+    gap: 0.5rem;
   }
-  .doom-chrono-card {
-    min-width: 38px;
-    height: 32px;
-    padding: 0 0.35rem;
-    border-radius: 7px;
+  .doom-flip-card {
+    width: 58px;
+    height: 68px;
+    border-radius: 10px;
   }
-  .doom-chrono-number {
-    font-size: 0.98rem;
-    letter-spacing: 0.8px;
+  .doom-flip-half.doom-flip-top {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
   }
-  .doom-chrono-colon {
-    height: 32px;
-    margin-bottom: 0.75rem;
-    gap: 4px;
+  .doom-flip-half.doom-flip-bottom {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
   }
-  .doom-chrono-colon .colon-dot {
-    width: 2.5px;
-    height: 2.5px;
+  .doom-flip-digit {
+    height: 68px;
+    font-size: 2.15rem;
   }
-  .doom-chrono-label {
-    font-size: 0.48rem;
-    letter-spacing: 0.8px;
+  .doom-flip-half.doom-flip-bottom .doom-flip-digit {
+    top: -34px;
   }
-  
+  .doom-flip-label {
+    font-size: 0.56rem;
+    letter-spacing: 0.08em;
+    margin-top: 0.4rem;
+  }
+
   .netflix-curved-screen-frame {
     aspect-ratio: 4 / 5;
     min-height: 350px;
