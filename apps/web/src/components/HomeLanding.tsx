@@ -32,36 +32,6 @@ interface SagaMetadata {
   short_name: string;
 }
 
-interface FeaturedMedia extends Media {
-  badge: "released" | "airing" | "upcoming";
-  relativeLabel: string;
-}
-
-function getReleaseDate(media: Media) {
-  return new Date(media.release_date);
-}
-
-function getEndDate(media: Media) {
-  if (!media.end_date) {
-    return null;
-  }
-
-  return new Date(media.end_date);
-}
-
-function startOfDay(date: Date) {
-  return new Date(date.getFullYear(), date.getMonth(), date.getDate());
-}
-
-function formatRelativeDays(dayDifference: number, isUpcoming: boolean) {
-  if (dayDifference === 0) {
-    return isUpcoming ? "Releases today" : "Released today";
-  }
-
-  const suffix = dayDifference === 1 ? "day" : "days";
-  return isUpcoming ? `In ${dayDifference} ${suffix}` : `Released ${dayDifference} ${suffix} ago`;
-}
-
 function formatMediaTypeLabel(mediatype: Media["mediatype"]) {
   return mediatype.charAt(0).toUpperCase() + mediatype.slice(1);
 }
@@ -105,18 +75,6 @@ function CarouselArrowIcon({ direction }: { direction: "left" | "right" }) {
       {direction === "left" ? <path d="M15 18l-6-6 6-6" /> : <path d="M9 6l6 6-6 6" />}
     </svg>
   );
-}
-
-function getFeaturedBadgeClass(badge: FeaturedMedia["badge"]) {
-  if (badge === "released") {
-    return "bg-green-500/30 text-green-100";
-  }
-
-  if (badge === "airing") {
-    return "bg-blue-500/35 text-blue-100";
-  }
-
-  return "bg-red-500/30 text-red-100";
 }
 
 function MediaCarousel({
@@ -226,68 +184,6 @@ function MediaCarousel({
   );
 }
 
-function FeaturedMediaSection({ items }: { items: FeaturedMedia[] }) {
-  return (
-    <section className="space-y-5 scroll-mt-24 md:scroll-mt-28">
-      <div>
-        <h2 className="text-xl font-bold text-white sm:text-2xl">Upcoming and airing</h2>
-      </div>
-      <div className="flex flex-wrap justify-center gap-4 pb-2 pt-2 sm:gap-5">
-        {items.map((item) => {
-          const mediaTypeStyles = getMediaTypeStyles(item.mediatype);
-          const featuredBadgeClass = getFeaturedBadgeClass(item.badge);
-
-          return (
-            <Link key={item.id} href={`/media/${item.id}`} className="group block h-136 min-w-0 w-full sm:h-65 lg:w-[calc(50%-0.625rem)]">
-              <article className={`h-full w-full overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-900/80 transition duration-300 group-hover:-translate-y-1 ${mediaTypeStyles.hoverBorderClass}`}>
-                <div className="flex h-full flex-col sm:flex-row">
-                  <div className="relative h-52 w-full shrink-0 bg-zinc-800 sm:h-auto sm:w-45 xl:w-50">
-                    <Image
-                      src={resolvePosterUrl(item.poster)}
-                      alt={item.title}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 640px) 100vw, (max-width: 1280px) 180px, 200px"
-                      unoptimized
-                    />
-                    <div className="featured-card-overlay absolute inset-0 bg-linear-to-t from-black/30 via-black/5 to-transparent sm:bg-linear-to-r" />
-                  </div>
-
-                  <div className="min-w-0 flex-1 flex flex-col justify-between gap-4 p-4 sm:p-6 xl:p-8">
-                    <div className="space-y-4">
-                      <div className="flex flex-wrap gap-2 text-[10px] font-semibold uppercase tracking-wide">
-                        <span className={`rounded-full px-2 py-1 ${featuredBadgeClass}`}>
-                          {item.badge === "released" ? "Released" : item.badge === "airing" ? "Airing" : "Upcoming"}
-                        </span>
-                      </div>
-
-                      <div className={`border-b border-zinc-600/90 pb-3 transition-colors duration-300 ${mediaTypeStyles.hoverDividerClass}`}>
-                        <h3 className="wrap-break-word text-lg font-black leading-tight text-white md:text-xl xl:text-xl">{item.title}</h3>
-                      </div>
-
-                      <p className="line-clamp-2 text-sm leading-relaxed text-zinc-300">
-                        {item.summary}
-                      </p>
-                    </div>
-
-                    {item.badge === "upcoming" && (
-                      <div className="flex flex-wrap gap-2 text-sm text-zinc-300">
-                        <span className="rounded-full border border-zinc-700 bg-zinc-950/60 px-4 py-2">
-                          {item.relativeLabel}
-                        </span>
-                      </div>
-                    )}
-                  </div>
-                </div>
-              </article>
-            </Link>
-          );
-        })}
-      </div>
-    </section>
-  );
-}
-
 export function HomeLanding() {
   const [media, setMedia] = useState<Media[]>([]);
   const [universeMetadata, setUniverseMetadata] = useState<Record<string, UniverseMetadata>>({});
@@ -362,82 +258,6 @@ export function HomeLanding() {
       .slice(0, 12);
   }, [media]);
 
-  const featuredReleases = useMemo<FeaturedMedia[]>(() => {
-    const now = startOfDay(new Date());
-    const dayMs = 1000 * 60 * 60 * 24;
-    const monthDays = 30;
-    const maxUpcomingDate = new Date(now.getTime() + 300 * dayMs);
-    const oneMonthAgo = new Date(now.getTime() - monthDays * dayMs);
-    const oneMonthAhead = new Date(now.getTime() + monthDays * dayMs);
-
-    const today = new Date(now);
-
-    return media
-      .map((item) => {
-        const releaseDate = getReleaseDate(item);
-        const endDate = getEndDate(item);
-
-        const isReleasedMedia =
-          releaseDate <= today && releaseDate >= oneMonthAgo
-
-        const isAiringShow =
-          item.mediatype === "show" && releaseDate <= today && Boolean(endDate && endDate >= today);
-
-        const isUpcomingMovie =
-          item.mediatype === "movie" && releaseDate > today && releaseDate <= maxUpcomingDate;
-
-        const isUpcomingShow =
-          item.mediatype === "show" && releaseDate > today && releaseDate <= maxUpcomingDate;
-
-        let badge: FeaturedMedia["badge"] | null = null;
-        if (isAiringShow) {
-          badge = "airing";
-        } else if (isUpcomingMovie || isUpcomingShow) {
-          badge = "upcoming";
-        } else if (isReleasedMedia) {
-          badge = "released";
-        }
-
-        if (!badge) {
-          return null;
-        }
-
-        const dayDifference = Math.max(0, Math.round(Math.abs(releaseDate.getTime() - now.getTime()) / dayMs));
-
-        return {
-          ...item,
-          badge,
-          relativeLabel:
-            badge === "upcoming"
-              ? formatRelativeDays(dayDifference, true)
-              : badge === "airing"
-                ? "Airing now"
-                : "Released",
-        };
-      })
-      .filter((item): item is FeaturedMedia => Boolean(item))
-      .sort((left, right) => {
-        const badgeOrder: Record<FeaturedMedia["badge"], number> = {
-          released: 0,
-          airing: 1,
-          upcoming: 2,
-        };
-
-        const badgeDifference = badgeOrder[left.badge] - badgeOrder[right.badge];
-        if (badgeDifference !== 0) {
-          return badgeDifference;
-        }
-
-        if (left.badge === "released") {
-          return getReleaseDate(right).getTime() - getReleaseDate(left).getTime();
-        }
-
-        return getReleaseDate(left).getTime() - getReleaseDate(right).getTime();
-      })
-      .slice(0, 6)
-      ;
-  }, [media]);
-
   return (
     <div className="min-h-screen bg-black text-zinc-100">
       <AppNavbar />
@@ -460,8 +280,6 @@ export function HomeLanding() {
 
         {!loading && !error && (
           <div className="space-y-10">
-            {featuredReleases.length > 0 && <FeaturedMediaSection items={featuredReleases} />}
-
             <MediaCarousel
               id="latest-movies"
               title="Latest movies"
