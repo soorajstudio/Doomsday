@@ -1,167 +1,148 @@
-# MCU Flowchart
+# 🌌 Avengers: Doomsday - Multiverse Cinema Hub & Marvel Explorer
 
-MCU Flowchart is a public-friendly monorepo for exploring Marvel screen media as structured metadata. It combines a FastAPI backend, a Next.js frontend, and a JSON dataset that powers media pages, watching-order guidance, and relationship graphs.
+<div align="center">
 
-## Contributing Metadata
+[![Next.js](https://img.shields.io/badge/Next.js-16.3-black?style=flat-square&logo=next.js&logoColor=white)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-19.0-61DAFB?style=flat-square&logo=react&logoColor=black)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Deployed-22c55e?style=flat-square&logo=github&logoColor=white)](https://soorajstudio.github.io/Doomsday/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue?style=flat-square)](LICENSE)
 
-The project is built around community-maintained metadata. If a title is missing, a relation looks wrong, or you disagree with how much context is required before watching something, contributions are welcome.
+An ultra-cinematic Marvel multiverse web experience engineered with an authentic **Netflix-style curved billboard canvas**, **scroll-scrubbed teaser sequence**, **universal fixed floating pill navigation**, and an interactive **Multiverse & Media Catalog** featuring 120+ titles across the MCU, Fox X-Men, Sony Spider-Verse, and Defenderverse.
 
-You can contribute by opening an issue or pull request for:
+<br/>
 
-- new media entries in `dataset/data/media/`;
-- poster references in `dataset/data/posters/`;
-- universe and saga metadata in `dataset/data/universes/` and `dataset/data/sagas/`;
-- connection updates in a media file's `connections.required`, `connections.optional`, or `connections.references` arrays;
-- corrections to summaries, release dates, phases, sagas, or universe assignments.
+<a href="https://soorajstudio.github.io/Doomsday/">
+  <img src="./docs/screenshots/hero-showcase.png" alt="Avengers: Doomsday Cinema Hub Preview" width="100%" />
+</a>
 
-Before opening a PR, run the dataset validator:
+**[🌐 Experience Live Demo](https://soorajstudio.github.io/Doomsday/)** • **[🎬 Marvel Watch Order Guide](https://soorajstudio.github.io/Marvel-Movies)**
 
-```bash
-python scripts/validate_data.py
-```
+</div>
 
-When changing relations, prefer a short `reason` explaining why the connection exists. Use `required` only when the linked media is important to understanding the story; use `optional` for helpful context; use `references` for callbacks, cameos, easter eggs, or lighter continuity links.
+---
 
-## Project Overview
+## 📸 Previews
 
-- `apps/api`: FastAPI service that validates and serves the dataset.
-- `apps/web`: Next.js application for browsing media and graph views.
-- `dataset`: JSON metadata, schemas, posters, universes, and sagas.
-- `scripts`: validation and smoke-test utilities.
-- `.github/workflows`: deployment and release automation.
+| Authentic Netflix Cinema Screen | Multiverse & Cinema Catalog |
+| :---: | :---: |
+| <img src="./docs/screenshots/cinematic-experience.png" width="100%" /> | <img src="./docs/screenshots/multiverse-explorer.png" width="100%" /> |
+| **Upward-Arched Billboard & Scrubbing Canvas** | **Horizontal Snap Carousels & Dynamic Cards** |
+
+| Latveria Intel Dossier & Cast Hub | Cinematic Teaser Experience |
+| :---: | :---: |
+| <img src="./docs/screenshots/media-dossier.png" width="100%" /> | <img src="./docs/screenshots/hero-showcase.png" width="100%" /> |
+| **Classified Records & Cast Roster** | **Scroll-Driven Frame Scrubbing & Subtitles** |
+
+---
+
+## ✨ Features
+
+- 🎬 **Authentic Netflix Curved Cinema Billboard**: Precision-engineered screen wrapper featuring the authentic Netflix upward-arched radial mask (`radial-gradient(103% 12% at 50% 102%, transparent 50%, white 51%)`), illuminated exclusion highlight border, and realistic ambient drop shadow.
+- 🎞️ **Interactive Scroll-Scrubbed Canvas**: 167-frame cinematic teaser sequence scrubbed dynamically via window scroll position with sub-pixel interpolation and synchronous subtitles engine.
+- 🧭 **Universal Fixed Floating Pill Navigation**: Glassmorphic, backdrop-blurred floating pill navbar anchored across all pages with smooth in-page gliding and active state indicators.
+- 🪐 **Comprehensive Multiverse Master Catalog**: Over 120+ structured Marvel screen media titles spanning the Sacred Timeline, Multiverse Saga, Fox X-Men, Sony's Spider-Man Universe (SSU), and Defenderverse.
+- 🍿 **Interactive Media Modals & Cast Intel**: Deep-dive modals presenting release dates, universe affiliation, phase classifications, official decrees, and star-studded cast profiles.
+- 🔗 **Dedicated Watching Order Integration**: Direct 1-click external navigation to the official [Marvel Movies Watch Order Guide](https://soorajstudio.github.io/Marvel-Movies).
+- ⚡ **Zero-Server Turbopack Static Export**: Ultra-fast next-gen static export prerendering 134+ static routes with instant page loads and zero server overhead.
+- 🚀 **Automated GitHub Pages CI/CD**: Automatic build, data compilation, poster asset staging, and GitHub Pages deployment workflow.
+- 📱 **Fluid Responsive Layout**: Bespoke cinematic framing and touch-optimized horizontal carousel scrubbing tailored for phones, tablets, and 4K displays.
+
+---
+
+## 🎮 Controls & Interactions
+
+| Action | Control / Gesture |
+| :--- | :--- |
+| **Cinema Canvas Scrubbing** | Scroll mouse wheel or trackpad up / down through the hero section |
+| **Canvas Playback** | Click the cinema billboard to toggle automatic sequence playback / pause |
+| **Explore Multiverse & Movies** | Click the floating pill button or the bottom chevron prompt to glide smoothly |
+| **Inspect Media Details** | Click on any movie or series card to open the classified intel modal |
+| **Open Cast & Intel Dossier** | Click **`Dossier & Cast`** for classified records and character affiliations |
+| **Watching Order Guide** | Click **`Watching Order`** in the floating pill to open the comprehensive guide |
+| **Close Modal Overlay** | Press **`Esc`** or click outside the modal backdrop / close button |
+
+---
+
+## 🛠️ Architecture & Tech Stack
+
+| Technology | Purpose |
+| :--- | :--- |
+| **Next.js 16 (App Router)** | Framework powering static site generation, route handlers, and static export |
+| **React 19** | Component architecture, state management, and declarative DOM updates |
+| **TypeScript 5** | Strict type safety for dataset schemas, media contracts, and UI components |
+| **Tailwind CSS** | Utility-first styling, glassmorphism, responsive breakpoints, and animations |
+| **HTML5 Canvas API** | High-performance 60fps frame rendering for the Doctor Doom trailer sequence |
+| **Lucide React** | Feather-light SVG iconography for navigation pills and modal controls |
+| **GitHub Actions** | Automated CI/CD pipeline for building, exporting, and publishing to GitHub Pages |
+
+---
+
+## 📂 Project Structure
 
 ```text
-apps/
-  api/                  # FastAPI backend
-  web/                  # Next.js frontend
-dataset/
-  data/
-    media/              # One JSON file per title
-    posters/            # Poster assets referenced by metadata
-    sagas/              # Saga metadata
-    universes/          # Universe metadata
-  schemas/              # JSON schemas
-scripts/                # Validation and smoke scripts
-docker-compose.yml      # Local full-stack runtime
+├── apps/
+│   ├── api/                     # FastAPI metadata service (optional backend)
+│   └── web/                     # Next.js 16 Web Application
+│       ├── public/
+│       │   ├── assets/          # Posters, cast images, emblems, and wallpapers
+│       │   └── sequence/        # 167-frame teaser sequence for hero canvas
+│       └── src/
+│           ├── app/             # Next.js App Router (pages & static routes)
+│           ├── components/      # DoomHeroCanvas, AppNavbar, MediaModals, etc.
+│           └── lib/             # Media dataset loaders and client utilities
+├── dataset/                     # Community-maintained Marvel metadata
+│   ├── data/
+│   │   ├── media/               # 120+ JSON metadata files per title
+│   │   ├── sagas/               # Saga metadata definitions
+│   │   └── universes/           # Multiverse universe definitions
+│   └── schemas/                 # Strict JSON Schemas
+├── docs/
+│   └── screenshots/             # High-resolution showcase & preview images
+└── .github/workflows/           # GitHub Actions automated deployment
 ```
 
-## Requirements
+---
 
-- Python 3.11+
-- Node.js 24+
-- Docker and Docker Compose, optional but recommended for local full-stack runs
+## 🚀 How to Run
 
-## Quick Start With Docker
+### Option A: Live Website (No Installation)
+Visit the live hosted deployment:
+👉 **[https://soorajstudio.github.io/Doomsday/](https://soorajstudio.github.io/Doomsday/)**
 
-From the repository root:
+---
 
-```bash
-docker compose up --build
-```
+### Option B: Run Locally (Development Server)
 
-Services are exposed at:
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/soorajstudio/Doomsday.git
+   cd Doomsday
+   ```
 
-- Web app: `http://localhost:3001`
-- API: `http://localhost:8001`
-- API docs: `http://localhost:8001/docs`
+2. **Install dependencies & start the dev server**:
+   ```bash
+   cd apps/web
+   npm install
+   npm run dev
+   ```
 
-Stop the stack with:
+3. **Open in browser**:
+   Navigate to `http://localhost:3000` (or `http://localhost:3001`).
 
-```bash
-docker compose down
-```
+---
 
-## Local Development
-
-### API
-
-```bash
-cd apps/api
-python -m venv .venv
-source .venv/bin/activate
-python -m pip install -r requirements.txt
-python ../../scripts/validate_data.py
-python run.py
-```
-
-On Windows PowerShell, activate the virtual environment with:
-
-```powershell
-.\.venv\Scripts\Activate.ps1
-```
-
-### Web
+### Option C: Build Static Production Export
 
 ```bash
 cd apps/web
-npm install
-cp .env.example .env.local
-npm run dev
-```
-
-The frontend runs on `http://localhost:3001` and proxies `/api/*` requests to the API.
-
-## Dataset Contract
-
-Each file in `dataset/data/media/*.json` describes one title. Required fields include:
-
-- `id`: stable unique identifier;
-- `title`: display title;
-- `release_date`: ISO date, `YYYY-MM-DD`;
-- `universe`: one of the universe ids defined by the schema;
-- `mediatype`: `movie`, `show`, or `special`;
-- `poster`: poster URL path, usually `/posters/<id>.jpg`;
-- `summary`: non-empty description;
-- `connections`: relation groups for `required`, `optional`, and `references`.
-
-Connection objects can target either a `media_id` or a `saga_id`, and may include:
-
-- `reason`: human-readable explanation;
-- `importance`: number between `0` and `1`.
-
-See `dataset/README.md` and `dataset/schemas/media.schema.json` for the full data contract.
-
-## Validation And Tests
-
-Run from the repository root:
-
-```bash
-python scripts/validate_data.py
-```
-
-Run API tests:
-
-```bash
-cd apps/api
-python -m pytest -q
-```
-
-Run frontend checks:
-
-```bash
-cd apps/web
-npm run lint
 npm run build
 ```
+The optimized static build will be exported directly into `apps/web/out/`.
 
-Run an API smoke test from the repository root:
+---
 
-```bash
-python scripts/smoke_api.py
-```
+## 📄 License
 
-## Deployment
-
-The repository includes GitHub Actions workflows for:
-
-- building and publishing Docker images to GitHub Container Registry;
-- deploying the API and web services from `stable` with `docker-compose.server.yml`;
-- regenerating release notes so stable releases list the feature PRs merged into `main`.
-
-`GITHUB_TOKEN` is provided automatically by GitHub Actions for GHCR authentication. A self-hosted Linux runner with Docker access is required for the deployment workflow.
-
-## Documentation
-
-- API details: `apps/api/README.md`
-- Frontend details: `apps/web/README.md`
-- Dataset details: `dataset/README.md`
+MIT License © 2026 [Sooraj Studio](https://github.com/soorajstudio)
