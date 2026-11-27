@@ -14,6 +14,9 @@ const DOOM_WORDS = [
   { text: "Doom", highlight: true },
 ];
 
+// Scroll scrub thresholds (0.0 to 1.0) for word-by-word reveal during scrolling
+const WORD_THRESHOLDS = [0.03, 0.18, 0.36, 0.54, 0.72];
+
 interface TimeRemaining {
   days: number;
   hours: number;
@@ -51,20 +54,7 @@ export function DoomHeroCanvas() {
   const [currentFrame, setCurrentFrame] = useState(0);
   const [countdown, setCountdown] = useState<TimeRemaining | null>(null);
   const [visibleWordCount, setVisibleWordCount] = useState(0);
-
-  // Word-by-word dialogue animation sequence
-  useEffect(() => {
-    let count = 0;
-    const interval = setInterval(() => {
-      count++;
-      if (count > DOOM_WORDS.length + 7) {
-        // Hold full phrase for ~2.8s, then loop smoothly
-        count = 0;
-      }
-      setVisibleWordCount(count);
-    }, 420);
-    return () => clearInterval(interval);
-  }, []);
+  const lastWordCountRef = useRef<number>(0);
 
   // Update Countdown Live
   useEffect(() => {
@@ -266,6 +256,13 @@ export function DoomHeroCanvas() {
 
           setCurrentFrame(targetFrame);
           drawFrame(targetFrame);
+
+          // Words reveal word-by-word during scrolling
+          const wordCount = WORD_THRESHOLDS.filter((t) => currentProgress >= t).length;
+          if (wordCount !== lastWordCountRef.current) {
+            lastWordCountRef.current = wordCount;
+            setVisibleWordCount(wordCount);
+          }
         }
       }
 
@@ -274,6 +271,9 @@ export function DoomHeroCanvas() {
 
     window.addEventListener("scroll", handleScroll, { passive: true });
     handleScroll();
+    const initialWordCount = WORD_THRESHOLDS.filter((t) => targetProgress >= t).length;
+    lastWordCountRef.current = initialWordCount;
+    setVisibleWordCount(initialWordCount);
     animId = requestAnimationFrame(updateLoop);
 
     return () => {
@@ -303,6 +303,12 @@ export function DoomHeroCanvas() {
         setCurrentFrame((prev) => {
           const next = (prev + 1) % TOTAL_FRAMES;
           drawFrame(next);
+          const playProgress = next / TOTAL_FRAMES;
+          const wordCount = WORD_THRESHOLDS.filter((t) => playProgress >= t).length;
+          if (wordCount !== lastWordCountRef.current) {
+            lastWordCountRef.current = wordCount;
+            setVisibleWordCount(wordCount);
+          }
           return next;
         });
       }
