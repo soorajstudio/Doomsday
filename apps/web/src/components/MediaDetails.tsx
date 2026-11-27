@@ -6,18 +6,6 @@ import { useEffect, useState } from "react";
 import { AppNavbar } from "./AppNavbar";
 import { apiV1Path, resolvePosterUrl } from "../lib/api";
 
-interface MediaReception {
-  imdb_rating?: string | null;
-  imdb_votes?: string | null;
-  rotten_tomatoes?: string | null;
-  metascore?: string | null;
-  box_office?: string | null;
-  rated?: string | null;
-  director?: string | null;
-  actors?: string | null;
-  awards?: string | null;
-}
-
 interface Media {
   id: string;
   title: string;
@@ -28,7 +16,6 @@ interface Media {
   mediatype: string;
   poster: string;
   summary: string;
-  reception?: MediaReception | null;
 }
 
 interface UniverseMetadata {
@@ -237,98 +224,6 @@ export function MediaDetails({ mediaId }: { mediaId: string }) {
               </div>
             </div>
           </section>
-
-          {/* Critical Reception & Box Office */}
-          {media.reception && (media.reception.imdb_rating || media.reception.rotten_tomatoes || media.reception.box_office || media.reception.director) && (
-            <section className="overflow-hidden rounded-3xl border border-zinc-800/80 bg-zinc-950/70 p-4 sm:p-6 shadow-2xl">
-              <div className="mb-4 flex items-center gap-2">
-                <span className="h-2 w-2 rounded-full bg-amber-400" />
-                <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-300">
-                  Critical Reception & Details
-                </h2>
-              </div>
-
-              <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4">
-                {/* IMDb Rating */}
-                {media.reception.imdb_rating && (
-                  <div className="rounded-2xl border border-amber-500/30 bg-amber-500/10 p-4 text-center sm:text-left">
-                    <p className="text-xs font-semibold uppercase tracking-wider text-amber-300">IMDb Rating</p>
-                    <div className="mt-1 flex items-baseline justify-center sm:justify-start gap-1">
-                      <span className="text-2xl font-black text-white sm:text-3xl">★ {media.reception.imdb_rating}</span>
-                      <span className="text-xs text-amber-200/70">/10</span>
-                    </div>
-                    {media.reception.imdb_votes && (
-                      <p className="mt-1 text-[11px] text-zinc-400">{media.reception.imdb_votes} votes</p>
-                    )}
-                  </div>
-                )}
-
-                {/* Rotten Tomatoes */}
-                {media.reception.rotten_tomatoes && (
-                  <div className="rounded-2xl border border-red-500/30 bg-red-500/10 p-4 text-center sm:text-left">
-                    <p className="text-xs font-semibold uppercase tracking-wider text-red-300">Rotten Tomatoes</p>
-                    <div className="mt-1 flex items-baseline justify-center sm:justify-start gap-1">
-                      <span className="text-2xl font-black text-white sm:text-3xl">🍅 {media.reception.rotten_tomatoes}</span>
-                    </div>
-                    <p className="mt-1 text-[11px] text-zinc-400">Tomatometer</p>
-                  </div>
-                )}
-
-                {/* Metascore */}
-                {media.reception.metascore && (
-                  <div className="rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-4 text-center sm:text-left">
-                    <p className="text-xs font-semibold uppercase tracking-wider text-emerald-300">Metascore</p>
-                    <div className="mt-1 flex items-baseline justify-center sm:justify-start gap-1">
-                      <span className="text-2xl font-black text-white sm:text-3xl">{media.reception.metascore}</span>
-                      <span className="text-xs text-emerald-200/70">/100</span>
-                    </div>
-                    <p className="mt-1 text-[11px] text-zinc-400">Metacritic</p>
-                  </div>
-                )}
-
-                {/* Box Office / Age Rating */}
-                {(media.reception.box_office || media.reception.rated) && (
-                  <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 text-center sm:text-left">
-                    <p className="text-xs font-semibold uppercase tracking-wider text-blue-300">
-                      {media.reception.box_office && media.reception.box_office !== "N/A" ? "Box Office" : "Content Rating"}
-                    </p>
-                    <div className="mt-1 flex items-baseline justify-center sm:justify-start gap-1">
-                      <span className="text-lg font-black text-white sm:text-2xl truncate">
-                        {media.reception.box_office && media.reception.box_office !== "N/A" ? media.reception.box_office : media.reception.rated}
-                      </span>
-                    </div>
-                    {media.reception.rated && media.reception.box_office && media.reception.box_office !== "N/A" && (
-                      <p className="mt-1 text-[11px] text-zinc-400">Rated {media.reception.rated}</p>
-                    )}
-                  </div>
-                )}
-              </div>
-
-              {/* Extra Info: Director, Cast, Awards */}
-              {(media.reception.director || media.reception.actors || media.reception.awards) && (
-                <div className="mt-4 divide-y divide-zinc-800/80 rounded-2xl border border-zinc-800 bg-zinc-900/50 p-4 text-sm text-zinc-300">
-                  {media.reception.director && (
-                    <div className="flex flex-col sm:flex-row sm:items-center py-2 gap-1 sm:gap-4">
-                      <span className="text-xs font-semibold uppercase tracking-wider text-zinc-400 w-24 shrink-0">Director</span>
-                      <span className="text-zinc-100">{media.reception.director}</span>
-                    </div>
-                  )}
-                  {media.reception.actors && (
-                    <div className="flex flex-col sm:flex-row sm:items-center py-2 gap-1 sm:gap-4">
-                      <span className="text-xs font-semibold uppercase tracking-wider text-zinc-400 w-24 shrink-0">Starring</span>
-                      <span className="text-zinc-100">{media.reception.actors}</span>
-                    </div>
-                  )}
-                  {media.reception.awards && (
-                    <div className="flex flex-col sm:flex-row sm:items-center py-2 gap-1 sm:gap-4">
-                      <span className="text-xs font-semibold uppercase tracking-wider text-zinc-400 w-24 shrink-0">Accolades</span>
-                      <span className="text-zinc-200">{media.reception.awards}</span>
-                    </div>
-                  )}
-                </div>
-              )}
-            </section>
-          )}
         </div>
       </main>
     </div>
