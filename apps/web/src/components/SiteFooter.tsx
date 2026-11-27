@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowUp, ExternalLink, Film, Compass, Shield, Sparkles } from "lucide-react";
+import { ArrowUp, ExternalLink, Film, Compass, Shield } from "lucide-react";
 
 const GITHUB_REPO_URL = "https://github.com/soorajstudio/Doomsday";
 const WATCHING_ORDER_URL = "https://soorajstudio.github.io/Marvel-Movies";
@@ -38,69 +38,9 @@ export function SiteFooter() {
       {/* Top Ambient Glow Radial */}
       <div className="pointer-events-none absolute inset-x-0 top-0 h-48 bg-[radial-gradient(ellipse_60%_90px_at_50%_0%,rgba(16,185,129,0.14),transparent)]" />
 
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-14 pb-10">
-        {/* Top Section: Brand Identity & Next Premiere Spotlight */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start pb-12 border-b border-zinc-800/60">
-          {/* Brand Info (7 cols) */}
-          <div className="lg:col-span-7 space-y-4">
-            <div className="inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-950/40 px-3 py-1 text-[0.72rem] font-bold tracking-wider uppercase text-emerald-400 backdrop-blur-md">
-              <span className="h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_8px_#34d399] animate-pulse" />
-              Live Multiverse Database • Phase 1 — Phase 6
-            </div>
-
-            <div className="flex items-baseline gap-3 flex-wrap">
-              <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-white via-zinc-100 to-zinc-400">
-                MCU FLOWCHART
-              </h2>
-              <span className="text-xs font-bold px-2 py-0.5 rounded border border-amber-400/30 bg-amber-400/10 text-amber-300 tracking-widest uppercase">
-                DOOMSDAY EDITION
-              </span>
-            </div>
-
-            <p className="text-sm leading-relaxed text-zinc-400 max-w-xl">
-              The definitive interactive timeline and connected storyline explorer for the Marvel Cinematic Universe. 
-              Seamlessly navigate every movie, series, special, and multiverse incursion leading into Battleworld.
-            </p>
-          </div>
-
-          {/* Premiere Spotlight Card (5 cols) */}
-          <div className="lg:col-span-5">
-            <div className="relative rounded-2xl border border-emerald-500/25 bg-zinc-900/50 p-5 backdrop-blur-xl shadow-2xl transition hover:border-emerald-500/40">
-              <div className="flex items-center justify-between text-xs text-zinc-400 mb-2">
-                <span className="flex items-center gap-1.5 font-bold tracking-wider uppercase text-amber-400">
-                  <Sparkles className="w-3.5 h-3.5 text-amber-400" />
-                  Upcoming Theatrical Premiere
-                </span>
-                <span className="rounded-full bg-emerald-500/15 border border-emerald-500/30 px-2 py-0.5 text-[0.68rem] font-semibold text-emerald-300">
-                  Phase 6
-                </span>
-              </div>
-
-              <h3 className="text-lg font-bold text-white tracking-wide">
-                Avengers: Doomsday
-              </h3>
-              <p className="text-xs text-zinc-400 mt-1">
-                Release Date: <span className="text-zinc-200 font-semibold">December 18, 2026</span> • Worldwide Theatrical
-              </p>
-
-              <div className="mt-4 pt-3 border-t border-zinc-800/60 flex items-center justify-between">
-                <Link
-                  href="/media/avengers-doomsday"
-                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-400 hover:text-emerald-300 transition"
-                >
-                  View Movie Dossier & Trailer
-                  <span aria-hidden="true">&rarr;</span>
-                </Link>
-                <span className="text-[0.7rem] text-zinc-500 font-mono">
-                  #ALL-HOPE-LIES-IN-DOOM
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
         {/* Navigation Grid (4 Columns) */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 py-12 border-b border-zinc-800/60 text-sm">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pb-10 border-b border-zinc-800/60 text-sm">
           {/* Column 1: Multiverse Navigation */}
           <div className="space-y-3">
             <p className="text-xs font-bold tracking-widest uppercase text-emerald-400 flex items-center gap-1.5">
