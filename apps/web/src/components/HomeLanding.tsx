@@ -155,9 +155,6 @@ function MediaCarousel({
                     sizes="180px"
                     unoptimized
                   />
-                  <span className={`absolute left-2 top-2 rounded-full px-2 py-0.5 text-[11px] font-semibold tracking-wide shadow-md ${mediaTypeStyles.badgeClass}`}>
-                    {formatMediaTypeLabel(item.mediatype)}
-                  </span>
                 </div>
               </article>
             </Link>

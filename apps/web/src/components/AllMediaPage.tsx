@@ -120,9 +120,6 @@ function MediaCard({
             sizes="(max-width: 640px) 45vw, (max-width: 1024px) 24vw, 120px"
             unoptimized
           />
-          <span className={`absolute left-1.5 top-1.5 rounded-full px-1.5 py-0.5 text-[9px] font-semibold tracking-wide shadow-md ${mediaTypeStyles.badgeClass}`}>
-            {formatMediaTypeLabel(item.mediatype)}
-          </span>
           {showIndex && (
             <span className="absolute right-1.5 top-1.5 rounded-full bg-black/75 px-1.5 py-0.5 text-[9px] font-bold text-zinc-300 backdrop-blur-xs border border-white/10">
               #{index + 1}
