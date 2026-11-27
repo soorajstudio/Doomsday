@@ -110,34 +110,24 @@ function MediaCard({
       href={`/media/${item.id}`}
       className="group mx-auto w-full max-w-36 sm:max-w-32"
     >
-      <article className={`relative overflow-hidden rounded-xl border border-zinc-800 bg-zinc-900/70 transition-transform duration-200 group-hover:-translate-y-0.5 ${mediaTypeStyles.hoverBorderClass}`}>
+      <article className={`relative overflow-hidden rounded-xl border border-zinc-800 bg-zinc-900/70 transition-all duration-200 group-hover:-translate-y-1 group-hover:shadow-lg ${mediaTypeStyles.hoverBorderClass}`}>
         <div className="relative aspect-2/3 bg-zinc-800">
           <Image
             src={resolvePosterUrl(item.poster)}
             alt={item.title}
             fill
-            className="object-cover"
+            className="object-cover transition-transform duration-300 group-hover:scale-105"
             sizes="(max-width: 640px) 45vw, (max-width: 1024px) 24vw, 120px"
             unoptimized
           />
-          <div className="absolute inset-0 bg-linear-to-t from-black/85 via-black/20 to-transparent" />
-          <span className={`absolute left-1.5 top-1.5 rounded-full px-1.5 py-0.5 text-[9px] font-semibold tracking-wide transition-opacity duration-300 group-hover:opacity-0 ${mediaTypeStyles.badgeClass}`}>
+          <span className={`absolute left-1.5 top-1.5 rounded-full px-1.5 py-0.5 text-[9px] font-semibold tracking-wide shadow-md ${mediaTypeStyles.badgeClass}`}>
             {formatMediaTypeLabel(item.mediatype)}
           </span>
-        </div>
-
-        <div className="absolute inset-x-0 bottom-0 p-2 pt-7">
-          <div className={`border-b border-zinc-600/90 pb-1 transition-colors duration-300 ${mediaTypeStyles.hoverDividerClass}`}>
-            <h3 className="line-clamp-2 text-[11px] font-semibold leading-tight text-white">
-              {showIndex ? `${index + 1}. ${item.title}` : item.title}
-            </h3>
-          </div>
-          <div className="mt-1 max-h-0 overflow-hidden opacity-0 transition-all duration-300 group-hover:max-h-14 group-hover:opacity-100">
-            <p className="text-[10px] text-zinc-300">
-              {new Date(item.release_date).getFullYear()}
-              {item.saga && sagaMetadata[item.saga]?.short_name ? ` • ${sagaMetadata[item.saga].short_name}` : ""}
-            </p>
-          </div>
+          {showIndex && (
+            <span className="absolute right-1.5 top-1.5 rounded-full bg-black/75 px-1.5 py-0.5 text-[9px] font-bold text-zinc-300 backdrop-blur-xs border border-white/10">
+              #{index + 1}
+            </span>
+          )}
         </div>
       </article>
     </Link>

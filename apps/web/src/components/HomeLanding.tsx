@@ -145,35 +145,19 @@ function MediaCarousel({
               href={`/media/${item.id}`}
               className="group min-w-36 max-w-36 snap-start sm:min-w-45 sm:max-w-45"
             >
-              <article className={`relative overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900/70 transition-transform duration-300 group-hover:-translate-y-1 ${mediaTypeStyles.hoverBorderClass}`}>
+              <article className={`relative overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900/70 transition-all duration-300 group-hover:-translate-y-1.5 group-hover:shadow-xl ${mediaTypeStyles.hoverBorderClass}`}>
                 <div className="relative aspect-2/3 bg-zinc-800">
                   <Image
                     src={resolvePosterUrl(item.poster)}
                     alt={item.title}
                     fill
-                    className="object-cover"
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
                     sizes="180px"
                     unoptimized
                   />
-                  <div className="absolute inset-0 bg-linear-to-t from-black/85 via-black/20 to-transparent" />
-                  <span className={`absolute left-2 top-2 rounded-full px-1.5 py-0.5 text-[11px] font-semibold tracking-wide transition-opacity duration-300 group-hover:opacity-0 ${mediaTypeStyles.badgeClass}`}>
+                  <span className={`absolute left-2 top-2 rounded-full px-2 py-0.5 text-[11px] font-semibold tracking-wide shadow-md ${mediaTypeStyles.badgeClass}`}>
                     {formatMediaTypeLabel(item.mediatype)}
                   </span>
-                </div>
-
-                <div className="absolute inset-x-0 bottom-0 p-3 pt-10">
-                  <div className={`border-b border-zinc-600/90 pb-2 transition-colors duration-300 ${mediaTypeStyles.hoverDividerClass}`}>
-                    <h3 className="line-clamp-2 text-sm font-semibold text-white">{item.title}</h3>
-                  </div>
-                  <div className="mt-2 max-h-0 overflow-hidden opacity-0 transition-all duration-300 group-hover:max-h-20 group-hover:opacity-100">
-                    <p className="text-[11px] tracking-wide text-zinc-300">
-                      {universeMetadata[item.universe]?.name ?? "Unknown universe"}
-                    </p>
-                    <p className="text-xs text-zinc-300">
-                      {new Date(item.release_date).getFullYear()}
-                      {item.saga && sagaMetadata[item.saga]?.short_name ? ` • ${sagaMetadata[item.saga].short_name}` : ""}
-                    </p>
-                  </div>
                 </div>
               </article>
             </Link>
