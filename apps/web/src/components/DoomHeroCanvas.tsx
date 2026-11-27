@@ -6,33 +6,12 @@ import "./DoomHeroCanvas.css";
 
 const TOTAL_FRAMES = 166;
 
-interface DoomDialogue {
-  speaker: string;
-  location: string;
-  text: string;
-}
-
-const DOOM_DIALOGUES: DoomDialogue[] = [
-  {
-    speaker: "DOCTOR DOOM",
-    location: "TRANSMISSION // LATVERIA",
-    text: "ALL HOPE LIES IN DOOM.",
-  },
-  {
-    speaker: "VICTOR VON DOOM",
-    location: "ARCHIVES // MULTIVERSE ZERO",
-    text: "When gods and kings fell, only one intellect ascended to salvage reality.",
-  },
-  {
-    speaker: "GOD EMPEROR DOOM",
-    location: "DECREE // BATTLEWORLD",
-    text: "The multiverse collides. Battleworld rises from the ashes of incursions.",
-  },
-  {
-    speaker: "SOVEREIGN DOOM",
-    location: "IMPERIAL THRONE // OMNIVERSE",
-    text: "Kneel before Victor von Doom — Supreme Sovereign of existence.",
-  },
+const DOOM_WORDS = [
+  { text: "Kneel", highlight: false },
+  { text: "before", highlight: false },
+  { text: "Victor", highlight: false },
+  { text: "von", highlight: false },
+  { text: "Doom", highlight: true },
 ];
 
 interface TimeRemaining {
@@ -70,9 +49,22 @@ export function DoomHeroCanvas() {
   const [loadProgress, setLoadProgress] = useState(0);
   const [isPlaying] = useState(false);
   const [currentFrame, setCurrentFrame] = useState(0);
-  const [showSubtitles] = useState(true);
-  const [subtitleIndex, setSubtitleIndex] = useState(0);
   const [countdown, setCountdown] = useState<TimeRemaining | null>(null);
+  const [visibleWordCount, setVisibleWordCount] = useState(0);
+
+  // Word-by-word dialogue animation sequence
+  useEffect(() => {
+    let count = 0;
+    const interval = setInterval(() => {
+      count++;
+      if (count > DOOM_WORDS.length + 7) {
+        // Hold full phrase for ~2.8s, then loop smoothly
+        count = 0;
+      }
+      setVisibleWordCount(count);
+    }, 420);
+    return () => clearInterval(interval);
+  }, []);
 
   // Update Countdown Live
   useEffect(() => {
@@ -274,12 +266,6 @@ export function DoomHeroCanvas() {
 
           setCurrentFrame(targetFrame);
           drawFrame(targetFrame);
-
-          const subIdx = Math.min(
-            DOOM_DIALOGUES.length - 1,
-            Math.floor(currentProgress * DOOM_DIALOGUES.length)
-          );
-          setSubtitleIndex(subIdx);
         }
       }
 
@@ -317,9 +303,6 @@ export function DoomHeroCanvas() {
         setCurrentFrame((prev) => {
           const next = (prev + 1) % TOTAL_FRAMES;
           drawFrame(next);
-          if (next % 40 === 0) {
-            setSubtitleIndex((subPrev) => (subPrev + 1) % DOOM_DIALOGUES.length);
-          }
           return next;
         });
       }
@@ -356,31 +339,24 @@ export function DoomHeroCanvas() {
             {/* Subtle bottom shadow for cinematic depth */}
             <div className="netflix-canvas-subtle-bottom" />
 
-            {/* Cinematic Dialogue Transmission HUD */}
-            {showSubtitles && DOOM_DIALOGUES[subtitleIndex] && (
-              <div className="doom-dialogue-hud" key={subtitleIndex}>
-                <div className="doom-dialogue-header">
-                  <div className="doom-dialogue-speaker">
-                    <span className="doom-voice-bars" aria-hidden="true">
-                      <span className="bar bar-1" />
-                      <span className="bar bar-2" />
-                      <span className="bar bar-3" />
+            {/* Transparent Word-by-Word Dialogue */}
+            <div className="doom-dialogue-transparent" aria-label="Kneel before Victor von Doom">
+              <div className="doom-dialogue-phrase">
+                {DOOM_WORDS.map((w, idx) => {
+                  const isVisible = visibleWordCount > idx;
+                  return (
+                    <span
+                      key={idx}
+                      className={`doom-dialogue-word ${w.highlight ? "doom-word-highlight" : ""} ${
+                        isVisible ? "is-visible" : "is-hidden"
+                      }`}
+                    >
+                      {w.text}
                     </span>
-                    <span className="speaker-name">
-                      {DOOM_DIALOGUES[subtitleIndex].speaker}
-                    </span>
-                  </div>
-                  <span className="doom-transmission-code">
-                    {DOOM_DIALOGUES[subtitleIndex].location}
-                  </span>
-                </div>
-                <div className="doom-dialogue-body">
-                  <span className="dialogue-quote">&ldquo;</span>
-                  <p className="dialogue-line">{DOOM_DIALOGUES[subtitleIndex].text}</p>
-                  <span className="dialogue-quote">&rdquo;</span>
-                </div>
+                  );
+                })}
               </div>
-            )}
+            </div>
 
             {/* Loading Indicator */}
             {loadProgress < 100 && (
