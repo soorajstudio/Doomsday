@@ -361,13 +361,6 @@ export function DoomHeroCanvas() {
           tabIndex={0}
           aria-label="Avengers: Doomsday Release Countdown"
         >
-          <div className="doom-countdown-label">
-            <span className="doom-countdown-pulse-dot" />
-            <span className="doom-countdown-tag">COUNTDOWN TO DOOMSDAY</span>
-            <span className="doom-countdown-divider">•</span>
-            <span className="doom-countdown-date">DECEMBER 18, 2026</span>
-          </div>
-
           {!countdown || !countdown.isExpired ? (
             <div className="doom-countdown-grid">
               <div className="doom-countdown-segment">
