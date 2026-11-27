@@ -40,6 +40,38 @@ function computeTimeRemaining(): TimeRemaining {
   return { days, hours, minutes, seconds, isExpired: false };
 }
 
+function ChronoCard({
+  value,
+  label,
+  isSeconds = false,
+}: {
+  value: string;
+  label: string;
+  isSeconds?: boolean;
+}) {
+  return (
+    <div className={`doom-chrono-segment ${isSeconds ? "is-seconds" : ""}`}>
+      <div className="doom-chrono-card">
+        <div className="doom-chrono-groove" />
+        <div className="doom-chrono-gloss" />
+        <div className="doom-digit-roller" key={value}>
+          <span className="doom-chrono-number">{value}</span>
+        </div>
+      </div>
+      <span className="doom-chrono-label">{label}</span>
+    </div>
+  );
+}
+
+function ChronoColon() {
+  return (
+    <div className="doom-chrono-colon" aria-hidden="true">
+      <span className="colon-dot" />
+      <span className="colon-dot" />
+    </div>
+  );
+}
+
 export function DoomHeroCanvas() {
   const containerRef = useRef<HTMLDivElement>(null);
   const billboardScreenRef = useRef<HTMLDivElement>(null);
@@ -374,7 +406,7 @@ export function DoomHeroCanvas() {
           </div>
         </div>
 
-        {/* Cinematic Doomsday Release Countdown Animation */}
+        {/* Cinematic Doomsday Release Chronometer HUD */}
         <div
           className="doom-countdown-container"
           onClick={() => scrollTo("explore-section")}
@@ -384,47 +416,26 @@ export function DoomHeroCanvas() {
         >
           {!countdown || !countdown.isExpired ? (
             <div className="doom-countdown-grid">
-              <div className="doom-countdown-segment">
-                <div className="doom-countdown-number-box">
-                  <span className="doom-countdown-digit">
-                    {countdown ? String(countdown.days).padStart(2, "0") : "00"}
-                  </span>
-                </div>
-                <span className="doom-countdown-unit">DAYS</span>
-              </div>
-
-              <span className="doom-countdown-colon">:</span>
-
-              <div className="doom-countdown-segment">
-                <div className="doom-countdown-number-box">
-                  <span className="doom-countdown-digit">
-                    {countdown ? String(countdown.hours).padStart(2, "0") : "00"}
-                  </span>
-                </div>
-                <span className="doom-countdown-unit">HOURS</span>
-              </div>
-
-              <span className="doom-countdown-colon">:</span>
-
-              <div className="doom-countdown-segment">
-                <div className="doom-countdown-number-box">
-                  <span className="doom-countdown-digit">
-                    {countdown ? String(countdown.minutes).padStart(2, "0") : "00"}
-                  </span>
-                </div>
-                <span className="doom-countdown-unit">MINS</span>
-              </div>
-
-              <span className="doom-countdown-colon">:</span>
-
-              <div className="doom-countdown-segment">
-                <div className="doom-countdown-number-box">
-                  <span className="doom-countdown-digit doom-digit-sec">
-                    {countdown ? String(countdown.seconds).padStart(2, "0") : "00"}
-                  </span>
-                </div>
-                <span className="doom-countdown-unit">SECS</span>
-              </div>
+              <ChronoCard
+                value={countdown ? String(countdown.days).padStart(2, "0") : "00"}
+                label="DAYS"
+              />
+              <ChronoColon />
+              <ChronoCard
+                value={countdown ? String(countdown.hours).padStart(2, "0") : "00"}
+                label="HOURS"
+              />
+              <ChronoColon />
+              <ChronoCard
+                value={countdown ? String(countdown.minutes).padStart(2, "0") : "00"}
+                label="MINS"
+              />
+              <ChronoColon />
+              <ChronoCard
+                value={countdown ? String(countdown.seconds).padStart(2, "0") : "00"}
+                label="SECS"
+                isSeconds
+              />
             </div>
           ) : (
             <div className="doom-countdown-now-playing">

@@ -262,96 +262,194 @@
   to { transform: rotate(360deg); }
 }
 
-/* Cinematic Doomsday Release Countdown HUD */
+/* ============================================================
+   Cinematic Doomsday Release Chronometer HUD
+   ============================================================ */
 .doom-countdown-container {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 0.85rem;
-  padding: 0.45rem 1rem;
+  padding: 0.45rem 1.05rem;
   border-radius: 14px;
-  background: rgba(12, 18, 15, 0.82);
-  border: 1px solid rgba(16, 185, 129, 0.3);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7), 0 0 20px rgba(16, 185, 129, 0.1);
-  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  background: rgba(10, 16, 13, 0.84);
+  border: 1px solid rgba(16, 185, 129, 0.32);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: 
+    0 10px 32px rgba(0, 0, 0, 0.85),
+    0 0 24px rgba(16, 185, 129, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   user-select: none;
   cursor: pointer;
   z-index: 25;
 }
 
 .doom-countdown-container:hover {
-  border-color: rgba(16, 185, 129, 0.55);
-  background: rgba(16, 24, 20, 0.92);
-  box-shadow: 0 10px 36px rgba(0, 0, 0, 0.8), 0 0 28px rgba(16, 185, 129, 0.2);
-  transform: translateY(-1px);
+  border-color: rgba(16, 185, 129, 0.65);
+  background: rgba(13, 22, 17, 0.92);
+  box-shadow: 
+    0 12px 42px rgba(0, 0, 0, 0.9),
+    0 0 32px rgba(16, 185, 129, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18);
+  transform: translateY(-2px);
 }
 
 .doom-countdown-grid {
   display: flex;
   align-items: center;
-  gap: 0.45rem;
+  gap: 0.5rem;
 }
 
-.doom-countdown-segment {
+/* Individual Chronometer Segment (Card + Unit Label) */
+.doom-chrono-segment {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.18rem;
 }
 
-.doom-countdown-number-box {
+/* Luxury Chronometer Dual-Tone Card */
+.doom-chrono-card {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 44px;
-  height: 34px;
-  padding: 0 0.45rem;
-  background: rgba(6, 10, 8, 0.9);
+  min-width: 48px;
+  height: 40px;
+  padding: 0 0.55rem;
+  background: linear-gradient(180deg, #101914 0%, #060a08 100%);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.7);
+  border-top-color: rgba(255, 255, 255, 0.18);
+  border-bottom-color: rgba(16, 185, 129, 0.25);
+  border-radius: 9px;
+  box-shadow: 
+    0 4px 14px rgba(0, 0, 0, 0.75),
+    inset 0 1px 1px rgba(255, 255, 255, 0.12),
+    inset 0 -1px 2px rgba(0, 0, 0, 0.8);
+  overflow: hidden;
 }
 
-.doom-countdown-digit {
+/* Horizontal split line across center */
+.doom-chrono-groove {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.9);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.08);
+  z-index: 4;
+  pointer-events: none;
+}
+
+/* Specular glass reflection top half */
+.doom-chrono-gloss {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.01) 100%);
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* Digit Rolling Entrance Animation */
+.doom-digit-roller {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: digitRollIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  z-index: 2;
+}
+
+@keyframes digitRollIn {
+  0% {
+    transform: translateY(-50%) scale(0.95);
+    opacity: 0.15;
+    filter: blur(2px);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+.doom-chrono-number {
   font-family: var(--font-geist-mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace);
-  font-size: 1.15rem;
+  font-variant-numeric: tabular-nums;
+  font-size: 1.25rem;
   font-weight: 800;
-  color: #ffffff;
-  letter-spacing: 1px;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+  letter-spacing: 1.5px;
+  color: #f8fafc;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.9);
+  line-height: 1;
 }
 
-.doom-digit-sec {
-  color: #34d199;
-  text-shadow: 0 0 12px rgba(52, 211, 153, 0.45);
-  animation: secGlow 1s infinite alternate;
+/* Active Seconds Pulse & Glowing Finish */
+.doom-chrono-segment.is-seconds .doom-chrono-card {
+  border-color: rgba(52, 211, 153, 0.45);
+  box-shadow: 
+    0 4px 16px rgba(0, 0, 0, 0.75),
+    0 0 16px rgba(16, 185, 129, 0.22),
+    inset 0 1px 1px rgba(255, 255, 255, 0.2);
 }
 
-@keyframes secGlow {
-  0% { text-shadow: 0 0 8px rgba(52, 211, 153, 0.3); }
-  100% { text-shadow: 0 0 14px rgba(52, 211, 153, 0.7); }
+.doom-chrono-segment.is-seconds .doom-chrono-number {
+  color: #34d399;
+  text-shadow: 0 0 12px rgba(52, 211, 153, 0.65), 0 2px 6px rgba(0, 0, 0, 0.9);
 }
 
-.doom-countdown-colon {
-  font-size: 1.1rem;
-  font-weight: 800;
-  color: rgba(16, 185, 129, 0.65);
-  margin-bottom: 0.75rem;
-  animation: colonBlink 1s infinite;
+/* LED Dual-Dot Glowing Colon */
+.doom-chrono-colon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  height: 40px;
+  padding: 0 0.15rem;
+  margin-bottom: 0.95rem;
 }
 
-@keyframes colonBlink {
-  0%, 100% { opacity: 0.9; }
-  50% { opacity: 0.25; }
+.doom-chrono-colon .colon-dot {
+  width: 3.5px;
+  height: 3.5px;
+  border-radius: 50%;
+  background-color: #34d399;
+  box-shadow: 0 0 8px #34d399, 0 0 14px rgba(52, 211, 153, 0.45);
+  animation: colonBreathe 1s infinite ease-in-out;
 }
 
-.doom-countdown-unit {
-  font-size: 0.58rem;
+@keyframes colonBreathe {
+  0%, 100% {
+    opacity: 0.95;
+    transform: scale(1);
+    box-shadow: 0 0 8px #34d399, 0 0 14px rgba(52, 211, 153, 0.45);
+  }
+  50% {
+    opacity: 0.22;
+    transform: scale(0.75);
+    box-shadow: 0 0 2px rgba(52, 211, 153, 0.2);
+  }
+}
+
+/* Unit Labels (DAYS, HOURS, MINS, SECS) */
+.doom-chrono-label {
+  font-size: 0.54rem;
   font-weight: 700;
-  letter-spacing: 0.8px;
-  color: #64748b;
+  letter-spacing: 1.1px;
+  color: #94a3b8;
+  text-transform: uppercase;
+  margin-top: 0.28rem;
+}
+
+.doom-chrono-segment.is-seconds .doom-chrono-label {
+  color: #34d399;
+  letter-spacing: 1.3px;
 }
 
 .doom-countdown-now-playing {
@@ -359,7 +457,7 @@
   font-size: 0.85rem;
   font-weight: 800;
   letter-spacing: 1.5px;
-  color: #34d199;
+  color: #34d399;
   text-shadow: 0 0 12px rgba(52, 211, 153, 0.5);
 }
 
@@ -647,23 +745,35 @@
   .pill-tab { padding: 0.35rem 0.7rem; font-size: 0.72rem; flex-shrink: 0; }
   
   .doom-countdown-container {
-    padding: 0.35rem 0.65rem;
+    padding: 0.35rem 0.75rem;
     margin-top: 0.45rem;
+    border-radius: 12px;
   }
-  .doom-countdown-number-box {
-    min-width: 36px;
-    height: 28px;
+  .doom-countdown-grid {
+    gap: 0.35rem;
+  }
+  .doom-chrono-card {
+    min-width: 38px;
+    height: 32px;
     padding: 0 0.35rem;
+    border-radius: 7px;
   }
-  .doom-countdown-digit {
-    font-size: 0.92rem;
+  .doom-chrono-number {
+    font-size: 0.98rem;
+    letter-spacing: 0.8px;
   }
-  .doom-countdown-unit {
-    font-size: 0.5rem;
+  .doom-chrono-colon {
+    height: 32px;
+    margin-bottom: 0.75rem;
+    gap: 4px;
   }
-  .doom-countdown-colon {
-    font-size: 0.92rem;
-    margin-bottom: 0.6rem;
+  .doom-chrono-colon .colon-dot {
+    width: 2.5px;
+    height: 2.5px;
+  }
+  .doom-chrono-label {
+    font-size: 0.48rem;
+    letter-spacing: 0.8px;
   }
   
   .netflix-curved-screen-frame {
